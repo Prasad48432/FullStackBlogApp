@@ -56,9 +56,9 @@ const Navbar = () => {
         {/* Mobile Button */}
         <div onClick={handleNav} className='block sm:hidden z-10'>
           {nav ? (
-            <AiOutlineClose size={30} style={{ color: `${textColor}` }} />
+            <AiOutlineClose size={30} style={{ color: `white` }} />
           ) : (
-            <AiOutlineMenu size={30} style={{ color: `${textColor}` }}/>
+            <AiOutlineMenu size={30} style={{ color: `black` }}/>
           )}
         </div>
         {/* Mobile Menu */}
@@ -69,7 +69,7 @@ const Navbar = () => {
               : 'sm:hidden absolute top-0 left-[-130%] right-0 bottom-0 flex justify-center items-center w-full h-screen text-center bg-black ease-in duration-300'
           }
         >
-          <ul>
+          <ul className='text-white'>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/'>Home</Link>
             </li>

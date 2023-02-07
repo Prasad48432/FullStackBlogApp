@@ -93,4 +93,15 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   color: #e54029;
 }
 
+@media (min-width:0px) and (max-width:500px){
+  .coins_list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+    padding: 1rem;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    margin-top: 100px;
+  }
+}
+
 
