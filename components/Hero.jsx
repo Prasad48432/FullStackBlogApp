@@ -2,7 +2,7 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 import Image from "next/image";
 
-const Hero = ({ heading, message }) => {
+const Hero = () => {
   return (
     <>
       <div>
@@ -28,9 +28,9 @@ const Hero = ({ heading, message }) => {
               <div role="contentinfo" className="w-full lg:w-1/2 h-full">
                 <p
                   tabIndex="0"
-                  className="text-black uppercase font-normal text-3xl mb-4"
+                  className="text-black  font-normal text-3xl mb-4"
                 >
-                  VBIT® STU TALKS{" "}
+                  VBIT® StuTalk{" "}
                 </p>
                 <h1
                   tabIndex="0"

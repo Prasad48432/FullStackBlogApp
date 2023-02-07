@@ -9,7 +9,7 @@ const Framer = () => {
   return (
     <>
     <div className="wrapper">
-    <motion.div transition={{layout: {duration: 1,type: 'spring'}}} layout onClick={() => setIsOpen(!isOpen)} className="card" style={{borderRadius: '1rem',boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'}}>
+    <motion.div transition={{layout: {duration: 0.8,type:"spring"}}} layout onClick={() => setIsOpen(!isOpen)} className="card" style={{borderRadius: '1rem',boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'}}>
       <motion.h2 className="text-xl font-semibold" layout="position" >OUR MOTTO 🚀</motion.h2>
       {isOpen && (
       <motion.div className="expand">

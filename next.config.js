@@ -14,4 +14,5 @@ module.exports = {
       'cdn.tuk.dev',
     ]
   }
+  
 }

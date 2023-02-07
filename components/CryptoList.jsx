@@ -5,7 +5,7 @@ import CryptoCard from './CryptoCard';
 const CryptoList = ({coinsData}) => {
   return (
     <div className='coins_list'>
-        {coinsData.map((coin,index)=>{
+        {coinsData.map((coin,index) =>{
             return(
                 <CryptoCard
                 key={index}

@@ -44,6 +44,9 @@ const Navbar = () => {
           <li style={{padding:'0.75rem'}} className={router.pathname=="/blogs" ? "active_nav" : " "}>
             <Link href='/blogs'>Blogs</Link>
           </li>
+          <li style={{padding:'0.75rem'}} className={router.pathname=="/cryptoprices" ? "active_nav" : " "}>
+            <Link href='/cryptoprices'>Crypto</Link>
+          </li>
           <li style={{padding:'0.75rem'}} className={router.pathname=="/work" ? "active_nav" : " "}>
             <Link href='/work'>Work</Link>
           </li>
