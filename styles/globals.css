@@ -106,5 +106,39 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 .custom-bx-shadow{
   box-shadow: 0 -5px 5px -5px #6e6767;
 }
+.testimonals{
+  margin-top: 50px;
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  grid-template-areas:
+  'one'
+  'two'
+  'three'
+  'four'
+  'five';
+}
+.testimonals div:nth-child(1){
+  grid-area: one;
+}
+.testimonals div:nth-child(2){
+  grid-area: two;
+}
+.testimonals div:nth-child(3){
+  grid-area: three;
+}
+.testimonals div:nth-child(4){
+  grid-area: four;
+}
+.testimonals div:nth-child(5){
+  grid-area: five;
+}
+@media (min-width:50em){
+  .testimonals{
+    grid-template-areas: 
+    'one one two five'
+    'three four four five';
+  }
+} 
 
 
