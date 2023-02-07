@@ -76,7 +76,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     height: 3px;
     background: rgb(67 56 202);;
     transform-origin: 0%;
-    z-index: 20;
+    z-index: 9;
   }
 }
 
