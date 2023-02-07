@@ -5,36 +5,77 @@ import Image from "next/image";
 const Hero = ({ heading, message }) => {
   return (
     <>
-    <div className="h-[70px] bg-[wheat]"></div>
-    <section className="mb-20 bg-[wheat]">
-
-    <div className="px-6 py-12 md:px-12 bg-[wheat] text-gray-800 text-center lg:text-left">
-      <div className="container mx-auto xl:px-32">
-        <div className="grid lg:grid-cols-2 gap-12 flex items-center">
-          <div className="mt-12 lg:mt-0">
-            <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12 text-transparent bg-clip-text bg-gradient-to-r from-[#e54029] to-[#eb5b13]"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e54029] to-[#eb5b13]">Voice of<Typewriter
-            options={{
-              strings: ["VBITIANS!!", "STUDENTS!!"],
-              autoStart: true,
-              loop: true,
-            }}
-          /></span></h1>
-          </div>
-          <div className="mb-12 lg:mb-0">
-            <Image
-              src="https://mdbootstrap.com/img/new/ecommerce/vertical/028.jpg"
-              className="w-5/6 rounded-lg shadow-lg"
-              alt=""
-              width={600}
-              height={660}
-              layout='responsive'
+      <div>
+        <section>
+          <div className="w-full relative pb-10 px-6 xl:px-0 ">
+            <img
+              className="absolute w-full inset-0 h-full object-cover object-center"
+              src="https://cdn.tuk.dev/assets/templates/weCare/hero2-bg.png"
+              alt="we care family"
             />
+
+            <div className="pt-32 lg:flex items-center relative z-1 container mx-auto">
+              <div className="w-full lg:w-1/2 h-full lg:pr-10 xl:pr-0">
+                <img
+                  tabIndex="0"
+                  role="img"
+                  aria-label="people smiling"
+                  className="mx-auto"
+                  src="https://cdn.tuk.dev/assets/templates/weCare/hero2-left.png"
+                  alt="people smiling"
+                />
+              </div>
+              <div role="contentinfo" className="w-full lg:w-1/2 h-full">
+                <p
+                  tabIndex="0"
+                  className="text-black uppercase font-normal text-3xl mb-4"
+                >
+                  VBIT® STU TALKS{" "}
+                </p>
+                <h1
+                  tabIndex="0"
+                  className="text-indigo-700 text-4xl lg:text-6xl font-black mb-2"
+                >
+                  Voice of
+                </h1>
+                <h1
+                  tabIndex="0"
+                  className="text-indigo-700 text-4xl lg:text-6xl font-black mb-8"
+                >
+                  <Typewriter
+                    className="font-bold"
+                    options={{
+                      strings: ["VBITIANS!!", "STUDENTS!!"],
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+                </h1>
+                <p tabIndex="0" className="text-gray-800 font-regular mb-8">
+                  StuTalk is a student- run forum that serves as the official
+                  campus magazine of VBIT, since 2007. We design and release two
+                  editons comprising a Volume in an academic year namely: The
+                  Freshmen Edition and The Republic Edition.
+                </p>
+                <div className="bg-white lg:mt-16 py-4 px-4 flex flex-col sm:flex-row justify-center sm:justify-center items-start sm:items-center shadow-lg rounded-lg  ">
+                  <div className="sm:flex items-center py-2 justify-between ">
+                    <div className="flex items-center ">
+                      <h2 className="text-2xl underline">Imagine !</h2>
+                    </div>
+                    <div className="flex items-center sm:mx-4 xl:mx-14 my-6 lg:my-0">
+                      <h2 className="text-2xl underline">Believe !</h2>
+                    </div>
+                    <div className="flex items-center">
+                      <h2 className="text-2xl underline">Achieve !</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
-  </section>
-  </>
+    </>
   );
 };
 

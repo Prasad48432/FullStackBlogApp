@@ -44,6 +44,7 @@ const Blogs = () => {
       <Hero heading="My Blogs" message="Check Out my blogs" />
       <CryptoList coinsData={coinsData} />
       {loading && <Loader />}
+      <div className="h-[100px]"></div>
     </>
   );
 };

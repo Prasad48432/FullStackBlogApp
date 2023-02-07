@@ -13,9 +13,6 @@ const Framer = () => {
       <motion.h2 className="text-xl font-semibold" layout="position" >OUR MOTTO 🚀</motion.h2>
       {isOpen && (
       <motion.div className="expand">
-        <div className="relative w-1/4 left-[5rem]">
-        <Image src="https://www.stutalk.in/images/logo.png" alt="logo" layout='responsive' width={40} height={40}/>
-        </div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
           Fugiat reiciendis atque tempora odio perferendis consectetur officia aliquid fuga culpa. Rem?</p>
         <p>Lorem

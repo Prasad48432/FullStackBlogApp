@@ -11,6 +11,7 @@ module.exports = {
       'mdbootstrap.com',
       'assets.coingecko.com',
       'icons8.com',
+      'cdn.tuk.dev',
     ]
   }
 }

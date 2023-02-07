@@ -46,8 +46,8 @@ html {
   z-index: 20;
 }
 .custom_bg_class{
-  background: rgba( 255, 255, 255, 0.5 );
-box-shadow: 0 8px 32px 0 rgba(136, 138, 177, 0.37);
+  background: rgba(252, 245, 219, 0.5);
+box-shadow: 0 8px 32px 0 rgba(113, 113, 95, 0.37);
 backdrop-filter: blur( 15px );
 -webkit-backdrop-filter: blur( 15px );
 border-radius: 10px;
@@ -88,9 +88,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   margin-top: 100px;
 }
 .active_nav{
-  font-weight: 600;
+  font-weight: 650;
   text-decoration-line: underline;
-  color: #e54029;
+  color: #0f0220;
 }
 
 @media (min-width:0px) and (max-width:500px){
@@ -102,6 +102,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     grid-row-gap: 1rem;
     margin-top: 100px;
   }
+}
+.custom-bx-shadow{
+  box-shadow: 0 -5px 5px -5px #6e6767;
 }
 
 

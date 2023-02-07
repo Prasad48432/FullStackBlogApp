@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar';
 import '../styles/globals.css';
 import {motion,useScroll} from 'framer-motion';
+import Footer from '../components/Footer';
 
 function MyApp({ Component, pageProps }) {
 
@@ -13,6 +14,7 @@ function MyApp({ Component, pageProps }) {
         style={{ scaleX: scrollYProgress }}
       />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }
