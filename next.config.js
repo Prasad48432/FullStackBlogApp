@@ -7,6 +7,10 @@ module.exports = {
   images: {
     domains: [
       'images.unsplash.com',
+      'www.stutalk.in',
+      'mdbootstrap.com',
+      'assets.coingecko.com',
+      'icons8.com',
     ]
   }
 }

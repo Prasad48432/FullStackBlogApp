@@ -8,7 +8,7 @@ html {
 }
 
 .custom-img-home {
-  background-image: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80')
+  background-color: white;
 }
 .wrapper{
   background: linear-gradient(to right, #72cddd , #07a399);
@@ -37,24 +37,24 @@ html {
 }
 .progress-bar {
   position: fixed;
-  top: 69px;
+  top: 70.5px;
   left: 0;
   right: 0;
   height: 3px;
-  background: rgb(10, 137, 221);
+  background: #eb5b13;
   transform-origin: 0%;
   z-index: 20;
 }
 .custom_bg_class{
-  background: rgba( 27, 212, 231, 0.3 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 17.5px );
-  -webkit-backdrop-filter: blur( 17.5px );
-  border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  background: rgba( 255, 255, 255, 0.5 );
+box-shadow: 0 8px 32px 0 rgba(136, 138, 177, 0.37);
+backdrop-filter: blur( 15px );
+-webkit-backdrop-filter: blur( 15px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-@media (min-width:0px) and (max-width:600px) {
+@media (min-width:0px) and (max-width:639px) {
   .expand{
     width: 10rem;
   }
@@ -68,6 +68,16 @@ html {
   .expand p{
     font-size: 10px;
   }
+  .progress-bar {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #eb5b13;
+    transform-origin: 0%;
+    z-index: 20;
+  }
 }
 
 .coins_list{
@@ -77,5 +87,9 @@ html {
   grid-row-gap: 1rem;
   margin-top: 100px;
 }
-
+.active_nav{
+  font-weight: 600;
+  text-decoration-line: underline;
+  color: #e54029;
+}
 

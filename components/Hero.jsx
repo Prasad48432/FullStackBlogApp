@@ -1,27 +1,41 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import Image from "next/image";
 
 const Hero = ({ heading, message }) => {
   return (
-    <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img-home">
-      {/* Overlay */}
-      <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/70 z-[2]" />
-      <div className="p-5 text-white z-[2]">
-        <h2 className="text-5xl font-bold">{heading}</h2>
-        <div className="flex">
-        <p className="pt-5 text-2xl">Voice of ‎ ‎</p>
-        <h2 className="pt-5 text-2xl"><Typewriter
+    <>
+    <div className="mt-20">
+    </div>
+    <section className="mb-20">
+
+    <div className="px-6 py-12 md:px-12 bg-gray-50 text-gray-800 text-center lg:text-left">
+      <div className="container mx-auto xl:px-32">
+        <div className="grid lg:grid-cols-2 gap-12 flex items-center">
+          <div className="mt-12 lg:mt-0">
+            <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12 text-transparent bg-clip-text bg-gradient-to-r from-[#e54029] to-[#eb5b13]"><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e54029] to-[#eb5b13]">Voice of 📢<Typewriter
             options={{
-              strings: ["VBITIANS!!", "STUDENTS"],
+              strings: ["VBITIANS!!", "STUDENTS!!"],
               autoStart: true,
               loop: true,
             }}
-          />
-          </h2>
-        </div>
-        <button className="px-8 py-2 mt-5 ml-5 border hover:bg-white hover:text-black hover:rounded-md ease-in duration-200">Explore STUTALKS</button>
+          /></span></h1>
+          </div>
+          <div className="mb-12 lg:mb-0">
+            <Image
+              src="https://mdbootstrap.com/img/new/ecommerce/vertical/028.jpg"
+              className="w-5/6 rounded-lg shadow-lg"
+              alt=""
+              width={600}
+              height={660}
+              layout='responsive'
+            />
+          </div>
         </div>
       </div>
+    </div>
+  </section>
+  </>
   );
 };
 

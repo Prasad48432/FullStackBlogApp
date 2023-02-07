@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import {useRouter} from 'next/router';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const [color, setColor] = useState('transparent');
-  const [textColor, setTextColor] = useState('white');
+  const [textColor, setTextColor] = useState('black');
+  const router = useRouter();
 
   const handleNav = () => {
     setNav(!nav);
@@ -14,11 +16,9 @@ const Navbar = () => {
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 40) {
-        setColor('#ffffff');
         setTextColor('#000000');
       } else {
-        setColor('transparent');
-        setTextColor('#ffffff');
+        setTextColor('black');
       }
     };
     window.addEventListener('scroll', changeColor);
@@ -26,29 +26,28 @@ const Navbar = () => {
 
   return (
     <div
-      style={{ backgroundColor: `${color}` }}
-      className='fixed left-0 top-0 w-full z-10 ease-in duration-300'
+      className='fixed left-0 top-0 w-full z-10 ease-in duration-300 shadow-xl custom_bg_class'
     >
-      <div className='max-w-[1240px] m-auto flex justify-between items-center p-3 text-white'>
+      <div className='max-w-[1240px] m-auto flex justify-between items-center p-3 text-black'>
         <Link href='/'>
           <div className='flex'>
-          <img src="https://www.stutalk.in/images/logo.png" style={{width:'40px',left: '45px'}}/>
-          <h1 style={{ color: `${textColor}` }} className='sm:font-bold font-semibold text-3xl ml-[10px] hide-small'>
+          <Image src="https://www.stutalk.in/images/logo.png" alt="" className='top-0' width={40} height={40} layout='fixed'/>
+          <h1 className='sm:font-bold font-semibold text-3xl ml-[10px] hide-small text-black'>
             STU TALK
           </h1>
           </div>
         </Link>
-        <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
-          <li className='p-3'>
+        <ul className='hidden sm:flex gap-3'>
+          <li style={{padding:'0.75rem'}} className={router.pathname=="/" ? "active_nav" : " "}>
             <Link href='/'>Home</Link>
           </li>
-          <li className='p-3'>
+          <li style={{padding:'0.75rem'}} className={router.pathname=="/blogs" ? "active_nav" : " "}>
             <Link href='/blogs'>Blogs</Link>
           </li>
-          <li className='p-3'>
+          <li style={{padding:'0.75rem'}} className={router.pathname=="/work" ? "active_nav" : " "}>
             <Link href='/work'>Work</Link>
           </li>
-          <li className='p-3'>
+          <li style={{padding:'0.75rem'}} className={router.pathname=="/contact" ? "active_nav" : " "}>
             <Link href='/contact'>Contact</Link>
           </li>
         </ul>

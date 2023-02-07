@@ -5,7 +5,7 @@ import CryptoList from "../components/CryptoList";
 import Loader from "../components/Loader";
 
 const PAGE_NUMBER = 1;
-const blogs = () => {
+const Blogs = () => {
   const [coinsData, setCoinsData] = useState([]);
   const [page, setPage] = useState(PAGE_NUMBER);
   const [loading, setLoading] = useState(false);
@@ -48,4 +48,4 @@ const blogs = () => {
   );
 };
 
-export default blogs;
+export default Blogs;
