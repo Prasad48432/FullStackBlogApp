@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
 import CryptoList from "../components/CryptoList";
-import Loader from "../components/Loader";
+import Loadercr from '../components/Loadercr';
 import {BsArrowClockwise} from 'react-icons/bs'
 
 const PAGE_NUMBER = 1;
@@ -49,7 +49,7 @@ const Cryptoprices = () => {
           ALL CURRENT CRYPTO PRICES
         </h2>
         <CryptoList coinsData={coinsData} />
-        {loading && <Loader />}
+        {loading && <Loadercr />}
 
         <div className="items-center justify-center flex mt-[50px]">
           <button

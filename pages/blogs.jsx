@@ -1,15 +1,35 @@
 import React, { useEffect, useState } from "react";
-import Hero from "../components/Hero";
-import axios from "axios";
-import CryptoList from "../components/CryptoList";
-import Loader from "../components/Loader";
+import { getPosts } from "../services";
+import PostCard from "../components/PostCard";
+import PostWidget from "../components/PostWidget";
+import Categories from "../components/Categories";
 
-const Blogs = () => {
+export default function Blogs({ posts }) {
   return (
     <>
-      <Hero />
+    <div className="h-[100px]"></div>
+    <div className="px-1 mb-8">
+      <div className="custom_grid">
+        <div className="custom_grid_2">
+          {posts.map((post, index) => (
+            <PostCard key={index} post={post.node} />
+          ))}
+        </div>
+        <div className="">
+          <div className="lg:sticky relative top-20">
+            <PostWidget />
+            <Categories />
+          </div>
+        </div>
+      </div>
+    </div>
     </>
   );
 };
 
-export default Blogs;
+export async function getStaticProps() {
+  const posts = (await getPosts()) || [];
+  return {
+    props: { posts },
+  };
+}
