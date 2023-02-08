@@ -108,6 +108,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .testimonals{
   margin-top: 50px;
+  margin-bottom: 50px;
   display: grid;
   gap: 1.5rem;
   padding: 2rem;
@@ -140,5 +141,10 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     'three four four five';
   }
 } 
-
-
+.custom_img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  float: right;
+  border-radius: 10px;
+}

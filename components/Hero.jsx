@@ -51,11 +51,11 @@ const Hero = () => {
                     }}
                   />
                 </h1>
-                <p tabIndex="0" className="text-gray-800 font-regular mb-8">
-                  StuTalk is a student- run forum that serves as the official
-                  campus magazine of VBIT, since 2007. We design and release two
-                  editons comprising a Volume in an academic year namely: The
-                  Freshmen Edition and The Republic Edition.
+                <p tabIndex="0" className="text-gray-800 font-regular text-lg mb-8">
+                  StuTalk is a <span className="underline underline-offset-2 decoration-2 font-semibold decoration-indigo-700">student-run</span> forum that serves as the official
+                  campus<span className="underline underline-offset-2 decoration-2 font-semibold decoration-indigo-700"> magazine of VBIT </span>, since 2007. We design and release two
+                  editons comprising a Volume in an academic year namely: <span className="underline underline-offset-2 font-semibold decoration-2 decoration-indigo-700">The
+                  Freshmen Edition</span> and <span className="underline underline-offset-2 font-semibold decoration-2 decoration-indigo-700">The Republic Edition.</span>
                 </p>
                 <div className="bg-white lg:mt-16 py-4 px-4 flex flex-col sm:flex-row justify-center sm:justify-center items-start sm:items-center shadow-lg rounded-lg  ">
                   <div className="sm:flex items-center py-2 justify-between ">
