@@ -53,7 +53,7 @@ const Cryptoprices = () => {
 
         <div className="items-center justify-center flex mt-[50px]">
           <button
-            class="inline-flex items-center px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-medium rounded-md"
+            className="inline-flex items-center px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-medium rounded-md"
             onClick={showAlert}
           >
             Load More
