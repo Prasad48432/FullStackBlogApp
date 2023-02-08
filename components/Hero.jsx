@@ -1,6 +1,5 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
-import Image from "next/image";
 
 const Hero = () => {
   return (

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { getPosts } from "../services";
 import PostCard from "../components/PostCard";
 import PostWidget from "../components/PostWidget";

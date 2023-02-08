@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios";
 import CryptoList from "../components/CryptoList";
 import Loadercr from '../components/Loadercr';
-import {BsArrowClockwise} from 'react-icons/bs'
 
 const PAGE_NUMBER = 1;
 
