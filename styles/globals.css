@@ -37,10 +37,10 @@ html {
 }
 .progress-bar {
   position: fixed;
-  top: 70.5px;
+  top: 71px;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2px;
   background: rgb(67 56 202);
   transform-origin: 0%;
   z-index: 20;
@@ -80,6 +80,44 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 }
 
+@media (min-width:640px) and (max-width:1400px){
+  #nprogress .bar {
+    background: rgb(67 56 202) !important;
+    height: 2px !important;
+  }
+  #nprogress .peg {
+    box-shadow: 0 0 10px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255) !important;
+  }
+  #nprogress .spinner-icon {
+  border-top-color: rgb(67 56 202)  !important;
+  border-left-color: rgb(67 56 202) !important;
+  width: 20px  !important;
+  height: 20px !important;
+
+  }
+  #nprogress .spinner {
+    display: block;
+    position: fixed !important;
+    z-index: 20 !important; 
+    top: 26px !important;
+    right: 25px !important;
+  }
+}
+@media (min-width:0px) and (max-width:639px){
+  #nprogress .spinner-icon {
+    border-top-color: rgb(67 56 202)  !important;
+    border-left-color: rgb(67 56 202) !important;
+    width: 20px  !important;
+    height: 20px !important;
+    }
+    #nprogress .spinner {
+      display: block;
+      position: fixed !important;
+      z-index: 10.1 !important; 
+      top: 26px !important;
+      right: 55px !important;
+    }
+}
 .coins_list{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -152,7 +190,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 .custom_grid{
   display: grid;
   gap: 1.5rem;
-  padding: 2rem;
+  padding: 1rem;
   grid-template-areas:
   'one'
   'two';
@@ -166,7 +204,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 .custom_grid_2{
   display: grid;
   gap: 1.5rem;
-  padding: 2rem;
+  padding: 1rem;
   grid-template-areas:
   'one'
   'two';
@@ -182,7 +220,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   .custom_grid{
     display: grid;
     gap: 1.5rem;
-    padding: 2rem;
+    padding: 1rem;
     grid-template-areas:
     'one one two';
   }
@@ -194,3 +232,4 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     'one two';
   }
 }
+

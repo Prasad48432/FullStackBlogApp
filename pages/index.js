@@ -2,6 +2,7 @@ import Head from "next/head";
 import Hero from "../components/Hero";
 import Instagram from "../components/Instagram";
 import Testimonals from "../components/Testimonals";
+import  FeaturedPosts  from '../sections/FeaturedPosts';
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         message="I capture moments in nature and keep them alive."
       />
       <Testimonals />
+      <FeaturedPosts />
       <Instagram />
       
     </div>

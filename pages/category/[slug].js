@@ -16,7 +16,7 @@ const CategoryPost = ({ posts }) => {
   return (
     <>
     <div className="h-[100px]"></div>
-    <div className="px-10 mb-8">
+    <div className="px-1 mb-8">
       <div className="custom_grid">
         <div className="custom_grid_2">
           {posts.map((post, index) => (
@@ -24,7 +24,7 @@ const CategoryPost = ({ posts }) => {
           ))}
         </div>
         <div className="">
-          <div className="relative lg:sticky top-8">
+          <div className="relative lg:sticky lg:top-20 lg:mt-[2rem]">
             <Categories />
           </div>
         </div>
