@@ -33,7 +33,7 @@ const Navbar = () => {
           <div className='flex'>
           <Image src="https://www.stutalk.in/images/logo.png" alt="" className='top-0' width={40} height={40} layout='fixed'/>
           <h1 className='sm:font-bold font-semibold text-3xl ml-[10px] hide-small text-black'>
-            STU TALK
+            STU TALK®
           </h1>
           </div>
         </Link>
@@ -44,11 +44,8 @@ const Navbar = () => {
           <li style={{padding:'0.75rem'}} className={router.pathname=="/blogs" ? "active_nav" : " "}>
             <Link href='/blogs'>Blogs</Link>
           </li>
-          <li style={{padding:'0.75rem'}} className={router.pathname=="/cryptoprices" ? "active_nav" : " "}>
-            <Link href='/cryptoprices'>Crypto</Link>
-          </li>
           <li style={{padding:'0.75rem'}} className={router.pathname=="/work" ? "active_nav" : " "}>
-            <Link href='/work'>Work</Link>
+            <Link href='/aboutus'>About us</Link>
           </li>
           <li style={{padding:'0.75rem'}} className={router.pathname=="/contact" ? "active_nav" : " "}>
             <Link href='/contact'>Contact</Link>
@@ -80,10 +77,7 @@ const Navbar = () => {
               <Link href='/blogs'>Blogs</Link>
             </li>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/cryptoprices'>Crypto</Link>
-            </li>
-            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/work'>Work</Link>
+              <Link href='/aboutus'>About us</Link>
             </li>
             <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/contact'>Contact</Link>

@@ -13,6 +13,9 @@ module.exports = {
       'icons8.com',
       'cdn.tuk.dev',
     ]
-  }
+  },
+  devIndicators: {
+    buildActivity: false
+}
   
 }

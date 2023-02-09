@@ -7,13 +7,10 @@ const Footer = () => {
     <footer aria-label="Site Footer" className="bg-white lg:grid lg:grid-cols-5 mb-5 custom-bx-shadow">
   <div className="relative block h-32 lg:col-span-2 lg:h-full rounded-lg">
     <div className='p-4'>
-    <Image
-      src="https://images.unsplash.com/photo-1642370324100-324b21fab3a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"
+    <img
+      src="https://www.stutalk.in/images/magazines/volume-15-issue-01.jpg"
       alt=""
-      width={490}
-      height={400}
-      layout="responsive"
-      className='rounded-lg'
+      className='rounded-lg w-[300px] h-[400px] object-cover ml-[100px]'
     />
     </div>
   </div>
@@ -23,14 +20,14 @@ const Footer = () => {
       <div>
         <p>
           <span className="text-xs tracking-wide text-gray-500 uppercase">
-            Call us
+            Contact us
           </span>
 
           <a
-            href="#"
+            href="mailto:vbit.stutalk@mail.com"
             className="block text-2xl font-medium text-gray-900 hover:opacity-75 sm:text-3xl"
           >
-            0123456789
+            vbit.stutalk@mail.com
           </a>
         </p>
 

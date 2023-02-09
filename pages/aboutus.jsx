@@ -1,12 +1,12 @@
 import React from 'react'
 
-const work = () => {
+const aboutus = () => {
   return (
     <div>
       <div className='mt-[200px]'></div>
-        <h2>WORK</h2>
+        <h2>AboutUS</h2>
     </div>
   )
 }
 
-export default work
+export default aboutus
