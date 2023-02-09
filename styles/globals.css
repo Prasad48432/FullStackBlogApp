@@ -157,7 +157,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   box-shadow: 0 -5px 5px -5px #6e6767;
 }
 .testimonals{
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 50px;
   display: grid;
   gap: 1.5rem;
@@ -344,4 +344,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+.custom_bx{
+  -webkit-box-shadow: -1px 3px 26px -7px rgba(219,118,35,1);
+-moz-box-shadow: -1px 3px 26px -7px rgba(219,118,35,1);
+box-shadow: -1px 3px 26px -7px rgba(219,118,35,1);
 }

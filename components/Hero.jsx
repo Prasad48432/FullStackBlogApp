@@ -19,9 +19,9 @@ const Hero = () => {
                   tabIndex="0"
                   role="img"
                   aria-label="people smiling"
-                  className="mx-auto"
-                  src="https://cdn.tuk.dev/assets/templates/weCare/hero2-left.png"
-                  alt="people smiling"
+                  className="mx-auto lg:w-[500px] lg:h-[500px] object-cover"
+                  src="https://i.ibb.co/7Q3nfWD/mainhomephoto.png"
+                  alt="main home image"
                 />
               </div>
               <div role="contentinfo" className="w-full lg:w-1/2 h-full">
@@ -56,8 +56,8 @@ const Hero = () => {
                   editons comprising a Volume in an academic year namely: <span className="underline underline-offset-2 font-semibold decoration-2 decoration-indigo-700">The
                   Freshmen Edition</span> and <span className="underline underline-offset-2 font-semibold decoration-2 decoration-indigo-700">The Republic Edition.</span>
                 </p>
-                <div className="bg-white lg:mt-16 py-4 px-4 flex flex-col sm:flex-row justify-center sm:justify-center items-start sm:items-center shadow-lg rounded-lg  ">
-                  <div className="sm:flex items-center py-2 justify-between ">
+                <div className="bg-white lg:mt-16 mt-10 py-4 px-4 flex flex-col sm:flex-row justify-center sm:justify-center items-center sm:items-center shadow-lg rounded-lg  ">
+                  <div className="sm:flex items-center py-2 justify-center ">
                     <div className="flex items-center ">
                       <h2 className="text-2xl underline">Imagine !</h2>
                     </div>
