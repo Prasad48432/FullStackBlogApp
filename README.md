@@ -1,1 +1,1 @@
-this is my basic nextJS reponsive Blog WEBSITE using graph CMS
+basic nextJS reponsive Blog Website using graph CMS
