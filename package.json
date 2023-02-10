@@ -30,6 +30,7 @@
     "react-router-dom": "^6.8.0",
     "react-spinners": "^0.13.8",
     "react-toastify": "^9.1.1",
+    "sass": "^1.58.0",
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {

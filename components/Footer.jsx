@@ -5,17 +5,17 @@ const Footer = () => {
   return (
     <>
     <footer aria-label="Site Footer" className="bg-white lg:grid lg:grid-cols-5 mb-5 custom-bx-shadow">
-  <div className="relative block h-32 lg:col-span-2 lg:h-full rounded-lg">
-    <div className='p-4'>
+  <div className="relative block lg:h-32 lg:col-span-2 lg:h-full rounded-lg">
+    <div className='lg:p-4'>
     <img
       src="https://www.stutalk.in/images/magazines/volume-15-issue-01.jpg"
       alt=""
-      className='rounded-lg w-[300px] h-[400px] object-cover ml-[100px]'
+      className='custom_hide rounded-lg w-[300px] h-[400px] object-cover ml-[100px]'
     />
     </div>
   </div>
 
-  <div className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
+  <div className="px-4 py-8 sm:px-6 lg:col-span-3 lg:px-8">
     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
       <div>
         <p>
