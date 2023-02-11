@@ -12,6 +12,7 @@ module.exports = {
       'assets.coingecko.com',
       'icons8.com',
       'cdn.tuk.dev',
+      'i.ibb.co',
     ]
   },
   devIndicators: {

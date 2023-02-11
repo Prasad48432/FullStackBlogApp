@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
 
 const Testimonals = () => {
   return (
     <>
       <div className="testimonals">
-        <div className="block p-6 rounded-lg shadow-lg  w-full bg-white outline outline-2 outline-black">
+        <div className="block p-6 rounded-lg w-full bg-red-100 custom_bg_shadow">
           <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2 p-3">
             Upcoming Event
           </h5>
@@ -22,7 +23,7 @@ const Testimonals = () => {
             </p>
           </div>
         </div>
-        <div className="block p-6 rounded-lg shadow-lg  w-full bg-white outline outline-4 outline-indigo-700">
+        <div className="block p-6 rounded-lg w-full bg-white custom_bg_shadow">
           <h5 className="text-gray-900 text-lg leading-tight font-medium mb-2 text-center">
             Writer Of the Month 🏆
           </h5>
@@ -39,6 +40,11 @@ const Testimonals = () => {
               Congratulations to our winner! Talent will always be appreciated
               here at StuTalk.
             </p>
+            <Link href={`/post/nbamtasport`}>
+              <span className="text-blue-600 dark:text-blue-400 hover:underline cursor-pointer">
+                Read winner&#39;s Blog ⟶
+              </span>
+            </Link>
           </div>
         </div>
         <div className="block p-6 rounded-lg shadow-lg  w-full bg-white outline outline-2 outline-black">
@@ -56,11 +62,15 @@ const Testimonals = () => {
             Upcoming Event
           </h5>
           <div className="lg:flex">
-          <img className="w-[200px] h-[170px]" src="https://www.stutalk.in/images/events/temp-3.jpeg" alt="/"/>
-          <p className="text-gray-700 text-base mb-4 lg:ml-7 p-2">
-            Some quick example text to build on the card title and make up the
-            bulk of the cards content. Lorem ipsum dolor sit amet consectetur
-          </p>
+            <img
+              className="w-[200px] h-[170px]"
+              src="https://www.stutalk.in/images/events/temp-3.jpeg"
+              alt="/"
+            />
+            <p className="text-gray-700 text-base mb-4 lg:ml-7 p-2">
+              Some quick example text to build on the card title and make up the
+              bulk of the cards content. Lorem ipsum dolor sit amet consectetur
+            </p>
           </div>
         </div>
         <div className="block p-6 rounded-lg shadow-lg  w-full bg-white outline outline-2 outline-black">
@@ -77,11 +87,9 @@ const Testimonals = () => {
               Some quick example text to build on the card title and make up the
               bulk of the cards content. Lorem ipsum dolor sit amet consectetur
               adipisicing elit. Praesentium expedita ut corporis magnam
-              voluptates
-
-              bulk of the cards content. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Praesentium expedita ut corporis magnam
-              voluptates
+              voluptates bulk of the cards content. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Praesentium expedita ut corporis
+              magnam voluptates
             </p>
           </div>
         </div>
