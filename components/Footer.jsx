@@ -4,8 +4,8 @@ import Image from 'next/image'
 const Footer = () => {
   return (
     <>
-    <footer aria-label="Site Footer" className="bg-white lg:grid lg:grid-cols-5 mb-5 custom-bx-shadow">
-  <div className="relative block lg:h-32 lg:col-span-2 lg:h-full rounded-lg">
+    <footer aria-label="Site Footer" className="bg-white lg:grid lg:grid-cols-5 mb-5 custom-bx-shadow custom_outline">
+  <div className="relative block lg:h-32 lg:col-span-2 rounded-lg">
     <div className='lg:p-4'>
     <img
       src="https://www.stutalk.in/images/magazines/volume-15-issue-01.jpg"
