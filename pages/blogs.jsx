@@ -8,6 +8,7 @@ export default function Blogs({ posts }) {
   return (
     <>
     <div className="h-[100px]"></div>
+    <h2 className="text-4xl font-bold text-center p-5">All <span className="text-indigo-700 underline decoration-indigo-700" >Blogs</span></h2>
     <div className="px-1 mb-8">
       <div className="custom_grid">
         <div className="custom_grid_2">

@@ -45,13 +45,13 @@ html {
   transform-origin: 0%;
   z-index: 20;
 }
-.custom_bg_class{
+.custom_bg_class {
   background: rgba(252, 245, 219, 0.5);
-box-shadow: 0 8px 32px 0 rgba(113, 113, 95, 0.37);
-backdrop-filter: blur( 15px );
--webkit-backdrop-filter: blur( 15px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  box-shadow: 0 8px 32px 0 rgba(113, 113, 95, 0.37);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 @media (min-width:0px) and (max-width:639px) {
