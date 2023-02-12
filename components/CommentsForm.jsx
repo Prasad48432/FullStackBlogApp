@@ -97,6 +97,20 @@ const CommentsForm = ({ slug }) => {
   else{
     commentValue = formData.comment
   }
+  let nameValue;
+  if(formData.name === null){
+    nameValue = " "
+  }
+  else{
+    nameValue = formData.name
+  }
+  let emailValue;
+  if(formData.email === null){
+    emailValue = " "
+  }
+  else{
+    emailValue = formData.email
+  }
 
   return (
     <>
@@ -106,8 +120,8 @@ const CommentsForm = ({ slug }) => {
         <textarea value={commentValue} onChange={onInputChange} className="p-4 outline-none w-full rounded-lg h-40 focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700" name="comment" placeholder="Comment" />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
-        <input type="text" value={formData.name} onChange={onInputChange} className="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700" placeholder="Name" name="name" />
-        <input type="email" value={formData.email} onChange={onInputChange} className="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700" placeholder="Email" name="email" />
+        <input type="text" value={nameValue} onChange={onInputChange} className="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700" placeholder="Name" name="name" />
+        <input type="email" value={emailValue} onChange={onInputChange} className="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700" placeholder="Email" name="email" />
       </div>
       <div className="grid grid-cols-1 gap-4 mb-4">
         <div className="p-3">
