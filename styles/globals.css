@@ -239,14 +239,14 @@ html {
 @media (min-width: 1024px) {
   .custom_grid{
     display: grid;
-    gap: 1.5rem;
+    gap: 0.5rem;
     padding: 1rem;
     grid-template-areas:
     'one one two';
   }
   .custom_grid_2{
     display: grid;
-    gap: 1.5rem;
+    gap: 1.0rem;
     padding: 2rem;
     grid-template-areas:
     'one two three';
@@ -266,7 +266,7 @@ html {
           align-items: center;
   overflow: hidden;
   cursor: pointer;
-  width: 370px;
+  width: 320px;
   height: 60px;
   background-color: #EEEEED;
   border-radius: 80px;
@@ -294,7 +294,7 @@ html {
 .share_span{
   position: absolute;
   z-index: 99;
-  width: 370px;
+  width: 320px;
   height: 60px;
   border-radius: 80px;
   font-size: 20px;
@@ -316,7 +316,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 370px;
+  width: 320px;
   height: 64px;
   border-radius: 80px;
 }
@@ -344,8 +344,8 @@ html {
 .btn_wrap:hover .share_span {
   -webkit-transition-delay: .25s;
           transition-delay: .25s;
-  -webkit-transform: translateX(-370px);
-          transform: translateX(-370px)
+  -webkit-transform: translateX(-320px);
+          transform: translateX(-320px)
 }
 
 .btn_wrap:hover a {

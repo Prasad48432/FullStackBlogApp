@@ -23,14 +23,14 @@ const PostDetails = ({ post }) => {
       <div className="h-[100px]"></div>
       <div className="container mx-auto px-5 mb-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="col-span-1 lg:col-span-8">
+          <div className="col-span-1 lg:col-span-9">
             <PostDetail post={post}/>
             <Author author={post.author} />
             <AdjacentPosts slug={post.slug} createdAt={post.createdAt} />
             <CommentsForm slug={post.slug} />
             <Comments slug={post.slug} />
           </div>
-          <div className="col-span-1 lg:col-span-4">
+          <div className="col-span-1 lg:col-span-3 lg:w-[320px]">
             <div className="relative lg:sticky top-8">
               <PostWidget
                 slug={post.slug}
@@ -40,9 +40,6 @@ const PostDetails = ({ post }) => {
               <div className="btn_wrap">
                 <span className="share_span">
                   Share Blog
-                  <svg
-                  className='bottom-5 absolute right-[6rem]' 
-                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"> <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/> </svg>
                 </span>
                 <div className="container_share">
                   <a className="in_links " href="facebook.com">
