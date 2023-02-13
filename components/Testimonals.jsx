@@ -5,7 +5,7 @@ const Testimonals = () => {
   return (
     <>
       <div className="testimonals">
-        <div className="block p-6 rounded-lg w-full bg-red-100 custom_bg_shadow">
+        <div className="block p-6 rounded-lg w-full bg-white custom_bg_shadow">
           <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2 p-3">
             Upcoming Event
           </h5>
@@ -47,7 +47,7 @@ const Testimonals = () => {
             </Link>
           </div>
         </div>
-        <div className="block p-6 rounded-lg shadow-lg  w-full bg-white outline outline-2 outline-black">
+        <div className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white">
           <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2">
             Upcoming Event
           </h5>
@@ -57,7 +57,7 @@ const Testimonals = () => {
             adipisicing elit.
           </p>
         </div>
-        <div className="block p-6 rounded-lg shadow-lg  w-full bg-white outline outline-2 outline-black">
+        <div className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white">
           <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2 p-3">
             Upcoming Event
           </h5>
@@ -73,7 +73,7 @@ const Testimonals = () => {
             </p>
           </div>
         </div>
-        <div className="block p-6 rounded-lg shadow-lg  w-full bg-white outline outline-2 outline-black">
+        <div className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white">
           <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2 p-3">
             Upcoming Event
           </h5>

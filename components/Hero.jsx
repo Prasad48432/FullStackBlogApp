@@ -56,7 +56,7 @@ const Hero = () => {
                   editons comprising a Volume in an academic year namely: <span className="underline underline-offset-2 font-semibold decoration-2 decoration-indigo-700">The
                   Freshmen Edition</span> and <span className="underline underline-offset-2 font-semibold decoration-2 decoration-indigo-700">The Republic Edition.</span>
                 </p>
-                <div className="bg-white lg:mt-16 mt-10 py-4 px-4 flex flex-col sm:flex-row justify-center sm:justify-center items-center sm:items-center shadow-lg rounded-lg  ">
+                <div className="bg-red-100 lg:mt-16 mt-10 py-4 px-4 flex flex-col sm:flex-row justify-center sm:justify-center items-center sm:items-center custom_bg_shadow rounded-lg  ">
                   <div className="sm:flex items-center py-2 justify-center ">
                     <div className="flex items-center ">
                       <h2 className="text-2xl underline">Imagine !</h2>
@@ -73,6 +73,7 @@ const Hero = () => {
             </div>
           </div>
         </section>
+        
       </div>
     </>
   );

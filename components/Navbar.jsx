@@ -31,8 +31,8 @@ const Navbar = () => {
       <div className='max-w-[1240px] m-auto flex justify-between items-center p-3 text-black'>
         <Link href='/'>
           <div className='flex'>
-          <Image src="https://www.stutalk.in/images/logo.png" alt="" className='top-0' width={40} height={40} layout='fixed'/>
-          <h1 className='sm:font-bold font-semibold text-3xl ml-[10px] hide-small text-black'>
+          <Image src="https://www.stutalk.in/images/logo.png" alt="" className='top-0 cursor-pointer' width={40} height={40} layout='fixed' />
+          <h1 className='sm:font-bold font-semibold text-3xl ml-[10px] hide-small text-black cursor-pointer'>
             STU TALK®
           </h1>
           </div>

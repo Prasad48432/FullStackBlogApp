@@ -5,7 +5,7 @@ import {FaArrowRight} from 'react-icons/fa'
 
 
 const PostCard = ({ post }) => (
-  <div className="bg-white custom_bg_shadow rounded-lg p-3 lg:p-5 pb-8 lg:pb-12 mb-8">
+  <div className="bg-white custom_bg_shadow rounded-lg p-3 lg:p-5 pb-8 lg:pb-12 mb-8 outline outline-2 outline-gray-300">
     {/* <div className="relative shadow-md inline-block w-full h-60 lg:h-80 mb-6">
       <Image
         unoptimized
