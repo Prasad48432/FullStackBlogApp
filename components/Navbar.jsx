@@ -44,7 +44,7 @@ const Navbar = () => {
           <li style={{padding:'0.75rem'}} className={router.pathname=="/blogs" ? "active_nav" : " "}>
             <Link href='/blogs'>Blogs</Link>
           </li>
-          <li style={{padding:'0.75rem'}} className={router.pathname=="/work" ? "active_nav" : " "}>
+          <li style={{padding:'0.75rem'}} className={router.pathname=="/aboutus" ? "active_nav" : " "}>
             <Link href='/aboutus'>About us</Link>
           </li>
           <li style={{padding:'0.75rem'}} className={router.pathname=="/contact" ? "active_nav" : " "}>
