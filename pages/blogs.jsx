@@ -17,7 +17,7 @@ export default function Blogs({ posts }) {
           ))}
         </div>
         <div className="">
-          <div className="lg:sticky relative lg:top-20 lg:mt-[2rem]">
+          <div className="lg:sticky relative lg:top-20 lg:mt-[1.99rem]">
             <PostWidget />
             <Categories />
           </div>
