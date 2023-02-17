@@ -24,7 +24,7 @@ const CategoryPost = ({ posts }) => {
           ))}
         </div>
         <div className="">
-          <div className="relative lg:sticky lg:top-20 lg:mt-[2rem] w-[320px]">
+          <div className="relative lg:sticky lg:top-20 lg:mt-[2rem] lg:w-[320px]">
             <Categories />
           </div>
         </div>
