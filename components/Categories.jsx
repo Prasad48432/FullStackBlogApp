@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
 import { getCategories } from '../services/index';
+import {motion} from 'framer-motion';
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
@@ -13,6 +13,21 @@ const Categories = () => {
   }, []);
 
   return (
+    <motion.div initial="hidden" animate="visible"
+        variants={{
+          hidden:{
+            y: 100,
+            opacity: 0,
+          },
+          visible:{
+            y: 0,
+            opacity: 1,
+            transition:{
+              ease: [0.6,0.01,0.05,0.95],
+              duration: 0.7,
+            }
+          }
+        }}>
     <div className="bg-white shadow-lg rounded-lg p-5 pb-8 mb-8 outline outline-2 outline-gray-300">
       <h3 className="text-xl mb-8 font-semibold border-b pb-4 border-black">Categories</h3>
       {categories.map((category, index) => (
@@ -21,6 +36,7 @@ const Categories = () => {
         </Link>
       ))}
     </div>
+    </motion.div>
   );
 };
 

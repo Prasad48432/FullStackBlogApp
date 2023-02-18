@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import {motion} from'framer-motion';
 
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
@@ -43,6 +44,21 @@ const PostDetail = ({ post }) => {
 
   return (
     <>
+    <motion.div initial="hidden" animate="visible"
+        variants={{
+          hidden:{
+            y: 100,
+            opacity: 0,
+          },
+          visible:{
+            y: 0,
+            opacity: 1,
+            transition:{
+              ease: [0.6,0.01,0.05,0.95],
+              duration: 0.7,
+            }
+          }
+        }}>
       <div className="bg-white lg:shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
         <div className="relative overflow-hidden lg:custom_bg_shadow mb-6">
           <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
@@ -74,6 +90,7 @@ const PostDetail = ({ post }) => {
           })}
         </div>
       </div>
+      </motion.div>
 
     </>
   );

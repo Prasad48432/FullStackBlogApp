@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 import Link from 'next/link';
-import {FaArrowRight} from 'react-icons/fa'
 
 
 const PostCard = ({ post }) => (

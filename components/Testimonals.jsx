@@ -1,10 +1,34 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import Link from 'next/link';
+import {motion , useAnimation} from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Testimonals = () => {
+  const {ref,inView} = useInView();
+  const animation = useAnimation();
+  useEffect(()=>{
+    if(inView){
+      animation.start({
+        y: 0,
+        opacity: 1,
+        transition:{
+          ease: [0.6,0.01,0.05,0.95],
+          duration: 1,
+        }
+      });
+    }
+    if(!inView){
+      animation.start({
+        y: 100,
+        opacity: 0,
+      });
+    }
+  },[inView]);
   return (
     <>
-      <div className="testimonals">
+    <motion.div animate={animation}>
+
+      <div ref={ref} className="testimonals">
         <div className="block p-6 rounded-lg w-full bg-white custom_bg_shadow">
           <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2 p-3">
             Upcoming Event
@@ -73,7 +97,7 @@ const Testimonals = () => {
             </p>
           </div>
         </div>
-        <div className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white">
+        <div  className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white">
           <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2 p-3">
             Upcoming Event
           </h5>
@@ -94,6 +118,7 @@ const Testimonals = () => {
           </div>
         </div>
       </div>
+      </motion.div>
     </>
   );
 }
