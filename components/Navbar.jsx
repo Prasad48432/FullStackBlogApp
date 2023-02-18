@@ -43,6 +43,22 @@ const Navbar = (props) => {
             </h1>
           </div>
         </Link>
+        <div className="sm:hidden p-2">
+              <ConfigProvider
+                theme={{
+                  token: {
+                    colorPrimary: "#4338CA",
+                  },
+                }}
+              >
+                <Switch
+                  checkedChildren="😈"
+                  unCheckedChildren="😊"
+                  onClick={props.data}
+                />
+              </ConfigProvider>
+            </div>
+
         <ul className="hidden sm:flex gap-3">
           <li
             style={{ padding: "0.75rem" }}
@@ -67,6 +83,27 @@ const Navbar = (props) => {
             className={router.pathname == "/contact" ? "active_nav" : " "}
           >
             <Link href="/contact">Contact</Link>
+          </li>
+          <li style={{ padding: "0.35rem" }}>
+            <div
+              className="lg:bg-red-200 p-2 lg:rounded-lg"
+              data-bs-toggle="tooltip"
+              title="Demon Mode"
+            >
+              <ConfigProvider
+                theme={{
+                  token: {
+                    colorPrimary: "#5c53ba",
+                  },
+                }}
+              >
+                <Switch
+                  checkedChildren="😈"
+                  unCheckedChildren="😊"
+                  onClick={props.data}
+                />
+              </ConfigProvider>
+            </div>
           </li>
         </ul>
 
@@ -113,19 +150,6 @@ const Navbar = (props) => {
             </li>
           </ul>
         </div>
-        <ConfigProvider
-          theme={{
-            token: {
-              colorPrimary: "#FF0000",
-            },
-          }}
-        >
-          <Switch
-            checkedChildren="😠"
-            unCheckedChildren="😊"
-            onClick={props.data}
-          />
-        </ConfigProvider>
       </div>
     </div>
   );
