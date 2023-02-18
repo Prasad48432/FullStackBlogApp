@@ -3,8 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import {useRouter} from 'next/router';
 import Image from 'next/image';
+import {Switch , ConfigProvider } from 'antd';
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [nav, setNav] = useState(false);
   const [textColor, setTextColor] = useState('black');
   const router = useRouter();
@@ -112,6 +113,19 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+        <ConfigProvider
+          theme={{
+            token: {
+              colorPrimary: "#FF0000",
+            },
+          }}
+        >
+          <Switch
+            checkedChildren="😠"
+            unCheckedChildren="😊"
+            onClick={props.data}
+          />
+        </ConfigProvider>
       </div>
     </div>
   );
