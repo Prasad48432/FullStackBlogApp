@@ -553,3 +553,67 @@ box-shadow: -1px 3px 26px -7px rgba(219,118,35,1);
   display: grid;
   place-items: center;
 }
+
+
+@media (min-width:0px) and (max-width:500px){
+  .card-group:hover > .big-card:nth-child(2) {
+  transform: translate(-75%, 16%) rotate(-24deg);
+}
+
+.card-group:hover > .big-card:nth-child(4) {
+  transform: translate(-25%, 8%) rotate(-8deg);
+}
+
+.card-group:hover > .big-card:nth-child(6) {
+  transform: translate(25%, 8%) rotate(8deg);
+}
+
+.card-group:hover > .big-card:nth-child(8) {
+  transform: translate(75%, 16%) rotate(24deg);
+}
+
+.card-group:hover > .little-card:nth-child(1) {
+  transform: translate(30%, -170%) rotate(-5deg);
+}
+
+.card-group:hover > .little-card:nth-child(3) {
+  transform: translate(30%, 90%) rotate(15deg);
+}
+
+.card-group:hover > .little-card:nth-child(5) {
+  transform: translate(-120%, -170%) rotate(15deg);
+}
+
+.card-group:hover > .little-card:nth-child(7) {
+  transform: translate(-120%, 80%) rotate(-15deg);
+}
+
+
+.awesome_gradient {
+  background-image: 
+    linear-gradient(to right, rgb(216, 99, 99),rgb(213, 164, 71),rgb(208, 208, 78),rgb(72, 196, 72),rgb(74, 74, 199),rgb(140, 70, 190),violet, rgb(196, 64, 64));
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+  animation: rainbow-animation 35s linear infinite;
+}
+
+@keyframes rainbow-animation {
+  to {
+      background-position: 10vh;
+  }
+}
+}
+
+.awesome_gradient {
+  background-image: 
+    linear-gradient(to right, rgb(216, 99, 99),rgb(213, 164, 71),rgb(208, 208, 78),rgb(72, 196, 72),rgb(74, 74, 199),rgb(140, 70, 190),violet, rgb(196, 64, 64)); 
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+  animation: rainbow-animation 35s linear infinite;
+}
+
+@keyframes rainbow-animation {
+  to {
+      background-position: 450vh;
+  }
+}
