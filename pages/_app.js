@@ -2,21 +2,13 @@ import Navbar from '../components/Navbar';
 import '../styles/globals.css';
 import {motion,useScroll,AnimatePresence} from 'framer-motion';
 import Footer from '../components/Footer';
-import React ,{useState}from 'react'
+import React from 'react'
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import Router from 'next/router';
-import { duration } from 'moment';
 
 function MyApp({ Component, pageProps , router}) {
 
-  const [toggle,setToggle] = useState(false);
-
-  const toggler = () => {
-    toggle ? setToggle(false) : setToggle(true);
-  }
-
-  console.log(toggle);
 
   Router.events.on('routeChangeStart', (url) => {
     NProgress.start();
@@ -26,51 +18,43 @@ function MyApp({ Component, pageProps , router}) {
   Router.events.on('routeChangeError', () => NProgress.done());
 
 
+
   const { scrollYProgress } = useScroll();
   return (
     <>
-      <Navbar data={toggler} />
+      <Navbar/>
       <motion.div
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
       />
-      {toggle 
-      ?
-      <AnimatePresence>
-      <motion.div key={router.route} initial="pageInitial" animate="pageAnimate" exit="pageExit" variants={{
-        pageInitial:{
-          opacity: 0
-        },
-        pageAnimate:{
-          opacity: 1,
-          transition: 0.3,
-        },
-        pageExit:{
-          background: 'white',
-          filter: `invert()`,
-          opacity: 0,
-        }
-      }}>
+      <AnimatePresence mode='wait' initial={false}>
+      <motion.div
+        key={router.route}
+        initial="initialState"
+        animate="animateState"
+        exit="exitState"
+        transition={{
+          duration: 0.75,
+        }}
+        variants={{
+          initialState: {
+            clipPath: 'polygon(0 0, 0 0, 0 100%, 0% 100%)', 
+    transition: { duration: .4 }
+          },
+          animateState: {
+            clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+    transition: { duration: .4, staggerChildren: .1 }
+          },
+          exitState: {
+            clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)',
+    transition: { duration: .4 }
+          },
+        }}
+        className="base-page-size"
+      >
         <Component {...pageProps} />
       </motion.div>
       </AnimatePresence> 
-      :
-      <AnimatePresence>
-      <motion.div key={router.route} initial="pageInitial" animate="pageAnimate" variants={{
-        pageInitial:{
-          opacity: 0
-        },
-        pageAnimate:{
-          opacity: 1,
-          transition:{
-            duration: 0.4,
-          }
-        }
-      }}>
-        <Component {...pageProps} />
-      </motion.div>
-      </AnimatePresence> 
-      }
       <Footer />
     </>
   );

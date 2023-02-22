@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import Instagram from "../components/Instagram";
 import Testimonals from "../components/Testimonals";
 import  FeaturedPosts  from '../sections/FeaturedPosts';
+import HoverGallery from "../components/HoverGallery";
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Testimonals />
       <FeaturedPosts />
       <Instagram />
+      <HoverGallery />
       
     </div>
   );

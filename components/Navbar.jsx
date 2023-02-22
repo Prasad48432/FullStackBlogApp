@@ -9,6 +9,16 @@ const Navbar = (props) => {
   const [nav, setNav] = useState(false);
   const [textColor, setTextColor] = useState('black');
   const router = useRouter();
+  const [toggle,setToggle] = useState(false);
+
+  useEffect(()=>{
+    const dataD = window.localStorage.getItem('DEMON_MODE');
+    if (dataD !== null ) setToggle(JSON.parse(dataD));
+  },[])
+  const toggler = () =>{
+    toggle ? setToggle(false) : setToggle(true);
+  }
+
 
   const handleNav = () => {
     setNav(!nav);
@@ -43,22 +53,6 @@ const Navbar = (props) => {
             </h1>
           </div>
         </Link>
-        <div className="sm:hidden p-2">
-              <ConfigProvider
-                theme={{
-                  token: {
-                    colorPrimary: "#4338CA",
-                  },
-                }}
-              >
-                <Switch
-                  checkedChildren="😈"
-                  unCheckedChildren="😊"
-                  onClick={props.data}
-                />
-              </ConfigProvider>
-            </div>
-
         <ul className="hidden sm:flex gap-3">
           <li
             style={{ padding: "0.75rem" }}
@@ -85,25 +79,6 @@ const Navbar = (props) => {
             <Link href="/contact">Contact</Link>
           </li>
           <li style={{ padding: "0.35rem" }}>
-            <div
-              className="lg:bg-red-200 p-2 lg:rounded-lg"
-              data-bs-toggle="tooltip"
-              title="Demon Mode"
-            >
-              <ConfigProvider
-                theme={{
-                  token: {
-                    colorPrimary: "#5c53ba",
-                  },
-                }}
-              >
-                <Switch
-                  checkedChildren="😈"
-                  unCheckedChildren="😊"
-                  onClick={props.data}
-                />
-              </ConfigProvider>
-            </div>
           </li>
         </ul>
 

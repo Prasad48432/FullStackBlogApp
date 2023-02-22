@@ -4,17 +4,8 @@ import Link from 'next/link';
 
 
 const PostCard = ({ post }) => (
+
   <div className="bg-white custom_bg_shadow rounded-lg p-3 lg:p-5 pb-8 lg:pb-12 mb-8 outline outline-2 outline-gray-300">
-    {/* <div className="relative shadow-md inline-block w-full h-60 lg:h-80 mb-6">
-      <Image
-        unoptimized
-        loader={grpahCMSImageLoader}
-        alt={post.title}
-        className="shadow-lg rounded-t-lg lg:rounded-lg"
-        layout="fill"
-        src={post.featuredImage.url}
-      />
-    </div> */}
     <div className="relative overflow-hidden pb-[12rem] lg:pb-[10rem] mb-6">
       <img
         src={post.featuredImage.url}
