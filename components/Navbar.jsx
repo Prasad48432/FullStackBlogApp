@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import {RiMenu3Fill , RiCloseLine} from 'react-icons/ri'
 import {useRouter} from 'next/router';
 import Image from 'next/image';
-import {Switch , ConfigProvider } from 'antd';
 
 const Navbar = (props) => {
   const [nav, setNav] = useState(false);
@@ -90,20 +89,20 @@ const Navbar = (props) => {
         {/* Mobile Button */}
         <div onClick={handleNav} className="block sm:hidden z-10">
           {nav ? (
-            <AiOutlineClose size={30} style={{ color: `white` }} />
+            <RiCloseLine size={30} style={{ color: `black` }} />
           ) : (
-            <AiOutlineMenu size={30} style={{ color: `black` }} />
+            <RiMenu3Fill size={30} style={{ color: `black` }} />
           )}
         </div>
         {/* Mobile Menu */}
         <div
           className={
             nav
-              ? "sm:hidden absolute top-[-5%] left-[-5%] right-0 bottom-0 flex justify-center items-center w-[110%] h-[105vh] text-center bg-black ease-in duration-300"
-              : "sm:hidden absolute top-0 left-[-130%] right-0 bottom-0 flex justify-center items-center w-full h-screen text-center bg-black ease-in duration-300"
+              ? "sm:hidden absolute top-[-5%] left-[-5%] right-0 bottom-0 flex justify-center items-center w-[110%] h-[105vh] text-center bg-white ease-in duration-300"
+              : "sm:hidden absolute top-0 left-[-130%] right-0 bottom-0 flex justify-center items-center w-full h-screen text-center bg-white ease-in duration-300"
           }
         >
-          <ul className="text-white">
+          <ul className="text-black">
             <li
               onClick={handleNav}
               className="p-4 text-4xl hover:text-gray-500"

@@ -26,7 +26,7 @@ const Testimonals = () => {
   },[inView]);
   return (
     <>
-    <motion.div animate={animation}>
+    <motion.div animate={animation} viewport={{ once: true }}>
 
       <div ref={ref} className="testimonals">
         <div className="block p-6 rounded-lg w-full bg-white custom_bg_shadow">
