@@ -66,6 +66,11 @@ const Navbar = (props) => {
           >
             <Link href="/blogs">Blogs</Link>
           </li>
+          <li style={{ padding: "0.75rem" }}
+            className={router.pathname == "/#gallery" ? "active_nav" : " "}
+          >
+            <Link href='/#gallery'>Gallery</Link>
+          </li>
           <li
             style={{ padding: "0.75rem" }}
             className={router.pathname == "/aboutus" ? "active_nav" : " "}
