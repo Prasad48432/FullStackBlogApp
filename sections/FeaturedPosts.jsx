@@ -53,7 +53,7 @@ const FeaturedPosts = () => {
 
   return (
     <>
-    <h2 className='text-2xl text-center text-black font-semibold p-5'>Featured Posts</h2>
+    <h2 className='text-2xl text-center text-black dark:text-white font-semibold p-5'>Featured Posts</h2>
     <div className="mb-8">
       <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-4">
         {dataLoaded && featuredPosts.map((post, index) => (

@@ -1,13 +1,12 @@
 import React from 'react'
-import {AiOutlineArrowLeft} from 'react-icons/ai';
 
 const HoverGallery = () => {
   return (
     <>
-      <div className="swiper-container" id="gallery">
+      <div className="swiper-container bg-white dark:bg-[#0b192f]" id="gallery">
         <div className="card-swiper">
           <img
-            src="./handarrow.jpg"
+            src="./handarrowre.png"
             alt="arrow"
             className="w-[45px] h-[45px] relative sm:bottom-5 sm:left-5 right-12 rotate-[-12deg] bottom-3"
           />

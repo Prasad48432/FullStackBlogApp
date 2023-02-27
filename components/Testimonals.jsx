@@ -29,8 +29,8 @@ const Testimonals = () => {
     <motion.div animate={animation} viewport={{ once: true }}>
 
       <div ref={ref} className="testimonals">
-        <div className="block p-6 rounded-lg w-full bg-white custom_bg_shadow">
-          <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2 p-3">
+        <div className="block p-6 rounded-lg w-full bg-white dark:bg-[#182a46] custom_bg_shadow">
+          <h5 className="text-gray-900 text-xl leading-tight dark:text-white font-medium mb-2 p-3">
             Upcoming Event
           </h5>
           <div className=" lg:flex">
@@ -39,7 +39,7 @@ const Testimonals = () => {
               src="https://www.stutalk.in/images/events/temp-1.jpeg"
               alt="/"
             />
-            <p className="text-gray-700 text-base mb-4 ml-7 p-2">
+            <p className="text-gray-700 dark:text-white text-base mb-4 ml-7 p-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Reprehenderit est autem minima nobis! Assumenda totam mollitia rem
               qui at ducimus harum enim illo fugiat nisi iste, obcaecati, in
@@ -47,8 +47,8 @@ const Testimonals = () => {
             </p>
           </div>
         </div>
-        <div className="block p-6 rounded-lg w-full bg-white custom_bg_shadow">
-          <h5 className="text-gray-900 text-lg leading-tight font-medium mb-2 text-center">
+        <div className="block p-6 rounded-lg w-full bg-white dark:bg-[#182a46] custom_bg_shadow">
+          <h5 className="text-gray-900 text-lg leading-tight dark:text-white font-medium mb-2 text-center">
             Writer Of the Month 🏆
           </h5>
           <div className="flex justify-center flex-col items-center p-3">
@@ -57,10 +57,10 @@ const Testimonals = () => {
               src="https://www.stutalk.in/images/wom/december22.png"
               alt="/"
             />
-            <h5 className="text-gray-900 text-lg leading-tight font-medium mb-2 text-center">
+            <h5 className="text-gray-900 dark:text-[#3b8e8a] text-lg leading-tight font-medium mb-2 text-center">
               Bohini Atharva
             </h5>
-            <p className="text-gray-700 text-base mb-4 text-center">
+            <p className="text-gray-700 dark:text-white text-base mb-4 text-center">
               Congratulations to our winner! Talent will always be appreciated
               here at StuTalk.
             </p>
@@ -71,18 +71,18 @@ const Testimonals = () => {
             </Link>
           </div>
         </div>
-        <div className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white">
-          <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2">
+        <div className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white dark:bg-[#182a46]">
+          <h5 className="text-gray-900 text-xl leading-tight dark:text-white font-medium mb-2">
             Upcoming Event
           </h5>
-          <p className="text-gray-700 text-base mb-4">
+          <p className="text-gray-700 dark:text-white text-base mb-4">
             Some quick example text to build on the card title and make up the
             bulk of the cards content. Lorem ipsum dolor sit amet consectetur
             adipisicing elit.
           </p>
         </div>
-        <div className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white">
-          <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2 p-3">
+        <div className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white dark:bg-[#182a46]">
+          <h5 className="text-gray-900 text-xl leading-tight dark:text-white font-medium mb-2 p-3">
             Upcoming Event
           </h5>
           <div className="lg:flex">
@@ -91,14 +91,14 @@ const Testimonals = () => {
               src="https://www.stutalk.in/images/events/temp-3.jpeg"
               alt="/"
             />
-            <p className="text-gray-700 text-base mb-4 lg:ml-7 p-2">
+            <p className="text-gray-700 dark:text-white text-base mb-4 lg:ml-7 p-2">
               Some quick example text to build on the card title and make up the
               bulk of the cards content. Lorem ipsum dolor sit amet consectetur
             </p>
           </div>
         </div>
-        <div  className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white">
-          <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2 p-3">
+        <div  className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white dark:bg-[#182a46]">
+          <h5 className="text-gray-900 text-xl leading-tight dark:text-white font-medium mb-2 p-3">
             Upcoming Event
           </h5>
           <div className="p-3">
@@ -107,7 +107,7 @@ const Testimonals = () => {
               src="https://www.stutalk.in/images/events/temp-2.png"
               alt="/"
             />
-            <p className="text-gray-700 text-base mb-4 p-3">
+            <p className="text-gray-700 dark:text-white text-base mb-4 p-3">
               Some quick example text to build on the card title and make up the
               bulk of the cards content. Lorem ipsum dolor sit amet consectetur
               adipisicing elit. Praesentium expedita ut corporis magnam

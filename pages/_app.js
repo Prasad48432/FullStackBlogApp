@@ -6,8 +6,12 @@ import React from 'react'
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import Router from 'next/router';
+import {ThemeProvider} from 'next-themes';
+
 
 function MyApp({ Component, pageProps , router}) {
+
+
 
 
   Router.events.on('routeChangeStart', (url) => {
@@ -22,7 +26,7 @@ function MyApp({ Component, pageProps , router}) {
   const { scrollYProgress } = useScroll();
   return (
     <>
-      <Navbar/>
+    <Navbar /> 
       <motion.div
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
@@ -52,7 +56,9 @@ function MyApp({ Component, pageProps , router}) {
         }}
         className="base-page-size"
       >
+        <ThemeProvider enableSystem={true} attribute="class">
         <Component {...pageProps} />
+        </ThemeProvider>
       </motion.div>
       </AnimatePresence> 
       <Footer />

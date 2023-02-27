@@ -6,13 +6,8 @@ const Hero = () => {
   return (
     <>
       <div>
-        <section>
+        <section className="">
           <div className="w-full relative pb-10 px-6 xl:px-0 ">
-            <img
-              className="absolute w-full inset-0 h-full object-cover object-center "
-              src="https://cdn.tuk.dev/assets/templates/weCare/hero2-bg.png"
-              alt="we care family"
-            />
 
             <div className="pt-32 lg:flex items-center relative z-1 container mx-auto">
               <div className="w-full lg:w-1/2 h-full lg:pr-10 xl:pr-0">
@@ -46,7 +41,7 @@ const Hero = () => {
                 >
                   <p
                     tabIndex="0"
-                    className="text-black  font-normal text-3xl mb-4"
+                    className="text-black  dark:text-white font-normal text-3xl mb-4"
                   >
                     VBIT® StuTalk{" "}
                   </p>
@@ -70,14 +65,14 @@ const Hero = () => {
                 >
                   <h1
                     tabIndex="0"
-                    className="text-indigo-700 text-4xl lg:text-6xl font-black mb-2"
+                    className="text-indigo-700 dark:text-[#3b8e8a] text-4xl lg:text-6xl font-black mb-2"
                   >
                     Voice of
                   </h1>
                 </motion.div>
                 <h1
                   tabIndex="0"
-                  className="text-indigo-700 text-4xl lg:text-6xl font-black mb-8"
+                  className="text-indigo-700 dark:text-[#3b8e8a] text-4xl lg:text-6xl font-black mb-8"
                 >
                   <Typewriter
                     className="font-bold"
@@ -90,28 +85,28 @@ const Hero = () => {
                 </h1>
                 <p
                   tabIndex="0"
-                  className="text-gray-800 font-regular text-lg mb-8"
+                  className="text-gray-800 dark:text-white font-regular text-lg mb-8"
                 >
                   StuTalk is a{" "}
-                  <span className="underline underline-offset-2 decoration-2 font-semibold decoration-indigo-700">
+                  <span className="underline underline-offset-2 decoration-2 font-semibold decoration-indigo-700 dark:decoration-[#3b8e8a]">
                     student-run
                   </span>{" "}
                   forum that serves as the official campus
-                  <span className="underline underline-offset-2 decoration-2 font-semibold decoration-indigo-700">
+                  <span className="underline underline-offset-2 decoration-2 font-semibold decoration-indigo-700 dark:decoration-[#3b8e8a]">
                     {" "}
                     magazine of VBIT{" "}
                   </span>
                   , since 2007. We design and release two editons comprising a
                   Volume in an academic year namely:{" "}
-                  <span className="underline underline-offset-2 font-semibold decoration-2 decoration-indigo-700">
+                  <span className="underline underline-offset-2 font-semibold decoration-2 decoration-indigo-700 dark:decoration-[#3b8e8a]">
                     The Freshmen Edition
                   </span>{" "}
                   and{" "}
-                  <span className="underline underline-offset-2 font-semibold decoration-2 decoration-indigo-700">
+                  <span className="underline underline-offset-2 font-semibold decoration-2 decoration-indigo-700 dark:decoration-[#3b8e8a]">
                     The Republic Edition.
                   </span>
                 </p>
-                <div className="bg-red-100 lg:mt-16 mt-10 py-4 px-4 flex flex-col sm:flex-row justify-center sm:justify-center items-center sm:items-center custom_bg_shadow rounded-lg  ">
+                <div className="bg-red-100 dark:bg-[#182a46] lg:mt-16 mt-10 py-4 px-4 flex flex-col sm:flex-row justify-center sm:justify-center items-center sm:items-center custom_bg_shadow rounded-lg  ">
                   <div className="sm:flex items-center py-2 justify-center ">
                     <div className="flex items-center ">
                       <h2 className="text-2xl underline">Imagine !</h2>

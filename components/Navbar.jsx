@@ -1,41 +1,24 @@
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {RiMenu3Fill , RiCloseLine} from 'react-icons/ri'
 import {useRouter} from 'next/router';
 import Image from 'next/image';
 
-const Navbar = (props) => {
-  const [nav, setNav] = useState(false);
-  const [textColor, setTextColor] = useState('black');
-  const router = useRouter();
-  const [toggle,setToggle] = useState(false);
+const Navbar = () => {
 
-  useEffect(()=>{
-    const dataD = window.localStorage.getItem('DEMON_MODE');
-    if (dataD !== null ) setToggle(JSON.parse(dataD));
-  },[])
-  const toggler = () =>{
-    toggle ? setToggle(false) : setToggle(true);
-  }
+
+  const [nav, setNav] = useState(false);
+  const router = useRouter();
+
 
 
   const handleNav = () => {
     setNav(!nav);
   };
 
-  useEffect(() => {
-    const changeColor = () => {
-      if (window.scrollY >= 40) {
-        setTextColor('#000000');
-      } else {
-        setTextColor('black');
-      }
-    };
-    window.addEventListener('scroll', changeColor);
-  }, []);
 
   return (
-    <div className="fixed left-0 top-0 w-full z-10 ease-in duration-300 shadow-xl custom_bg_class">
+    <div className="fixed left-0 top-0 w-full z-10 ease-in duration-300 shadow-xl custom_bg_class dark:bg-[#0b192f]">
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-3 text-black">
         <Link href="/">
           <div className="flex">
@@ -47,12 +30,12 @@ const Navbar = (props) => {
               height={40}
               layout="fixed"
             />
-            <h1 className="sm:font-bold font-semibold text-3xl ml-[10px] hide-small text-black cursor-pointer">
+            <h1 className="sm:font-bold font-semibold text-3xl ml-[10px] hide-small text-black dark:text-[#3b8e8a] cursor-pointer">
               STU TALK®
             </h1>
           </div>
         </Link>
-        <ul className="hidden sm:flex gap-3">
+        <ul className="hidden sm:flex gap-3 dark:text-[#3b8e8a]">
           <li
             style={{ padding: "0.75rem" }}
             className={router.pathname == "/" ? "active_nav" : " "}
@@ -85,6 +68,7 @@ const Navbar = (props) => {
           <li style={{ padding: "0.35rem" }}>
           </li>
         </ul>
+        
 
         {/* Mobile Button */}
         <div onClick={handleNav} className="block sm:hidden z-10">

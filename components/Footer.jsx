@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Footer = () => {
   return (
     <>
-    <footer aria-label="Site Footer" className="bg-white lg:grid lg:grid-cols-5 mb-5 custom-bx-shadow custom_outline">
+    <footer aria-label="Site Footer" className="bg-white dark:bg-[#0b192f] lg:grid lg:grid-cols-5 mb-5 custom-bx-shadow custom_outline">
   <div className="relative block lg:h-32 lg:col-span-2 rounded-lg">
     <div className='lg:p-4'>
     <img
@@ -19,24 +19,24 @@ const Footer = () => {
     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
       <div>
         <p>
-          <span className="text-xs tracking-wide text-gray-500 uppercase flex space-y-1">
+          <span className="text-xs tracking-wide text-gray-500 dark:text-white uppercase flex space-y-1">
             write to us at
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-down" viewBox="0 0 16 16"> <path fillRule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/> </svg>
           </span>
 
           <a
             href="mailto:vbit.stutalk@mail.com"
-            className="block text-2xl font-medium text-gray-900 hover:opacity-75 sm:text-3xl"
+            className="block text-2xl font-medium text-gray-900 dark:text-[#3b8e8a]  hover:opacity-75 sm:text-3xl"
           >
             vbit.stutalk@mail.com
           </a>
         </p>
 
-        <ul className="mt-8 space-y-1 text-sm text-gray-700">
+        <ul className="mt-8 space-y-1 text-sm text-gray-700 dark:text-white">
           <li>Monday to Friday: 10am - 5pm</li>
           <li>Weekend: 10am - 3pm</li>
         </ul>
-        <ul className="mt-8 flex space-y-1 text-md text-gray-700">
+        <ul className="mt-8 flex space-y-1 text-md text-gray-700 dark:text-white">
           <li className='mr-5'>Our Socials</li>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-down" viewBox="0 0 16 16"> <path fillRule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/> </svg>
         </ul>
@@ -47,7 +47,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-gray-700 dark:text-[#3b8e8a] transition hover:opacity-75"
             >
               <span className="sr-only">Facebook</span>
 
@@ -71,7 +71,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-gray-700 dark:text-[#3b8e8a] transition hover:opacity-75"
             >
               <span className="sr-only">Instagram</span>
 
@@ -95,7 +95,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-gray-700 dark:text-[#3b8e8a] transition hover:opacity-75"
             >
               <span className="sr-only">Twitter</span>
 
@@ -117,7 +117,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-gray-700 dark:text-[#3b8e8a] transition hover:opacity-75"
             >
               <span className="sr-only">GitHub</span>
 
@@ -141,7 +141,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 transition hover:opacity-75"
+              className="text-gray-700 dark:text-[#3b8e8a] transition hover:opacity-75"
             >
               <span className="sr-only">Dribbble</span>
 
@@ -164,36 +164,36 @@ const Footer = () => {
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
-          <p className="font-medium text-gray-900">Services</p>
+          <p className="font-medium text-gray-900 dark:text-[#3b8e8a]">Services</p>
 
           <nav aria-label="Footer Navigation - Services" className="mt-6">
             <ul className="space-y-4 text-sm">
               <li>
-                <a href="#" className="text-gray-700 transition hover:opacity-75">
+                <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
                   1on1 Coaching
                 </a>
               </li>
 
               <li>
-                <a href="#" className="text-gray-700 transition hover:opacity-75">
+                <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
                   Company Review
                 </a>
               </li>
 
               <li>
-                <a href="#" className="text-gray-700 transition hover:opacity-75">
+                <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
                   Accounts Review
                 </a>
               </li>
 
               <li>
-                <a href="#" className="text-gray-700 transition hover:opacity-75">
+                <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
                   HR Consulting
                 </a>
               </li>
 
               <li>
-                <a href="#" className="text-gray-700 transition hover:opacity-75">
+                <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
                   SEO Optimisation
                 </a>
               </li>
@@ -202,24 +202,24 @@ const Footer = () => {
         </div>
 
         <div>
-          <p className="font-medium text-gray-900">Company</p>
+          <p className="font-medium text-gray-900 dark:text-[#3b8e8a]">Company</p>
 
           <nav aria-label="Footer Navigation - Company" className="mt-6">
             <ul className="space-y-4 text-sm">
               <li>
-                <a href="#" className="text-gray-700 transition hover:opacity-75">
+                <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
                   About
                 </a>
               </li>
 
               <li>
-                <a href="#" className="text-gray-700 transition hover:opacity-75">
+                <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
                   Meet the Team
                 </a>
               </li>
 
               <li>
-                <a href="#" className="text-gray-700 transition hover:opacity-75">
+                <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
                   Accounts Review
                 </a>
               </li>
@@ -229,7 +229,7 @@ const Footer = () => {
       </div>
     </div>
 
-    <div className="pt-12 mt-12 border-t border-gray-100">
+    <div className="pt-12 mt-12 border-t border-gray-100 dark:border-[#3b8e8a]">
       <div className="sm:flex sm:items-center sm:justify-between">
         <nav aria-label="Footer Navigation - Support">
           <ul className="flex flex-wrap gap-4 text-xs">

@@ -10,6 +10,7 @@ html {
 .custom-img-home {
   background-color: white;
 }
+
 .wrapper{
   background: linear-gradient(to right, #72cddd , #07a399);
   height: 350px;
@@ -37,7 +38,7 @@ html {
 }
 .progress-bar {
   position: fixed;
-  top: 75px;
+  top: 73px;
   left: 0;
   right: 0;
   height: 2px;
@@ -47,10 +48,8 @@ html {
 }
 .custom_bg_class {
   background: rgba(252, 245, 219, 0.5);
-  box-shadow: 0 8px 32px 0 rgba(113, 113, 95, 0.37);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
@@ -547,7 +546,6 @@ box-shadow: -1px 3px 26px -7px rgba(219,118,35,1);
   border-color: rgb(33, 150, 243);
 }
 .swiper-container{
-  background-color: rgb(255, 255, 255);  
   margin: 0px;  
   height: 100vh;
   margin-top: 100px;
@@ -617,4 +615,22 @@ box-shadow: -1px 3px 26px -7px rgba(219,118,35,1);
   to {
       background-position: 450vh;
   }
+}
+
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(0%, -50%); 
+  user-select: none; /* -- Prevent image highlighting -- */
+  margin-top: 15rem;
+}
+
+#image-track > .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% center;
 }
