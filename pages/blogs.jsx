@@ -8,7 +8,6 @@ import {motion} from 'framer-motion';
 export default function Blogs({ posts }) {
   return (
     <>
-    <div className="dark:bg-[#0b192f] bg-white" >
     <div className="h-[100px]"></div>
     <h2 className="text-4xl font-bold text-center p-5">All <span className="text-indigo-700 underline decoration-indigo-700 dark:text-[#3b8e8a] dark:decoration-[#3b8e8a]" >Blogs</span></h2>
     <div className="px-1 mb-8 ">
@@ -41,7 +40,6 @@ export default function Blogs({ posts }) {
           </div>
         </div>
       </div>
-    </div>
     </div>
     </>
   );
