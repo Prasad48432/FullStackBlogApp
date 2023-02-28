@@ -8,7 +8,7 @@ const HoverGallery = () => {
           <img
             src="./handarrowre.png"
             alt="arrow"
-            className="w-[45px] h-[45px] relative sm:bottom-5 sm:left-5 right-12 rotate-[-12deg] bottom-3"
+            className="w-[45px] h-[45px] relative sm:bottom-5 sm:left-5 right-12 rotate-[-12deg] bottom-3 dark:invert"
           />
           <h1 className="text-right relative bottom-20 hidden sm:block awesome_gradient text-3xl">
             Hover me
