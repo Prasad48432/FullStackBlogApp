@@ -79,7 +79,7 @@ const Navbar = () => {
         {/* Mobile Button */}
         <div onClick={handleNav} className="block sm:hidden z-10">
           {nav ? (
-            <div className='text-black dark:text-white' >
+            <div className= 'text-black dark:text-white' >
             <RiCloseLine size={30} />
             </div>
           ) : (
@@ -92,8 +92,8 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "sm:hidden absolute top-[-5%] left-[-5%] right-0 bottom-0 flex justify-center items-center w-[110%] h-[105vh] text-center bg-white dark:bg-[#182a46] ease-in duration-300"
-              : "sm:hidden absolute top-0 left-[-130%] right-0 bottom-0 flex justify-center items-center w-full h-screen text-center bg-white dark:bg-[#182a46] ease-in duration-300"
+              ? "sm:hidden absolute top-[15vw] left-[-5%] right-0 bottom-0 flex justify-center items-center w-[110%] h-[105vh] text-center bg-white dark:bg-[#182a46] ease-in duration-300"
+              : "sm:hidden absolute top-[15vw] left-[-130%] right-0 bottom-0 flex justify-center items-center w-full h-screen text-center bg-white dark:bg-[#182a46] ease-in duration-300"
           }
         >
           <ul className="text-black dark:text-white">

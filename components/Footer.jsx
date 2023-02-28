@@ -7,9 +7,9 @@ const Footer = () => {
   <div className="relative block lg:h-32 lg:col-span-2 rounded-lg">
     <h1 className='text-2xl text-center p-3 mt-3 font-semibold' >Our <span className='underline underline-offset-2 dark:text-[#3b8e8a] text-indigo-700 decoration-2 darkdecoration-[#3b8e8a]' >Magazines</span></h1>
     <div className='grid grid-cols-3 gap-3 p-5'>
-      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-16-issue-01.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline outline-1 outline-black sm:outline-none'  />
-      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-15-issue-02.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline outline-1 outline-black sm:outline-none' />
-      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-15-issue-01.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline outline-1 outline-black sm:outline-none' />
+      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-16-issue-01.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline outline-1 outline-black '  />
+      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-15-issue-02.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline outline-1 outline-black ' />
+      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-15-issue-01.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline outline-1 outline-black ' />
     </div>
   </div>
 
