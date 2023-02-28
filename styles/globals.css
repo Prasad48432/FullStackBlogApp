@@ -225,15 +225,7 @@ html {
   'two'
   'three';
 }
-.custom_grid_2 div:nth-child(1){
-  grid-area: one;
-}
-.custom_grid_2 div:nth-child(2){
-  grid-area: two;
-}
-.custom_grid_2 div:nth-child(3){
-  grid-area: three;
-}
+
 
 @media (min-width: 1024px) {
   .custom_grid{
@@ -247,8 +239,7 @@ html {
     display: grid;
     gap: 1.0rem;
     padding: 2rem;
-    grid-template-areas:
-    'one two three';
+    grid-template-columns: repeat(3, 1fr)
   }
 }
 
