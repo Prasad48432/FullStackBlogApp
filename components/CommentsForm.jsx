@@ -12,7 +12,7 @@ const CommentsForm = ({ slug }) => {
 
   const notify = () =>{
     toast.success('Comment submitted for review', {
-      position: "top-right",
+      position: "bottom-left",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,

@@ -21,7 +21,7 @@ export default function Home() {
       />
       <Testimonals />
       <FeaturedPosts />
-      <HoverGallery />
+      {/* <HoverGallery /> */}
       <Instagram />
       </>
   );
