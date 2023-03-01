@@ -16,12 +16,12 @@ const ErrorPage = () => {
               This page does not exist
             </div>
 
-            <div className="text-gray-400 font-medium text-sm md:text-xl lg:text-2xl mt-8">
+            <div className="text-gray-400 font-medium text-sm md:text-xl lg:text-2xl sm:mt-8 mt-2">
               The page you are looking for could not be found.
             </div>
           </div>
 
-          <div className="flex flex-row sm:flex-col mt-2">
+          <div className="sm:flex flex-row sm:flex-col mt-2 hidden ">
             <div className="text-gray-400 font-bold uppercase">Continue With</div>
 
             <div className="flex flex-row items-stretch mt-5">
@@ -127,6 +127,11 @@ const ErrorPage = () => {
               </Link>
             </div>
           </div>
+          <Link href="/">
+          <div className="sm:hidden block mt-8">
+            <h2 className="text-xl text-center text-black dark:text-white" >← Back to Home</h2>
+          </div>
+          </Link>
         </div>
       </div>
     </>
