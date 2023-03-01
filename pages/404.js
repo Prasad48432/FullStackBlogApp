@@ -1,5 +1,6 @@
 import { FiImage,FiFileText,FiHome ,FiMessageCircle} from "react-icons/fi";
 import Link from 'next/link';
+import React from "react";
 
 const ErrorPage = () => {
   return (
