@@ -14,6 +14,7 @@ export const getPosts = async() =>{
                 photo {
                   url
                 }
+                class
               }
               createdAt
               slug
@@ -65,6 +66,7 @@ export const getCategories = async () => {
             photo {
               url
             }
+            class
           }
           createdAt
           slug

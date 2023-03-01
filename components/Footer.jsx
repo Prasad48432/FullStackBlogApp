@@ -1,15 +1,16 @@
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
     <>
     <footer aria-label="Site Footer" className="bg-white dark:bg-[#0b192f] lg:grid lg:grid-cols-5 outline outline-2 outline-black dark:outline-[#3b8e8a]">
   <div className="relative block lg:h-32 lg:col-span-2 rounded-lg">
-    <h1 className='text-2xl text-center p-3 mt-3 font-semibold' >Our <span className='underline underline-offset-2 dark:text-[#3b8e8a] text-indigo-700 decoration-2 darkdecoration-[#3b8e8a]' >Magazines</span></h1>
+    <h1 className='text-2xl text-center p-3 mt-3 font-semibold' >Our <span className='underline underline-offset-2 dark:text-[#3b8e8a] text-indigo-700 decoration-2 dark:decoration-[#3b8e8a]' >Magazines</span></h1>
     <div className='grid grid-cols-3 gap-3 p-5'>
-      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-16-issue-01.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline outline-1 outline-black '  />
-      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-15-issue-02.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline outline-1 outline-black ' />
-      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-15-issue-01.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline outline-1 outline-black ' />
+      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-16-issue-01.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-[#3b8e8a]'  />
+      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-15-issue-02.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-[#3b8e8a]' />
+      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-15-issue-01.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-[#3b8e8a]' />
     </div>
   </div>
 
@@ -31,8 +32,8 @@ const Footer = () => {
         </p>
 
         <ul className="mt-8 space-y-1 text-sm text-gray-700 dark:text-white">
-          <li>Monday to Friday: 10am - 5pm</li>
-          <li>Weekend: 10am - 3pm</li>
+          <li>Write for any doubts and concerns</li>
+          <li>Want to Feature your blog?</li>
         </ul>
         <ul className="mt-8 flex space-y-1 text-md text-gray-700 dark:text-white">
           <li className='mr-5'>Our Socials</li>
@@ -162,63 +163,63 @@ const Footer = () => {
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
-          <p className="font-medium text-gray-900 dark:text-[#3b8e8a]">Services</p>
+          <p className="font-medium text-gray-900 dark:text-[#3b8e8a]">Links</p>
 
           <nav aria-label="Footer Navigation - Services" className="mt-6">
             <ul className="space-y-4 text-sm">
               <li>
-                <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
-                  1on1 Coaching
-                </a>
+                <p  className="text-gray-700 dark:text-white transition hover:opacity-75">
+                <Link href="/">Home</Link>
+                </p>
               </li>
 
               <li>
-                <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
-                  Company Review
-                </a>
+                <p  className="text-gray-700 dark:text-white transition hover:opacity-75">
+                <Link href="/blogs">Blogs</Link>
+                </p>
               </li>
 
               <li>
-                <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
-                  Accounts Review
-                </a>
+                <p  className="text-gray-700 dark:text-white transition hover:opacity-75">
+                <Link href='/#gallery'>Gallery</Link>
+                </p>
               </li>
 
               <li>
-                <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
-                  HR Consulting
-                </a>
+                <p  className="text-gray-700 dark:text-white transition hover:opacity-75">
+                <Link href="/aboutus">About us</Link>
+                </p>
               </li>
 
               <li>
-                <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
-                  SEO Optimisation
-                </a>
+                <p  className="text-gray-700 dark:text-white transition hover:opacity-75">
+                <Link href="/contact">Contact</Link>
+                </p>
               </li>
             </ul>
           </nav>
         </div>
 
         <div>
-          <p className="font-medium text-gray-900 dark:text-[#3b8e8a]">Company</p>
+          <p className="font-medium text-gray-900 dark:text-[#3b8e8a]">Stutalk® Team</p>
 
           <nav aria-label="Footer Navigation - Company" className="mt-6">
             <ul className="space-y-4 text-sm">
               <li>
                 <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
-                  About
+                  Our Story
                 </a>
               </li>
 
               <li>
                 <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
-                  Meet the Team
+                  Meet our Team
                 </a>
               </li>
 
               <li>
                 <a href="#" className="text-gray-700 dark:text-white transition hover:opacity-75">
-                  Accounts Review
+                  Faculty Coordinators
                 </a>
               </li>
             </ul>
@@ -252,7 +253,7 @@ const Footer = () => {
         </nav>
 
         <p className="mt-8 text-xs text-gray-500 sm:mt-0">
-          &copy; 2022. Company Name. All rights reserved.
+          &copy; 2015. Stutalk®. All rights reserved.
         </p>
       </div>
     </div>

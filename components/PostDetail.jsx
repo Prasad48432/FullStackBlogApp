@@ -81,6 +81,7 @@ const PostDetail = ({ post }) => {
               </svg>
               <span className="align-middle">{moment(post.createdAt).format('MMM DD, YYYY')}</span>
             </div>
+            <div className="text-xs ml-5 px-3 py-[0.1rem] bg-indigo-200 text-indigo-800 rounded-full">{post.author.class}</div>
           </div>
           <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
           {post.content.raw.children.map((typeObj, index) => {
