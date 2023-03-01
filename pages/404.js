@@ -21,7 +21,7 @@ const ErrorPage = () => {
             </div>
           </div>
 
-          <div className="flex flex-col mt-2">
+          <div className="flex flex-row sm:flex-col mt-2">
             <div className="text-gray-400 font-bold uppercase">Continue With</div>
 
             <div className="flex flex-row items-stretch mt-5">
