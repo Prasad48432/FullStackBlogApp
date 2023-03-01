@@ -11,6 +11,30 @@ html {
   background-color: white;
 }
 
+::-webkit-scrollbar{
+  width: 12px;
+}
+::-webkit-scrollbar-track{
+  background: rgb(204, 204, 204);
+  border-radius: 10px;
+  margin-block: 10px;
+}
+.dark ::-webkit-scrollbar-track{
+  background: #1d2d45;
+  border-radius: 10px;
+  margin-block: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background: rgb(17,12,106);
+background: linear-gradient(360deg, rgba(17,12,106,1) 0%, rgba(67,56,202,1) 47%, rgba(21,140,222,1) 100%);
+  border-radius: 10px;
+}
+.dark ::-webkit-scrollbar-thumb{
+  background: rgb(17,88,67);
+  background: linear-gradient(360deg, rgba(17,88,67,1) 0%, rgba(59,142,138,1) 47%, rgba(36,168,84,1) 100%);
+  border-radius: 10px;
+}
+
 .wrapper{
   background: linear-gradient(to right, #72cddd , #07a399);
   height: 350px;
