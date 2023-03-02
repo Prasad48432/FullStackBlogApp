@@ -181,6 +181,7 @@ export const getPosts = async() =>{
             }
             bio
             class
+            username
           }
         }
       }

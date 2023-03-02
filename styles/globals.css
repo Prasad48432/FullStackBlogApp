@@ -256,6 +256,16 @@ background: linear-gradient(360deg, rgba(17,12,106,1) 0%, rgba(67,56,202,1) 47%,
   'two'
   'three';
 }
+.custom_grid_3{
+  display: grid;
+  gap: 1.5rem;
+  padding: 1rem;
+  grid-template-areas:
+  'one'
+  'two'
+  'three'
+  'four';
+}
 
 
 @media (min-width: 1024px) {
@@ -672,3 +682,4 @@ box-shadow: -1px 3px 26px -7px rgba(219,118,35,1);
 .contact_image{
   background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
 }
+
