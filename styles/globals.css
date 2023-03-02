@@ -272,6 +272,12 @@ background: linear-gradient(360deg, rgba(17,12,106,1) 0%, rgba(67,56,202,1) 47%,
     padding: 2rem;
     grid-template-columns: repeat(3, 1fr)
   }
+  .custom_grid_3{
+    display: grid;
+    gap: 1.0rem;
+    padding: 2rem;
+    grid-template-columns: repeat(4, 1fr)
+  }
 }
 
 .btn_wrap {

@@ -15,6 +15,7 @@ export const getPosts = async() =>{
                   url
                 }
                 class
+                username
               }
               createdAt
               slug
@@ -35,22 +36,7 @@ export const getPosts = async() =>{
     const result = await request(graphqlAPI,query);
     return result.postsConnection.edges;
 }
-
-export const getCategories = async () => {
-    const query = gql`
-      query GetGategories {
-          categories {
-            name
-            slug
-          }
-      }
-    `;
-  
-    const result = await request(graphqlAPI, query);
-  
-    return result.categories;
-  };
-  
+ 
   export const getPostDetails = async (slug) => {
     const query = gql`
       query GetPostDetails($slug : String!) {
@@ -90,7 +76,10 @@ export const getCategories = async () => {
     const query = gql`
       query GetPostDetails($slug: String!, $categories: [String!]) {
         posts(
-          where: {slug_not: $slug, AND: {categories_some: {slug_in: $categories}}}
+          where: {
+            slug_not: $slug
+            AND: { categories_some: { slug_in: $categories } }
+          }
           last: 3
         ) {
           title
@@ -178,6 +167,88 @@ export const getCategories = async () => {
   
     return result.postsConnection.edges;
   };
+
+  export const getAuthor = async(username) =>{
+    const query = gql`
+    query getAuthorDetails($username : String!) {
+      authorsConnection(where: {username: $username}) {
+        edges {
+          node {
+            id
+            name
+            photo {
+              url
+            }
+            bio
+            class
+          }
+        }
+      }
+    }
+    `
+    const result = await request(graphqlAPI, query, { username });
+    return result.authorsConnection.edges;
+  }
+
+  export const getAuthorPosts = async (username) => {
+    const query = gql`
+      query getAuthorPosts($username: String!) {
+        postsConnection(where: { author: { username: $username } }) {
+          edges {
+            node {
+              author {
+                photo {
+                  url
+                }
+                bio
+                name
+                id
+              }
+              featuredImage {
+                url
+              }
+              excerpt
+              title
+              slug
+            }
+          }
+        }
+      }
+    `;
+    const result = await request(graphqlAPI, query, { username });
+    return result.postsConnection.edges;
+  }
+
+  export const getAuthors = async () => {
+    const query = gql`
+      query GetAuthors {
+        authors {
+          name
+          username
+        }
+      }
+    `;
+  
+    const result = await request(graphqlAPI, query);
+  
+    return result.authors;
+  };
+
+  export const getCategories = async () => {
+    const query = gql`
+      query GetCategories {
+          categories {
+            name
+            slug
+          }
+      }
+    `;
+  
+    const result = await request(graphqlAPI, query);
+  
+    return result.categories;
+  };
+  
   
   export const getFeaturedPosts = async () => {
     const query = gql`
@@ -249,6 +320,12 @@ export const getCategories = async () => {
       }
     `;
     const result = await request(graphqlAPI, query);
+    const final_result = result.posts;
+    const reversed_result = final_result.reverse();
   
-    return result.posts;
+    return reversed_result;
   };
+
+
+
+

@@ -41,15 +41,15 @@ function MyApp({ Component, pageProps , router}) {
             variants={{
               initialState: {
                 clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-                transition: { duration: 0.4 },
+                transition: { duration: 0.35 },
               },
               animateState: {
                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-                transition: { duration: 0.4, staggerChildren: 0.1 },
+                transition: { duration: 0.35, staggerChildren: 0.1 },
               },
               exitState: {
                 clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
-                transition: { duration: 0.4 },
+                transition: { duration: 0.35 },
               },
             }}
             className="base-page-size"

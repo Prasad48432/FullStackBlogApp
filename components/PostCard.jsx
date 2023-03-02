@@ -21,16 +21,18 @@ const PostCard = ({ post }) => (
     <div className="flex text-center items-center justify-center mb-0 lg:mb-8 w-full ">
       <div className="flex gap-[2rem] items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8">
         <div className="flex items-center justify-center">
-        <Link href={`/post/${post.slug}`}>
+        <Link href={`/authorposts/${post.author.username}`}>
           <img
             alt={post.author.name}
             src={post.author.photo.url}
             className="w-[30px]"
           />
           </Link>
-          <p className="inline align-middle text-gray-700 ml-2 font-medium text-xs dark:text-[#3b8e8a]">
+          <Link href={`/authorposts/${post.author.username}`}>
+          <p className="inline align-middle text-gray-700 ml-2 font-medium text-xs dark:text-[#3b8e8a] cursor-pointer">
             {post.author.name}
           </p>
+          </Link>
         </div>
         <div className="font-medium text-gray-700">
           <span className="align-middle text-xs dark:text-[#3b8e8a]">

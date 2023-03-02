@@ -56,7 +56,7 @@ const Navbar = () => {
             style={{ padding: "0.65rem" }}
             className={router.pathname == "/#gallery" ? "active_nav" : " "}
           >
-            <Link href="/#gallery">Gallery</Link>
+            <Link href="/gallery">Gallery</Link>
           </li>
           <li
             style={{ padding: "0.65rem" }}

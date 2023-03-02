@@ -5,7 +5,7 @@ import PostWidget from "../components/PostWidget";
 import Categories from "../components/Categories";
 import {motion} from 'framer-motion';
 
-export default function Blogs({ posts }) {
+export default function Blogs({ posts,final_result }) {
   return (
     <>
     <div className="h-[100px]"></div>
@@ -28,9 +28,10 @@ export default function Blogs({ posts }) {
           }
         }}>
         <div className="custom_grid_2">
-          {posts.map((post, index) => (
+          {final_result.map((post, index) => (
             <PostCard key={index} post={post.node} />
           ))}
+          
         </div>
         </motion.div>
         <div className="">
@@ -47,7 +48,8 @@ export default function Blogs({ posts }) {
 
 export async function getStaticProps() {
   const posts = (await getPosts()) || [];
+  const final_result = posts.reverse();
   return {
-    props: { posts },
+    props: { posts,final_result },
   };
 }
