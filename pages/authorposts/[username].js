@@ -46,10 +46,10 @@ const AuthorPosts = ({ posts,author}) => {
         </div>
       </div>
 
-      <div class="relative flex py-5 items-center">
-        <div class="flex-grow border-t border-2 border-black dark:border-[#3b8e8a]"></div>
-        <span class="flex-shrink text-3xl font-semibold mx-4 text-black dark:text-white">Blogs by {author_details.name}</span>
-        <div class="flex-grow border-t border-2 border-black dark:border-[#3b8e8a]"></div>
+      <div className="relative flex py-5 items-center">
+        <div className="flex-grow border-t border-2 border-black dark:border-[#3b8e8a]"></div>
+        <span className="flex-shrink text-3xl font-semibold mx-4 text-black dark:text-white">Blogs by {author_details.name}</span>
+        <div className="flex-grow border-t border-2 border-black dark:border-[#3b8e8a]"></div>
       </div>
       <div className="custom_grid_3">
         {posts.map((post, index) => (
