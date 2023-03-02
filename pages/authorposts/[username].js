@@ -7,7 +7,6 @@ import Loader from "../../components/Loader";
 const AuthorPosts = ({ posts,author}) => {
 
   const author_details =  author[0].node;
-  console.log(author_details);
   const router = useRouter();
 
   if (router.isFallback) {
@@ -73,9 +72,9 @@ export async function getStaticProps({ params }) {
   // Specify dynamic routes to pre-render pages based on data.
   // The HTML is generated at build time and will be reused on each request.
   export async function getStaticPaths() {
-    const categories = await getAuthors();
+    const authors = await getAuthors();
     return {
-      paths: categories.map(({ username }) => ({ params: { username } })),
-      fallback: true,
+      paths: authors.map(({ username }) => ({ params: { username } })),
+      fallback: false,
     };
   }
