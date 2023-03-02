@@ -106,7 +106,7 @@ const Hero = () => {
                     The Republic Edition.
                   </span>
                 </p>
-                <div className="bg-red-100 dark:bg-[#182a46] lg:mt-16 mt-10 py-4 px-4 flex flex-col sm:flex-row justify-center sm:justify-center items-center sm:items-center custom_bg_shadow rounded-lg  ">
+                <div className="bg-blue-100 dark:bg-[#182a46] lg:mt-16 mt-10 py-4 px-4 flex flex-col sm:flex-row justify-center sm:justify-center items-center sm:items-center custom_bg_shadow rounded-lg  ">
                   <div className="sm:flex items-center py-2 justify-center ">
                     <div className="flex items-center ">
                       <h2 className="text-2xl underline">Imagine !</h2>

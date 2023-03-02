@@ -155,6 +155,13 @@ background: linear-gradient(360deg, rgba(17,12,106,1) 0%, rgba(67,56,202,1) 47%,
   color:  rgb(67 56 202);
 }
 
+.dark .active_nav{
+  font-weight: 650;
+  text-decoration-line: underline;
+  color:  #3b8e8a;
+
+}
+
 @media (min-width:0px) and (max-width:500px){
   .coins_list{
     display: grid;

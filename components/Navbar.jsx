@@ -4,14 +4,15 @@ import {RiMenu3Fill , RiCloseLine} from 'react-icons/ri'
 import {useRouter} from 'next/router';
 import Image from 'next/image';
 import ThemeToggler from "../pages/ThemeToggler";
+import Modal from './Modal';
+import useGeoLocation from '../hooks/useGeoLocation.';
 
 const Navbar = () => {
-
+  const [modal, setModal] = React.useState(false);
+  // const location = useGeoLocation();
 
   const [nav, setNav] = useState(false);
   const router = useRouter();
-
-
 
   const handleNav = () => {
     setNav(!nav);
@@ -19,7 +20,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="fixed left-0 top-0 w-full z-10 ease-in duration-300 shadow-xl bg-white dark:bg-[#0b192f]">
+    <div className="fixed left-0 top-0 w-full z-10 shadow-xl bg-white dark:bg-[#0b192f]">
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-3 text-black">
         <Link href="/">
           <div className="flex">
@@ -31,12 +32,14 @@ const Navbar = () => {
               height={40}
               layout="fixed"
             />
-            <h1 className="sm:font-bold font-semibold text-3xl ml-[10px] hide-small text-black dark:text-[#3b8e8a] cursor-pointer">
+            <h1 className="sm:font-bold font-semibold text-3xl ml-[10px] hide-small text-black dark:text-white cursor-pointer">
               STU TALK®
             </h1>
           </div>
         </Link>
-        <ul className="hidden sm:flex gap-3 dark:text-[#3b8e8a]">
+        <ul className="hidden sm:flex gap-3 dark:text-white">
+          <li>
+          </li>
           <li
             style={{ padding: "0.65rem" }}
             className={router.pathname == "/" ? "active_nav" : " "}
@@ -49,10 +52,11 @@ const Navbar = () => {
           >
             <Link href="/blogs">Blogs</Link>
           </li>
-          <li style={{ padding: "0.65rem" }}
+          <li
+            style={{ padding: "0.65rem" }}
             className={router.pathname == "/#gallery" ? "active_nav" : " "}
           >
-            <Link href='/#gallery'>Gallery</Link>
+            <Link href="/#gallery">Gallery</Link>
           </li>
           <li
             style={{ padding: "0.65rem" }}
@@ -67,24 +71,30 @@ const Navbar = () => {
             <Link href="/contact">Contact</Link>
           </li>
           <li style={{ padding: "0.65rem" }}>
+            <button
+              className="text-black dark:text-white"
+              onClick={() => setModal((modal) => !modal)}
+            >
+              Magazines
+            </button>
           </li>
-          <ThemeToggler/>
+          <ThemeToggler />
         </ul>
-        <div className='sm:hidden'>
-        <ThemeToggler/>
+        <div className="sm:hidden">
+          <ThemeToggler />
         </div>
 
-        
+        <Modal {...{ modal, setModal }} />
 
         {/* Mobile Button */}
         <div onClick={handleNav} className="block sm:hidden z-10">
           {nav ? (
-            <div className= 'text-black dark:text-white' >
-            <RiCloseLine size={30} />
+            <div className="text-black dark:text-white">
+              <RiCloseLine size={30} />
             </div>
           ) : (
-            <div className='text-black dark:text-white' >
-            <RiMenu3Fill size={30}  />
+            <div className="text-black dark:text-white">
+              <RiMenu3Fill size={30} />
             </div>
           )}
         </div>
@@ -108,6 +118,14 @@ const Navbar = () => {
               className="p-4 text-4xl hover:text-gray-500"
             >
               <Link href="/blogs">Blogs</Link>
+            </li>
+            <li
+              onClick={handleNav}
+              className="p-4 text-4xl hover:text-gray-500"
+            >
+              <button className="" onClick={() => setModal((modal) => !modal)}>
+                Magazines
+              </button>
             </li>
             <li
               onClick={handleNav}

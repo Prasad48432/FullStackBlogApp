@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 
+
+
 const aboutus = () => {
   return (
     <>
@@ -20,6 +22,9 @@ const aboutus = () => {
             layout='responsive'
             width='677'
             height='451'
+            style={{
+              borderRadius: "10px"
+            }}
           />
         </div>
         <div className='w-full h-full'>
@@ -30,6 +35,9 @@ const aboutus = () => {
             height='217'
             layout='responsive'
             objectFit='cover'
+            style={{
+              borderRadius: "10px"
+            }}
           />
         </div>
         <div className='w-full h-full'>
@@ -40,6 +48,9 @@ const aboutus = () => {
             height='217'
             layout='responsive'
             objectFit='cover'
+            style={{
+              borderRadius: "10px"
+            }}
           />
         </div>
         <div className='w-full h-full'>
@@ -50,6 +61,9 @@ const aboutus = () => {
             height='217'
             layout='responsive'
             objectFit='cover'
+            style={{
+              borderRadius: "10px"
+            }}
           />
         </div>
         <div className='w-full h-full'>
@@ -60,6 +74,9 @@ const aboutus = () => {
             height='217'
             layout='responsive'
             objectFit='cover'
+            style={{
+              borderRadius: "10px"
+            }}
           />
         </div>
       </div>
