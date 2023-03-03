@@ -84,7 +84,7 @@ const AuthorPosts = ({ posts, author, authors }) => {
                     Browse More Authors
                   </h3>
                   {authors.map((author, index) => (
-                    <div className="flex items-center w-full mb-4">
+                    <div  key={index} className="flex items-center w-full mb-4">
                       <Link href={`/authorposts/${author.username}`}>
                         <img
                           className="w-12 h-12 p-1 rounded-full ring-2 ring-gray-300 dark:ring-[#0f1c32] object-cover  cursor-pointer"
