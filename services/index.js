@@ -53,6 +53,7 @@ export const getPosts = async() =>{
               url
             }
             class
+            username
           }
           createdAt
           slug
@@ -189,6 +190,25 @@ export const getPosts = async() =>{
     `
     const result = await request(graphqlAPI, query, { username });
     return result.authorsConnection.edges;
+  }
+
+  export const getAllAuthors = async() => {
+    const query = gql`
+    query getAllAuthors {
+      authors {
+        id
+        photo {
+          url
+        }
+        name
+        bio
+        class
+        username
+      }
+    }
+    `
+    const result = await request(graphqlAPI,query);
+    return result.authors;
   }
 
   export const getAuthorPosts = async (username) => {

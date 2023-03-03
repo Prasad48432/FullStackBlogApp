@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import {motion} from'framer-motion';
+import Link from 'next/link';
 
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
@@ -66,14 +67,18 @@ const PostDetail = ({ post }) => {
         <div className="px-4 lg:px-0">
           <div className="flex items-center mb-8 w-full">
             <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8">
+            <Link href={`/authorposts/${post.author.username}`}>
               <img
                 alt={post.author.name}
                 height="30px"
                 width="30px"
-                className="align-middle rounded-full"
+                className="align-middle rounded-full cursor-pointer"
                 src={post.author.photo.url}
               />
-              <p className="inline align-middle text-gray-700 dark:text-[#3b8e8a] ml-2 font-medium text-lg">{post.author.name}</p>
+              </Link>
+              <Link href={`/authorposts/${post.author.username}`}>
+              <p className="inline align-middle text-gray-700 dark:text-[#3b8e8a] ml-2 font-medium text-lg cursor-pointer">{post.author.name}</p>
+              </Link>
             </div>
             <div className="font-medium text-gray-700 dark:text-[#3b8e8a]">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
