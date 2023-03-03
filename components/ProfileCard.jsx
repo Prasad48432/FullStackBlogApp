@@ -1,8 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react';
+import ProfileImageModal from './ProfileImageModel';
+
 
 const ProfileCard = (props) => {
+
+  const [modal, setModal] = React.useState(false);
   return (
     <>
+      <ProfileImageModal  {...{ modal, setModal,props}} />
       <div className="sm:w-[40vw] px-10 py-6 mx-4 mt-20 bg-white dark:bg-[#182a46] rounded-lg custom_bg_shadow md:mx-auto border-1 items-center justify-center">
         <div className="flex flex-col items-start w-full m-auto sm:flex-row">
           <div className="flex mx-auto sm:mr-10 sm:m-0">
@@ -10,7 +15,8 @@ const ProfileCard = (props) => {
               <img
                 alt="profil"
                 src={props.data.photo.url}
-                className="object-cover w-20 h-20 mx-auto rounded-full sm:w-32 sm:h-32"
+                className="object-cover w-20 h-20 mx-auto rounded-full sm:w-32 sm:h-32 cursor-pointer"
+                onClick={() => setModal((modal) => !modal)}
               />
             </div>
           </div>
@@ -36,6 +42,7 @@ const ProfileCard = (props) => {
           <p className="text-sm text-black dark:text-white md:text-base">{props.data.bio}</p>
         </div>
       </div>
+
     </>
   );
 }
