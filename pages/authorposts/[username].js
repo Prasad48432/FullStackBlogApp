@@ -6,12 +6,13 @@ import {
   getAuthor,
   getAllAuthors,
 } from "../../services";
-import PostCard from "../../components/PostCard";
 import Loader from "../../components/Loader";
 import { motion } from "framer-motion";
 import PostWidget from "../../components/PostWidget";
 import ProfileCard from "../../components/ProfileCard";
 import Link from "next/link";
+import PostCardProfile from "../../components/PostCardProfile";
+import PostCard from "../../components/PostCard";
 
 const AuthorPosts = ({ posts, author, authors }) => {
   const author_details = author[0].node;
@@ -31,8 +32,27 @@ const AuthorPosts = ({ posts, author, authors }) => {
   }
   return (
     <>
-      <div className="h-[100px]"></div>
+      <div className="h-[40px]"></div>
+      <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {
+                x: 100,
+                opacity: 0,
+              },
+              visible: {
+                x: 0,
+                opacity: 1,
+                transition: {
+                  ease: [0.6, 0.01, 0.05, 0.95],
+                  duration: 0.7,
+                },
+              },
+            }}
+          >
       <ProfileCard count={count} data={author_details} />
+      </motion.div>
       <div className="px-1 mb-8 ">
         <div className="custom_grid">
           <motion.div
@@ -60,7 +80,7 @@ const AuthorPosts = ({ posts, author, authors }) => {
             </fieldset>
             <div className="custom_grid_2">
               {posts.map((post, index) => (
-                <PostCard key={index} post={post.node} />
+                <PostCardProfile key={index} post={post.node} />
               ))}
             </div>
           </motion.div>

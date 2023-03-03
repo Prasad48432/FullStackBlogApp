@@ -54,7 +54,7 @@ const Navbar = () => {
           </li>
           <li
             style={{ padding: "0.65rem" }}
-            className={router.pathname == "/#gallery" ? "active_nav" : " "}
+            className={router.pathname == "/gallery" ? "active_nav" : " "}
           >
             <Link href="/gallery">Gallery</Link>
           </li>
