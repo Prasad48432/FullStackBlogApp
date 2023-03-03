@@ -53,8 +53,8 @@ const AuthorPosts = ({ posts, author, authors }) => {
               },
             }}
           >
-            <fieldset class="hidden sm:block border-t-2 border-gray-300 dark:border-gray-700 mt-5">
-              <legend class="mx-auto px-4 text-black dark:text-white text-2xl">
+            <fieldset className="hidden sm:block border-t-2 border-gray-300 dark:border-gray-700 mt-5">
+              <legend className="mx-auto px-4 text-black dark:text-white text-2xl">
               Blogs by {author_details.name}
               </legend>
             </fieldset>
