@@ -146,6 +146,8 @@ export const getPosts = async() =>{
                 photo {
                   url
                 }
+                class
+                username
               }
               createdAt
               slug

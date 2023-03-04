@@ -30,7 +30,7 @@ const ProfileCard = (props) => {
             <div className="flex items-center justify-center mt-3 space-x-2">
               <div className="flex">
                 <span className="mr-1 font-semibold">{props.count}</span>Blogs
-                <span className="bg-blue-100 text-blue-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">{props.data.class}</span>
+                <span class="bg-blue-200 text-blue-800 text-sm font-medium ml-4 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{props.data.class}</span>
               </div>
             </div>
           </div>
