@@ -74,8 +74,8 @@ const AuthorPosts = ({ posts, author, authors }) => {
             }}
           >
             <fieldset className="hidden sm:block border-t-2 border-gray-300 dark:border-gray-700 mt-5">
-              <legend className="mx-auto px-4 text-black dark:text-white text-2xl">
-              Blogs by {author_details.name}
+              <legend className="mx-auto px-4 text-black dark:text-white font-semibold text-2xl">
+              Blogs by <span className="text-indigo-700 dark:text-[#3b8e8a] dark:decoration-[#3b8e8a] underline decoration-indigo-700" >{author_details.name}</span>
               </legend>
             </fieldset>
             <div className="custom_grid_2">

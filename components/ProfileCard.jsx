@@ -15,14 +15,14 @@ const ProfileCard = (props) => {
               <img
                 alt="profil"
                 src={props.data.photo.url}
-                className="object-cover w-20 h-20 mx-auto rounded-full sm:w-32 sm:h-32 cursor-pointer"
+                className="object-cover w-20 h-20 mx-auto rounded-full sm:w-32 sm:h-32 cursor-pointer p-1 ring-2 ring-gray-300 dark:ring-[#0f1c32]" 
                 onClick={() => setModal((modal) => !modal)}
               />
             </div>
           </div>
           <div className="flex flex-col pt-4 mx-auto my-auto sm:pt-0 sm:mx-0">
             <div className="flex flex-col mx-auto sm:flex-row sm:mx-0 ">
-              <h2 className="flex pr-4 text-xl font-semibold text-black dark:text-[#3b8e8a] sm:text-3xl">
+              <h2 className="flex pr-4 text-xl font-semibold text-black dark:text-[#3b8e8a] sm:text-3xl cursor-default">
                 @{props.data.username}
               </h2>
               
@@ -39,7 +39,7 @@ const ProfileCard = (props) => {
           <h1 className="text-lg font-semibold text-black dark:text-white sm:text-xl">
             {props.data.name}
           </h1>
-          <p className="text-sm text-gray-500 md:text-base">Blogger</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 md:text-base">Blogger</p>
           <p className="text-sm text-black dark:text-white md:text-base">{props.data.bio}</p>
         </div>
       </div>
