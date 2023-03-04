@@ -12,20 +12,17 @@ import PostWidget from "../../components/PostWidget";
 import ProfileCard from "../../components/ProfileCard";
 import Link from "next/link";
 import PostCardProfile from "../../components/PostCardProfile";
-import PostCard from "../../components/PostCard";
 
 const AuthorPosts = ({ posts, author, authors }) => {
   const author_details = author[0].node;
   const router = useRouter();
   const count = posts.length;
-  console.log(authors);
 
   for (var i = 0; i < authors.length; i++) {
     if (authors[i].name === author_details.name) {
       authors.splice(i, 1);
     }
   }
-  console.log(authors);
 
   if (router.isFallback) {
     return <Loader />;
@@ -38,12 +35,12 @@ const AuthorPosts = ({ posts, author, authors }) => {
             animate="visible"
             variants={{
               hidden: {
-                x: 100,
                 opacity: 0,
+                x:100,
               },
               visible: {
-                x: 0,
                 opacity: 1,
+                x:0,
                 transition: {
                   ease: [0.6, 0.01, 0.05, 0.95],
                   duration: 0.7,

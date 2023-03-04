@@ -9,7 +9,6 @@ import {motion} from 'framer-motion';
 
 const CategoryPost = ({ posts,topslug }) => {
   const router = useRouter();
-  console.log(topslug)
 
 
   if (router.isFallback) {
