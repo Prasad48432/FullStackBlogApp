@@ -23,12 +23,12 @@ const contact = () => {
             font-normal
             text-gray-700
             bg-white
-            dark:bg-[#182a46] bg-clip-padding
+            dark:bg-onbg-color-dk bg-clip-padding
             border border-solid border-gray-300
             dark:border-[#40649D]
             rounded
             m-0
-            focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-[#3b8e8a]  focus:outline-none"
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-variant-color-dk  focus:outline-none"
                       id="exampleInput7"
                       placeholder="Name"
                     />
@@ -45,12 +45,12 @@ const contact = () => {
             font-normal
             text-gray-700
             bg-white
-            dark:bg-[#182a46]  bg-clip-padding
+            dark:bg-onbg-color-dk  bg-clip-padding
             border border-solid border-gray-300
             dark:border-[#40649D]
             rounded
             m-0
-            focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-[#3b8e8a]  focus:outline-none"
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-variant-color-dk  focus:outline-none"
                       id="exampleInput8"
                       placeholder="Email address"
                     />
@@ -68,12 +68,12 @@ const contact = () => {
             font-normal
             text-gray-700
             bg-white
-            dark:bg-[#182a46]  bg-clip-padding
+            dark:bg-onbg-color-dk  bg-clip-padding
             border border-solid border-gray-300
             dark:border-[#40649D]
             rounded
             m-0
-            focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-[#3b8e8a] focus:outline-none
+            focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-variant-color-dk focus:outline-none
           "
                       id="exampleFormControlTextarea13"
                       rows="3"
@@ -87,7 +87,7 @@ const contact = () => {
           px-6
           py-2.5
           bg-indigo-600
-          dark:bg-[#3b8e8a]
+          dark:bg-variant-color-dk
           text-white
           font-medium
           text-xs
@@ -111,7 +111,7 @@ const contact = () => {
                   <div className="mb-12 grow-0 shrink-0 basis-auto w-full md:w-6/12 px-3 lg:px-6">
                     <div className="flex items-start">
                       <div className="shrink-0">
-                        <div className="p-4 bg-indigo-700 dark:bg-[#3b8e8a] rounded-md shadow-md w-14 h-14 flex items-center justify-center">
+                        <div className="p-4 bg-indigo-700 dark:bg-variant-color-dk rounded-md shadow-md w-14 h-14 flex items-center justify-center">
                           <svg
                             aria-hidden="true"
                             focusable="false"
@@ -144,7 +144,7 @@ const contact = () => {
                   <div className="mb-12 grow-0 shrink-0 basis-auto w-full md:w-6/12 px-3 lg:px-6">
                     <div className="flex items-start">
                       <div className="shrink-0">
-                        <div className="p-4 bg-indigo-700 dark:bg-[#3b8e8a] rounded-md shadow-md w-14 h-14 flex items-center justify-center">
+                        <div className="p-4 bg-indigo-700 dark:bg-variant-color-dk rounded-md shadow-md w-14 h-14 flex items-center justify-center">
                           <svg
                             aria-hidden="true"
                             focusable="false"
@@ -175,7 +175,7 @@ const contact = () => {
                   <div className="mb-12 md:mb-0 grow-0 shrink-0 basis-auto w-full md:w-6/12 px-3 lg:px-6">
                     <div className="flex align-start">
                       <div className="shrink-0">
-                        <div className="p-4 bg-indigo-700 dark:bg-[#3b8e8a] rounded-md shadow-md w-14 h-14 flex items-center justify-center text-white">
+                        <div className="p-4 bg-indigo-700 dark:bg-variant-color-dk rounded-md shadow-md w-14 h-14 flex items-center justify-center text-white">
                           <HiOutlineUserAdd  size={30}/>
                         </div>
                       </div>
@@ -190,7 +190,7 @@ const contact = () => {
                   <div className="grow-0 shrink-0 basis-auto w-full md:w-6/12 px-3 lg:px-6">
                     <div className="flex align-start">
                       <div className="shrink-0">
-                        <div className="p-4 bg-indigo-700 dark:bg-[#3b8e8a] rounded-md shadow-md w-14 h-14 flex items-center justify-center">
+                        <div className="p-4 bg-indigo-700 dark:bg-variant-color-dk rounded-md shadow-md w-14 h-14 flex items-center justify-center">
                           <svg
                             aria-hidden="true"
                             focusable="false"

@@ -1,5 +1,6 @@
 import React from 'react';
 import { AnimatePresence, motion } from "framer-motion";
+import Image from 'next/image';
 
 const Modal = ({ modal, setModal }) => {
   return (
@@ -17,7 +18,7 @@ const Modal = ({ modal, setModal }) => {
               opacity: 0,
             }}
             transition={{ type: "spring", bounce: 0.3, duration: 0.4 }}
-            className="absolute z-10 p-5 bg-white dark:bg-[#182a46] h-auto w-[90vw] sm:w-[60vw]  rounded text-white"
+            className="absolute z-10 p-5 bg-white dark:bg-onbg-color-dk h-auto w-[90vw] sm:w-[60vw]  rounded text-white"
           >
             <button
               onClick={() => setModal((modal) => !modal)}
@@ -25,23 +26,35 @@ const Modal = ({ modal, setModal }) => {
             >
               &times;
             </button>
-            <h1 className='text-2xl text-center p-3 mt-3 font-semibold text-black dark:text-white' > Our <span className='underline underline-offset-2 dark:text-[#3b8e8a] text-indigo-700 decoration-2 dark:decoration-[#3b8e8a]' >Magazines</span></h1>
+            <h1 className='text-2xl text-center p-3 mt-3 font-semibold text-black dark:text-white' > Our <span className='underline underline-offset-2 dark:text-variant-color-dk text-indigo-700 decoration-2 dark:decoration-variant-color-dk' >Magazines</span></h1>
             <div className="grid grid-cols-3 gap-3 p-5">
-              <img
-                alt="Magazine"
-                src="https://www.stutalk.in/images/magazines/volume-16-issue-01.jpg"
-                className="transition duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-[#3b8e8a]"
-              />
-              <img
-                alt="Magazine"
-                src="https://www.stutalk.in/images/magazines/volume-15-issue-02.jpg"
-                className="transition duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-[#3b8e8a]"
-              />
-              <img
-                alt="Magazine"
-                src="https://www.stutalk.in/images/magazines/volume-15-issue-01.jpg"
-                className="transition duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-[#3b8e8a]"
-              />
+            <div className='transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' >
+    <Image
+      src="https://www.stutalk.in/images/magazines/volume-16-issue-01.jpg"
+      alt="Magazine1"
+      width={500}
+      height={700}
+      layout='fill'
+    />
+    </div>
+    <div className='transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' >
+    <Image
+      src="https://www.stutalk.in/images/magazines/volume-15-issue-02.jpg"
+      alt="Magazine2"
+      width={500}
+      height={700}
+      layout='fill'
+    />
+    </div>
+    <div className='transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' >
+    <Image
+      src="https://www.stutalk.in/images/magazines/volume-15-issue-01.jpg"
+      alt="Magazine3"
+      width={500}
+      height={700}
+      layout='responsive'
+    />
+    </div>
             </div>
           </motion.div>
           <motion.div

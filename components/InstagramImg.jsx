@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import { FaInstagram } from 'react-icons/fa';
-import {motion} from 'framer-motion';
-import {toggle} from '../pages/_app'
 
 const InstagramImg = ({ socialImg }) => {
   return (

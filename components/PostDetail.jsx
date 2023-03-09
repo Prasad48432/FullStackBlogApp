@@ -17,7 +17,7 @@ const PostDetail = ({ post }) => {
       }
 
       if (obj.underline) {
-        modifiedText = (<u key={index} className="underline decoration-2 decoration-black dark:decoration-[#3b8e8a]" >{text}</u>);
+        modifiedText = (<u key={index} className="underline decoration-2 decoration-black dark:decoration-variant-color-dk" >{text}</u>);
       }
     }
 
@@ -63,7 +63,7 @@ const PostDetail = ({ post }) => {
           },
         }}
       >
-        <div className="bg-white dark:bg-[#182a46] lg:shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
+        <div className="bg-white dark:bg-onbg-color-dk lg:shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
           <div className="relative overflow-hidden lg:custom_bg_shadow mb-6">
             <img
               src={post.featuredImage.url}
@@ -84,12 +84,12 @@ const PostDetail = ({ post }) => {
                   />
                 </Link>
                 <Link href={`/authorposts/${post.author.username}`}>
-                  <p className="inline align-middle text-gray-700 dark:text-[#3b8e8a] ml-2 font-medium text-lg cursor-pointer">
+                  <p className="inline align-middle text-gray-700 dark:text-variant-color-dk ml-2 font-medium text-lg cursor-pointer">
                     {post.author.name}
                   </p>
                 </Link>
               </div>
-              <div className="font-medium text-gray-700 dark:text-[#3b8e8a]">
+              <div className="font-medium text-gray-700 dark:text-variant-color-dk">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6 inline mr-2"
@@ -113,6 +113,7 @@ const PostDetail = ({ post }) => {
               </div>
             </div>
             <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
+            <span className='dark:text-excerpt-color-dk' >
             {post.content.raw.children.map((typeObj, index) => {
               const children = typeObj.children.map((item, itemindex) =>
                 getContentFragment(itemindex, item.text, item)
@@ -120,6 +121,7 @@ const PostDetail = ({ post }) => {
 
               return getContentFragment(index, children, typeObj, typeObj.type);
             })}
+            </span>
           </div>
         </div>
       </motion.div>

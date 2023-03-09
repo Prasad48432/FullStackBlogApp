@@ -3,7 +3,7 @@ import React from 'react'
 const HoverGallery = () => {
   return (
     <>
-      <div className="swiper-container bg-white dark:bg-[#0b192f]" id="gallery">
+      <div className="swiper-container bg-white dark:bg-bg-color-dk" id="gallery">
         <div className="card-swiper">
           <img
             src="./handarrowre.png"

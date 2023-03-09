@@ -93,10 +93,37 @@ export const getPosts = async() =>{
       }
     `;
     const result = await request(graphqlAPI, query, { slug, categories });
+    const final_result = result.posts;
+    const reversed_result = final_result.reverse();
   
-    return result.posts;
+    return reversed_result;
+  };
+
+  export const getRecentPosts = async () => {
+    const query = gql`
+      query GetPostDetails() {
+        posts(
+          orderBy: createdAt_ASC
+          last: 3
+        ) {
+          title
+          featuredImage {
+            url
+          }
+          createdAt
+          slug
+        }
+      }
+    `;
+    const result = await request(graphqlAPI, query);
+    const final_result = result.posts;
+    const reversed_result = final_result.reverse();
+  
+    return reversed_result;
   };
   
+
+
   export const getAdjacentPosts = async (createdAt, slug) => {
     const query = gql`
       query GetAdjacentPosts($createdAt: DateTime!,$slug:String!) {
@@ -326,28 +353,6 @@ export const getPosts = async() =>{
     return result.comments;
   };
   
-  export const getRecentPosts = async () => {
-    const query = gql`
-      query GetPostDetails() {
-        posts(
-          orderBy: createdAt_ASC
-          last: 3
-        ) {
-          title
-          featuredImage {
-            url
-          }
-          createdAt
-          slug
-        }
-      }
-    `;
-    const result = await request(graphqlAPI, query);
-    const final_result = result.posts;
-    const reversed_result = final_result.reverse();
-  
-    return reversed_result;
-  };
 
 
 

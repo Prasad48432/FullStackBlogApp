@@ -6,7 +6,7 @@ import Link from 'next/link';
 const PostCard = ({ post }) => (
   <>
   <Link href={`/post/${post.slug}`}>
-  <div className="bg-white dark:bg-[#182a46] custom_bg_shadow rounded-lg p-3 lg:p-5 pb-8 lg:pb-12 mb-2 outline outline-2 outline-gray-300 dark:outline-[#182a46] cursor-pointer">
+  <div className="bg-white dark:bg-onbg-color-dk custom_bg_shadow dark:shadow-none rounded-lg p-3 lg:p-5 pb-8 lg:pb-12 mb-2 outline outline-2 outline-gray-300 dark:outline-border-color-dk cursor-pointer">
     <div className="relative overflow-hidden pb-[12rem] lg:pb-[10rem] mb-6">
       <img
         src={post.featuredImage.url}
@@ -29,13 +29,13 @@ const PostCard = ({ post }) => (
           />
           </Link>
           <Link href={`/authorposts/${post.author.username}`}>
-          <p className="inline align-middle text-gray-700 ml-2 font-medium text-xs dark:text-[#3b8e8a] cursor-pointer">
+          <p className="inline align-middle text-gray-700 ml-2 font-medium text-xs dark:text-variant-color-dk cursor-pointer">
             {post.author.name}
           </p>
           </Link>
         </div>
         <div className="font-medium text-gray-700">
-          <span className="align-middle text-xs dark:text-[#3b8e8a]">
+          <span className="align-middle text-xs dark:text-variant-color-dk">
             {moment(post.createdAt).format("MMM DD, YYYY")}
           </span>
         </div>

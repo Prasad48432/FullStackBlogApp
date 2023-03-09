@@ -6,6 +6,7 @@ import Image from 'next/image';
 import ThemeToggler from "../pages/ThemeToggler";
 import Modal from './Modal';
 import useGeoLocation from '../hooks/useGeoLocation.';
+import { FiImage,FiFileText,FiHome ,FiMessageCircle} from "react-icons/fi";
 
 const Navbar = () => {
   const [modal, setModal] = React.useState(false);
@@ -20,129 +21,162 @@ const Navbar = () => {
 
 
   return (
-    <div className="fixed left-0 top-0 w-full z-10 shadow-xl bg-white dark:bg-[#0b192f]">
-      <div className="max-w-[1240px] m-auto flex justify-between items-center p-3 text-black">
-        <Link href="/">
-          <div className="flex">
-            <Image
-              src="https://www.stutalk.in/images/logo.png"
-              alt=""
-              className="top-0 cursor-pointer"
-              width={40}
-              height={40}
-              layout="fixed"
-            />
-            <h1 className="sm:font-bold font-semibold text-3xl ml-[10px] hide-small text-black dark:text-white cursor-pointer">
-              STU TALK®
-            </h1>
-          </div>
-        </Link>
-        <ul className="hidden sm:flex gap-3 dark:text-white">
-          <li>
-          </li>
-          <li
-            style={{ padding: "0.65rem" }}
-            className={router.pathname == "/" ? "active_nav" : " "}
-          >
-            <Link href="/">Home</Link>
-          </li>
-          <li
-            style={{ padding: "0.65rem" }}
-            className={router.pathname == "/blogs" ? "active_nav" : " "}
-          >
-            <Link href="/blogs">Blogs</Link>
-          </li>
-          <li
-            style={{ padding: "0.65rem" }}
-            className={router.pathname == "/gallery" ? "active_nav" : " "}
-          >
-            <Link href="/gallery">Gallery</Link>
-          </li>
-          <li
-            style={{ padding: "0.65rem" }}
-            className={router.pathname == "/aboutus" ? "active_nav" : " "}
-          >
-            <Link href="/aboutus">About us</Link>
-          </li>
-          <li
-            style={{ padding: "0.65rem" }}
-            className={router.pathname == "/contact" ? "active_nav" : " "}
-          >
-            <Link href="/contact">Contact</Link>
-          </li>
-          <li style={{ padding: "0.65rem" }}>
-            <button
-              className="text-black dark:text-white"
-              onClick={() => setModal((modal) => !modal)}
-            >
-              Magazines
-            </button>
-          </li>
-          <ThemeToggler />
-        </ul>
-        <div className="sm:hidden">
-          <ThemeToggler />
-        </div>
-
-        <Modal {...{ modal, setModal }} />
-
-        {/* Mobile Button */}
-        <div onClick={handleNav} className="block sm:hidden z-10">
-          {nav ? (
-            <div className="text-black dark:text-white">
-              <RiCloseLine size={30} />
+    <>
+      <div className="fixed left-0 sm:top-0 w-full z-10 shadow-xl dark:shadow-none bg-white dark:bg-bg-color-dk">
+        <div className="max-w-[1240px] m-auto flex justify-between items-center p-3 text-black">
+          <Link href="/">
+            <div className="flex">
+              <Image
+                src="https://www.stutalk.in/images/logo.png"
+                alt=""
+                className="top-0 cursor-pointer"
+                width={40}
+                height={40}
+                layout="fixed"
+              />
+              <h1 className="sm:font-bold font-semibold text-3xl ml-[10px] hide-small text-black dark:text-white cursor-pointer">
+                STU TALK<span className="font-normal">®</span>
+              </h1>
             </div>
-          ) : (
-            <div className="text-black dark:text-white">
-              <RiMenu3Fill size={30} />
-            </div>
-          )}
-        </div>
-        {/* Mobile Menu */}
-        <div
-          className={
-            nav
-              ? "sm:hidden absolute top-[15vw] left-[-5%] right-0 bottom-0 flex justify-center items-center w-[110%] h-[105vh] text-center bg-white dark:bg-[#182a46] ease-in duration-300"
-              : "sm:hidden absolute top-[15vw] left-[-130%] right-0 bottom-0 flex justify-center items-center w-full h-screen text-center bg-white dark:bg-[#182a46] ease-in duration-300"
-          }
-        >
-          <ul className="text-black dark:text-white">
+          </Link>
+          <ul className="hidden sm:flex gap-3 dark:text-white">
+            <li></li>
             <li
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
+              style={{ padding: "0.65rem" }}
+              className={router.pathname == "/" ? "active_nav" : " "}
             >
               <Link href="/">Home</Link>
             </li>
             <li
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
+              style={{ padding: "0.65rem" }}
+              className={router.pathname == "/blogs" ? "active_nav" : " "}
             >
               <Link href="/blogs">Blogs</Link>
             </li>
             <li
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
+              style={{ padding: "0.65rem" }}
+              className={router.pathname == "/gallery" ? "active_nav" : " "}
             >
-              <button className="" onClick={() => setModal((modal) => !modal)}>
-                Magazines
-              </button>
+              <Link href="/gallery">Gallery</Link>
             </li>
             <li
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
+              style={{ padding: "0.65rem" }}
+              className={router.pathname == "/aboutus" ? "active_nav" : " "}
             >
               <Link href="/aboutus">About us</Link>
             </li>
             <li
-              onClick={handleNav}
-              className="p-4 text-4xl hover:text-gray-500"
+              style={{ padding: "0.65rem" }}
+              className={router.pathname == "/contact" ? "active_nav" : " "}
             >
               <Link href="/contact">Contact</Link>
             </li>
+            <li style={{ padding: "0.65rem" }}>
+              <button
+                className="text-black dark:text-white"
+                onClick={() => setModal((modal) => !modal)}
+              >
+                Magazines
+              </button>
+            </li>
+            <ThemeToggler />
           </ul>
+          <div className="sm:hidden">
+            <ThemeToggler />
+          </div>
+
+          <Modal {...{ modal, setModal }} />
+
+          {/* Mobile Button */}
+          <div onClick={handleNav} className="block sm:hidden z-10">
+            {nav ? (
+              <div className="text-black dark:text-white">
+                <RiCloseLine size={30} />
+              </div>
+            ) : (
+              <div className="text-black dark:text-white">
+                <RiMenu3Fill size={30} />
+              </div>
+            )}
+          </div>
+          {/* Mobile Menu */}
+          <div
+            className={
+              nav
+                ? "sm:hidden absolute top-[15vw] left-[-5%] right-0 bottom-0 flex justify-center items-center w-[110%] h-[105vh] text-center bg-white dark:bg-onbg-color-dk ease-in duration-300"
+                : "sm:hidden absolute top-[15vw] left-[-130%] right-0 bottom-0 flex justify-center items-center w-full h-screen text-center bg-white dark:bg-onbg-color-dk ease-in duration-300"
+            }
+          >
+            <ul className="text-black dark:text-white">
+              <li
+                onClick={handleNav}
+                className="p-4 text-4xl hover:text-gray-500"
+              >
+                <Link href="/">Home</Link>
+              </li>
+              <li
+                onClick={handleNav}
+                className="p-4 text-4xl hover:text-gray-500"
+              >
+                <Link href="/blogs">Blogs</Link>
+              </li>
+              <li
+                onClick={handleNav}
+                className="p-4 text-4xl hover:text-gray-500"
+              >
+                <button
+                  className=""
+                  onClick={() => setModal((modal) => !modal)}
+                >
+                  Magazines
+                </button>
+              </li>
+              <li
+                onClick={handleNav}
+                className="p-4 text-4xl hover:text-gray-500"
+              >
+                <Link href="/aboutus">About us</Link>
+              </li>
+              <li
+                onClick={handleNav}
+                className="p-4 text-4xl hover:text-gray-500"
+              >
+                <Link href="/contact">Contact</Link>
+              </li>
+            </ul>
+          </div>
         </div>
+        <div className="inner hidden sm:block"></div>
       </div>
-    </div>
+      <section className="block sm:hidden fixed inset-x-0 bottom-0 z-[20] bg-white dark:bg-bg-color-dk shadow">
+      <div className="flex justify-between">
+        <Link href="/">
+          <a className="w-full justify-center inline-block text-center pt-2 pb-1">
+            <FiHome size={30} className={router.pathname == "/" ? "active_nav inline-block mb-1" : "inline-block mb-1"}/>
+            <span className="block text-xs">Home</span>
+          </a>
+        </Link>
+        <Link href="/blogs">
+          <a className="w-full justify-center inline-block text-center pt-2 pb-1">
+            <FiFileText size={30} className={router.pathname == "/blogs" ? "active_nav inline-block mb-1" : "inline-block mb-1"} />
+            <span className="block text-xs">Blogs</span>
+          </a>
+        </Link>
+        <Link href="/gallery">
+          <a className="w-full justify-center inline-block text-center pt-2 pb-1">
+            <FiImage size={30} className={router.pathname == "/gallery" ? "active_nav inline-block mb-1" : "inline-block mb-1"} />
+            <span className="block text-xs">Gallery</span>
+          </a>
+        </Link>
+        <Link href="/contact">
+          <a className="w-full justify-center inline-block text-center pt-2 pb-1">
+            <FiMessageCircle size={30} className={router.pathname == "/contact" ? "active_nav inline-block mb-1" : "inline-block mb-1"} />
+            <span className="block text-xs">Contact</span>
+          </a>
+        </Link>
+      </div>
+    </section>
+    </>
   );
 };
 

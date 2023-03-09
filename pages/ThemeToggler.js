@@ -11,7 +11,7 @@ const ThemeToggler = () => {
   return (
     <>
       <Button
-        className="bg-gray-200 dark:bg-[#182a46]"
+        className="bg-gray-200 dark:bg-onbg-color-dk"
         onClick={() => setTheme(theme == "light" ? "dark" : "light")}
       >
         {theme === "light" ? (

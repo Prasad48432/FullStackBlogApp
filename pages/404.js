@@ -5,14 +5,14 @@ import React from "react";
 const ErrorPage = () => {
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen bg-white dark:bg-[#0b192f] py-[7rem]">
+      <div className="flex items-center justify-center min-h-screen bg-white dark:bg-bg-color-dk py-[7rem]">
         <div className="flex flex-col">
           <div className="flex flex-col items-center">
             <div className="">
                 <img src='https://miro.medium.com/v2/resize:fit:828/1*qdFdhbR00beEaIKDI_WDCw.gif' className="W-[300px] h-[200px] object-cover" alt='404' />
             </div>
 
-            <div className="font-bold text-2xl xl:text-4xl lg:text-6xl md:text-5xl mt-10 text-black dark:text-[#3b8e8a]">
+            <div className="font-bold text-2xl xl:text-4xl lg:text-6xl md:text-5xl mt-10 text-black dark:text-variant-color-dk">
               This page does not exist
             </div>
 
@@ -28,10 +28,10 @@ const ErrorPage = () => {
             <Link href="/">
               <div
                 className="flex flex-row group px-4 py-8
-                    border-t border-black dark:border-[#3b8e8a] hover:cursor-pointer
+                    border-t border-black dark:border-variant-color-dk hover:cursor-pointer
                     transition-all duration-200 delay-100"
               >
-                <div className="rounded-xl bg-blue-100 dark:bg-[#182a46] p-2 md:py-4">
+                <div className="rounded-xl bg-blue-100 dark:bg-onbg-color-dk p-2 md:py-4">
                   <span className="text-black dark:text-white" ><FiHome size={30}/></span>
                 </div>
 
@@ -52,10 +52,10 @@ const ErrorPage = () => {
               <Link href="/blogs">
               <div
                 className="flex flex-row group px-4 py-8
-                    border-t border-black dark:border-[#3b8e8a] hover:cursor-pointer
+                    border-t border-black dark:border-variant-color-dk hover:cursor-pointer
                     transition-all duration-200 delay-100"
               >
-                <div className="rounded-xl bg-blue-100 dark:bg-[#182a46] p-2 md:py-4">
+                <div className="rounded-xl bg-blue-100 dark:bg-onbg-color-dk p-2 md:py-4">
                   <span className="text-black dark:text-white" ><FiFileText size={30}/></span>
                 </div>
 
@@ -76,10 +76,10 @@ const ErrorPage = () => {
               <Link href='/#gallery'>
               <div
                 className="flex flex-row group px-4 py-8
-                    border-t border-black dark:border-[#3b8e8a] hover:cursor-pointer
+                    border-t border-black dark:border-variant-color-dk hover:cursor-pointer
                     transition-all duration-200 delay-100"
               >
-                <div className="rounded-xl bg-blue-100 dark:bg-[#182a46] p-2 md:py-4">
+                <div className="rounded-xl bg-blue-100 dark:bg-onbg-color-dk p-2 md:py-4">
                   <span className="text-black dark:text-white"><FiImage size={30}/></span>
                 </div>
 
@@ -100,10 +100,10 @@ const ErrorPage = () => {
             <Link href="/contact">
               <div
                 className="flex flex-row group px-4 py-8
-                    border-t border-black dark:border-[#3b8e8a] hover:cursor-pointer
+                    border-t border-black dark:border-variant-color-dk hover:cursor-pointer
                     transition-all duration-200 delay-100"
               >
-                <div className="rounded-xl bg-blue-100 dark:bg-[#182a46] p-2 md:py-4">
+                <div className="rounded-xl bg-blue-100 dark:bg-onbg-color-dk p-2 md:py-4">
                   <span className="text-black dark:text-white" ><FiMessageCircle size={30}/></span>
                 </div>
 

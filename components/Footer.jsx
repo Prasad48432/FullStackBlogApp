@@ -1,16 +1,47 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
     <>
-    <footer aria-label="Site Footer" className="bg-white dark:bg-[#0b192f] lg:grid lg:grid-cols-5 outline outline-2 outline-black dark:outline-[#3b8e8a]">
+    <footer aria-label="Site Footer" className="bg-white dark:bg-bg-color-dk lg:grid lg:grid-cols-5 outline outline-2 outline-black dark:outline-variant-color-dk">
   <div className="relative block lg:h-32 lg:col-span-2 rounded-lg">
-    <h1 className='text-2xl text-center p-3 mt-3 font-semibold' >Our <span className='underline underline-offset-2 dark:text-[#3b8e8a] text-indigo-700 decoration-2 dark:decoration-[#3b8e8a]' >Magazines</span></h1>
+    <h1 className='text-2xl text-center p-3 mt-3 font-semibold' >Our <span className='underline underline-offset-2 dark:text-variant-color-dk text-indigo-700 decoration-2 dark:decoration-variant-color-dk' >Magazines</span></h1>
     <div className='grid grid-cols-3 gap-3 p-5'>
-      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-16-issue-01.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-[#3b8e8a]'  />
-      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-15-issue-02.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-[#3b8e8a]' />
-      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-15-issue-01.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-[#3b8e8a]' />
+    <div className='transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' >
+    <Image
+      src="https://www.stutalk.in/images/magazines/volume-16-issue-01.jpg"
+      alt="Magazine"
+      width={500}
+      height={700}
+      layout="fill"
+      loading='lazy'
+    />
+    </div>
+    <div className='transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' >
+    <Image
+      src="https://www.stutalk.in/images/magazines/volume-15-issue-02.jpg"
+      alt="Magazine"
+      width={500}
+      height={700}
+      layout="fill"
+      loading='lazy'
+    />
+    </div>
+    <div className='transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' >
+    <Image
+      src="https://www.stutalk.in/images/magazines/volume-15-issue-01.jpg"
+      alt="Magazine"
+      width={500}
+      height={700}
+      layout='responsive'
+      loading='lazy'
+    />
+    </div>
+      {/* <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-16-issue-01.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk'  />
+      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-15-issue-02.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' />
+      <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-15-issue-01.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' /> */}
     </div>
   </div>
 
@@ -25,7 +56,7 @@ const Footer = () => {
 
           <a
             href="mailto:vbit.stutalk@mail.com"
-            className="block text-2xl font-medium text-gray-900 dark:text-[#3b8e8a]  hover:opacity-75 sm:text-3xl"
+            className="block text-2xl font-medium text-gray-900 dark:text-variant-color-dk  hover:opacity-75 sm:text-3xl"
           >
             vbit.stutalk@mail.com
           </a>
@@ -46,7 +77,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 dark:text-[#3b8e8a] transition hover:opacity-75"
+              className="text-gray-700 dark:text-variant-color-dk transition hover:opacity-75"
             >
               <span className="sr-only">Facebook</span>
 
@@ -70,7 +101,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 dark:text-[#3b8e8a] transition hover:opacity-75"
+              className="text-gray-700 dark:text-variant-color-dk transition hover:opacity-75"
             >
               <span className="sr-only">Instagram</span>
 
@@ -94,7 +125,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 dark:text-[#3b8e8a] transition hover:opacity-75"
+              className="text-gray-700 dark:text-variant-color-dk transition hover:opacity-75"
             >
               <span className="sr-only">Twitter</span>
 
@@ -116,7 +147,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 dark:text-[#3b8e8a] transition hover:opacity-75"
+              className="text-gray-700 dark:text-variant-color-dk transition hover:opacity-75"
             >
               <span className="sr-only">GitHub</span>
 
@@ -140,7 +171,7 @@ const Footer = () => {
               href="/"
               rel="noreferrer"
               target="_blank"
-              className="text-gray-700 dark:text-[#3b8e8a] transition hover:opacity-75"
+              className="text-gray-700 dark:text-variant-color-dk transition hover:opacity-75"
             >
               <span className="sr-only">Dribbble</span>
 
@@ -163,7 +194,7 @@ const Footer = () => {
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
-          <p className="font-medium text-gray-900 dark:text-[#3b8e8a]">Links</p>
+          <p className="font-medium text-gray-900 dark:text-variant-color-dk">Links</p>
 
           <nav aria-label="Footer Navigation - Services" className="mt-6">
             <ul className="space-y-4 text-sm">
@@ -201,7 +232,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <p className="font-medium text-gray-900 dark:text-[#3b8e8a]">Stutalk® Team</p>
+          <p className="font-medium text-gray-900 dark:text-variant-color-dk">Stutalk® Team</p>
 
           <nav aria-label="Footer Navigation - Company" className="mt-6">
             <ul className="space-y-4 text-sm">
@@ -228,7 +259,7 @@ const Footer = () => {
       </div>
     </div>
 
-    <div className="pt-12 mt-12 border-t border-gray-100 dark:border-[#3b8e8a]">
+    <div className="pt-12 mt-12 border-t border-gray-100 dark:border-variant-color-dk">
       <div className="sm:flex sm:items-center sm:justify-between">
         <nav aria-label="Footer Navigation - Support">
           <ul className="flex flex-wrap gap-4 text-xs">

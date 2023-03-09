@@ -8,7 +8,7 @@ const ProfileCard = (props) => {
   return (
     <>
       <ProfileImageModal  {...{ modal, setModal,props}} />
-      <div className="sm:w-[40vw] px-10 py-6 mx-4 mt-20 bg-white dark:bg-[#182a46] rounded-lg custom_bg_shadow md:mx-auto border-1 items-center justify-center">
+      <div className="sm:w-[40vw] px-10 py-6 mx-4 mt-20 bg-white dark:bg-onbg-color-dk rounded-lg custom_bg_shadow dark:shadow-none md:mx-auto border-1 items-center justify-center">
         <div className="flex flex-col items-start w-full m-auto sm:flex-row">
           <div className="flex mx-auto sm:mr-10 sm:m-0">
             <div className="items-center justify-center w-20 h-20 m-auto mr-4 sm:w-32 sm:h-32">
@@ -22,7 +22,7 @@ const ProfileCard = (props) => {
           </div>
           <div className="flex flex-col pt-4 mx-auto my-auto sm:pt-0 sm:mx-0">
             <div className="flex flex-col mx-auto sm:flex-row sm:mx-0 ">
-              <h2 className="flex pr-4 text-xl font-semibold text-black dark:text-[#3b8e8a] sm:text-3xl cursor-default">
+              <h2 className="flex pr-4 text-xl font-semibold text-black dark:text-variant-color-dk sm:text-3xl cursor-default">
                 @{props.data.username}
               </h2>
               

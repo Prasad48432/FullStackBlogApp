@@ -17,7 +17,7 @@ const ProfileImageModal = ({ modal, setModal,props }) => {
               opacity: 0,
             }}
             transition={{ type: "spring", bounce: 0.3, duration: 0.4 }}
-            className="absolute z-10 p-5 bg-white dark:bg-[#182a46] h-auto w-[90vw] sm:w-[40vw]  rounded text-white"
+            className="absolute z-10 p-5 bg-white dark:bg-onbg-color-dk h-auto w-[90vw] sm:w-[40vw]  rounded text-white"
           >
             <button
               onClick={() => setModal((modal) => !modal)}
