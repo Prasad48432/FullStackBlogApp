@@ -16,7 +16,7 @@ html {
   --primary-color-dk:#FFFFFF;
   --onbg-color-dk: #283545;
   --excerpt-color-dk:rgb(255 255 255 / 0.8);
-  --variant-color-dk: #a2df6f;
+  --variant-color-dk: #77bd3e;
   --border-color-dk:#4b4b4c;
 }
 
@@ -723,5 +723,7 @@ box-shadow: -1px 3px 26px -7px rgba(219,118,35,1);
 .contact_image{
   background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
 }
-
+.base-page-size{
+  background-color: transparent;
+}
 

@@ -63,12 +63,12 @@ const PostDetail = ({ post }) => {
           },
         }}
       >
-        <div className="bg-white dark:bg-onbg-color-dk lg:shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
+        <div className="bg-white dark:bg-bg-color-dk  rounded-lg lg:p-1 pb-12 mb-8">
           <div className="relative overflow-hidden lg:custom_bg_shadow mb-6">
             <img
               src={post.featuredImage.url}
               alt=""
-              className="object-top h-full w-full object-cover dark:opacity-90 shadow-lg rounded-t-lg lg:rounded-lg"
+              className="object-top h-full w-full object-cover dark:opacity-[0.85] shadow-lg rounded-t-lg lg:rounded-lg"
             />
           </div>
           <div className="px-4 lg:px-0">

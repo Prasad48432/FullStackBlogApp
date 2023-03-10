@@ -153,25 +153,25 @@ const Navbar = () => {
         <Link href="/">
           <a className="w-full justify-center inline-block text-center pt-2 pb-1">
             <FiHome size={30} className={router.pathname == "/" ? "active_nav inline-block mb-1" : "inline-block mb-1"}/>
-            <span className="block text-xs">Home</span>
+            <span className={router.pathname == "/" ? "active_nav block text-xs" : "block text-xs"} >Home</span>
           </a>
         </Link>
         <Link href="/blogs">
           <a className="w-full justify-center inline-block text-center pt-2 pb-1">
             <FiFileText size={30} className={router.pathname == "/blogs" ? "active_nav inline-block mb-1" : "inline-block mb-1"} />
-            <span className="block text-xs">Blogs</span>
+            <span className={router.pathname == "/blogs" ? "active_nav block text-xs" : "block text-xs"}>Blogs</span>
           </a>
         </Link>
         <Link href="/gallery">
           <a className="w-full justify-center inline-block text-center pt-2 pb-1">
             <FiImage size={30} className={router.pathname == "/gallery" ? "active_nav inline-block mb-1" : "inline-block mb-1"} />
-            <span className="block text-xs">Gallery</span>
+            <span className={router.pathname == "/gallery" ? "active_nav block text-xs" : "block text-xs"}>Gallery</span>
           </a>
         </Link>
         <Link href="/contact">
           <a className="w-full justify-center inline-block text-center pt-2 pb-1">
             <FiMessageCircle size={30} className={router.pathname == "/contact" ? "active_nav inline-block mb-1" : "inline-block mb-1"} />
-            <span className="block text-xs">Contact</span>
+            <span className={router.pathname == "/contact" ? "active_nav block text-xs" : "block text-xs"}>Contact</span>
           </a>
         </Link>
       </div>
