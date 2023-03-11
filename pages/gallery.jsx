@@ -1,69 +1,76 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
 
 const gallery = () => {
   return (
     <>
-    <div className="h-[70px]"></div>
-    <section className="overflow-hidden text-neutral-700 mb-10">
-      <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
-        <div className="-m-1 flex flex-wrap md:-m-2">
-          <div className="flex w-1/3 flex-wrap">
-            <div className="w-full p-1 md:p-2">
-              <img
-                alt="gallery"
-                className="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-              />
-            </div>
-          </div>
-          <div className="flex w-1/3 flex-wrap">
-            <div className="w-full p-1 md:p-2">
-              <img
-                alt="gallery"
-                className="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp"
-              />
-            </div>
-          </div>
-          <div className="flex w-1/3 flex-wrap">
-            <div className="w-full p-1 md:p-2">
-              <img
-                alt="gallery"
-                className="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp"
-              />
-            </div>
-          </div>
-          <div className="flex w-1/3 flex-wrap">
-            <div className="w-full p-1 md:p-2">
-              <img
-                alt="gallery"
-                className="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp"
-              />
-            </div>
-          </div>
-          <div className="flex w-1/3 flex-wrap">
-            <div className="w-full p-1 md:p-2">
-              <img
-                alt="gallery"
-                className="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp"
-              />
-            </div>
-          </div>
-          <div className="flex w-1/3 flex-wrap">
-            <div className="w-full p-1 md:p-2">
-              <img
-                alt="gallery"
-                className="block h-full w-full rounded-lg object-cover object-center"
-                src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
-              />
-            </div>
-          </div>
-        </div>
+      <div className="h-[80px] sm:h-[20px]"></div>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 p-5 sm:p-[5rem] relative">
+        <Image
+          src="https://images.unsplash.com/photo-1678382998507-8e8f2bee31d6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+          alt="/"
+          width={300}
+          height={400}
+          layout="responsive"
+          objectFit='cover'
+        />
+        <Image
+          src="https://images.unsplash.com/photo-1678465952856-4b87cd6e04bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+          alt="/"
+          width={300}
+          height={400}
+          layout="responsive"
+          objectFit='cover'
+        />
+        <Image
+          src="https://images.unsplash.com/photo-1678418607665-045f20eb867a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+          alt="/"
+          width={300}
+          height={400}
+          layout="responsive"
+          objectFit='cover'
+        />
+        <Image
+          src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+          alt="/"
+          width={300}
+          height={400}
+          layout="responsive"
+          objectFit='cover'
+        />
+        <Image
+          src="https://images.unsplash.com/photo-1678327429479-626fc43740f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+          alt="/"
+          width={300}
+          height={400}
+          layout="responsive"
+          objectFit='cover'
+        />
+        <Image
+          src="https://images.unsplash.com/photo-1678327461067-ee8fe27163c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+          alt="/"
+          width={300}
+          height={400}
+          layout="responsive"
+          objectFit='cover'
+        />
+        <Image 
+          src="https://images.unsplash.com/photo-1678449077046-3ad10de62471?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzOXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+          alt="/"
+          width={300}
+          height={400}
+          layout="responsive"
+          objectFit='cover'
+        />
+        <Image
+          src="https://images.unsplash.com/photo-1678379975630-bd7f527317d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0N3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+          alt="/"
+          width={300}
+          height={400}
+          layout="responsive"
+          objectFit='cover'
+        />
       </div>
-    </section>
     </>
   );
 }
