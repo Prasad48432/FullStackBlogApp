@@ -13,7 +13,7 @@ const ErrorPage = () => {
             </div>
 
             <div className="font-bold text-2xl xl:text-4xl lg:text-6xl md:text-5xl mt-10 text-black dark:text-variant-color-dk">
-              This page does not exist man!
+              This page does not exist
             </div>
 
             <div className="text-gray-600 dark:text-gray-300 font-medium text-sm md:text-xl lg:text-2xl sm:mt-8 mt-2">
