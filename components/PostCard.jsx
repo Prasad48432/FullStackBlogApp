@@ -25,7 +25,7 @@ const PostCard = ({ post }) => (
           <img
             alt={post.author.name}
             src={post.author.photo.url}
-            className="w-[30px] rounded-full cursor-pointer"
+            className="w-[30px] cursor-pointer"
           />
           </Link>
           <Link href={`/authorposts/${post.author.username}`}>

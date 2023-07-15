@@ -12,7 +12,7 @@ const CommentsForm = ({ slug }) => {
 
   const notify = () =>{
     toast.success('Comment submitted for review', {
-      position: "top-right",
+      position: "bottom-left",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -117,10 +117,10 @@ const CommentsForm = ({ slug }) => {
     <div className="bg-white dark:bg-onbg-color-dk shadow-lg rounded-lg p-8 pb-12 mb-8">
       <h3 className="text-xl mb-8 font-semibold border-b pb-4 dark:text-variant-color-dk border-variant-color-dk ">Leave a Reply</h3>
       <div className="grid grid-cols-1 gap-4 mb-4">
-        <textarea value={commentValue} onChange={onInputChange} className=" p-4 outline-none w-full rounded-lg h-40 focus:ring-2 focus:ring-gray-200 dark:focus:ring-variant-color-dk bg-gray-100  lg:bg-gray-200 text-gray-700 dark:bg-[#274069] dark:text-gray-400" name="comment" placeholder="Comment" />
+        <textarea value={commentValue} onChange={onInputChange} className=" p-4 outline-none w-full rounded-lg h-40 focus:ring-2 focus:ring-gray-200 dark:focus:ring-variant-color-dk bg-gray-100  lg:bg-gray-200 text-gray-700 dark:bg-[#274069] dark:text-gray-400 dark:placeholder-blue-100" name="comment" placeholder="Comment" />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
-        <input type="text" value={nameValue} onChange={onInputChange} className="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 dark:focus:ring-variant-color-dk bg-gray-100 lg:bg-gray-200  text-gray-700 dark:text-gray-400 dark:bg-[#274069]" placeholder="Name" name="name" />
+        <input type="text" value={nameValue} onChange={onInputChange} className="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 dark:focus:ring-variant-color-dk bg-gray-100 lg:bg-gray-200  text-gray-700 dark:text-gray-400 dark:bg-[#274069] dark:placeholder-blue-100" placeholder="Name" name="name" />
         <input type="email" value={emailValue} onChange={onInputChange} className="py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 dark:focus:ring-variant-color-dk  bg-gray-100  lg:bg-gray-200  text-gray-700 dark:bg-[#274069] dark:text-gray-400" placeholder="Email" name="email" />
       </div>
       <div className="grid grid-cols-1 gap-4 mb-4">
