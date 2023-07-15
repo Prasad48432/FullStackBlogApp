@@ -18,7 +18,7 @@ const CategoryPost = ({ posts,topslug }) => {
   return (
     <>
     <div className="h-[100px]"></div>
-    <h2 className="text-4xl font-bold text-center p-2">Blogs on <span className="text-indigo-700 underline decoration-indigo-700" >{topslug}</span></h2>
+    <h2 className="text-4xl font-bold text-center p-2">Blogs on <span className="text-indigo-700 underline decoration-indigo-700 dark:text-variant-color-dk dark:decoration-variant-color-dk" >{topslug}</span></h2>
     <div className="px-1 mb-8">
       <div className="custom_grid">
       <motion.div initial="hidden" animate="visible"
