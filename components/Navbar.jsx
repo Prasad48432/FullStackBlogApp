@@ -107,7 +107,7 @@ const Navbar = () => {
                 : "sm:hidden absolute top-[15vw] left-[-130%] right-0 bottom-0 flex justify-center items-center w-full h-screen text-center bg-white dark:bg-onbg-color-dk ease-in duration-300"
             }
           >
-            <ul className="text-black dark:text-white">
+            <ul className="text-black dark:text-white top-[25vh] absolute">
               <li
                 onClick={handleNav}
                 className="p-4 text-4xl hover:text-gray-500"
@@ -149,7 +149,7 @@ const Navbar = () => {
         <div className="inner hidden sm:block"></div>
       </div>
       <section className="block sm:hidden fixed inset-x-0 bottom-0 z-[20] bg-white dark:bg-bg-color-dk shadow">
-      <div className="flex justify-between">
+      <div className="flex justify-between bottom-bar-shadow">
         <Link href="/">
           <a className="w-full justify-center inline-block text-center pt-2 pb-1">
             <FiHome size={30} className={router.pathname == "/" ? "active_nav inline-block mb-1" : "inline-block mb-1"}/>
