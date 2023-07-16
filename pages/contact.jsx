@@ -4,7 +4,8 @@ import {HiOutlineUserAdd} from 'react-icons/hi';
 const contact = () => {
   return (
     <>
-      <div className="h-[70px]"></div>
+        <div className="h-[100px]"></div>
+    <h2 className="text-4xl font-bold text-center p-5">{""}<span className="text-indigo-700 underline decoration-indigo-700 dark:text-variant-color-dk dark:decoration-variant-color-dk" >Contact us</span></h2>
       <section className="mb-32 text-gray-800">
         <div className="container text-gray-800 px-4 md:px-12">
           <div className=" rounded-lg shadow-lg py-10 md:py-12 px-2 md:px-6 mt-[50px] bg-[hsla(0, 0%, 100%, 0.8)]">

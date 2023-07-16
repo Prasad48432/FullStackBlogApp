@@ -21,8 +21,10 @@ const gallery = () => {
   ];
   return (
     <>
-      <div className="h-[80px] sm:h-[20px]"></div>
+<div className="h-[100px]"></div>
+    <h2 className="text-4xl font-bold text-center p-5">Our <span className="text-indigo-700 underline decoration-indigo-700 dark:text-variant-color-dk dark:decoration-variant-color-dk" >Gallery</span></h2>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 p-5 sm:p-[5rem] relative ">
+        
       {array.map((x) => (
         <div key={String(x)}>
           <Image
