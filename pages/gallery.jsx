@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 const gallery = () => {
 
+
   const array = ["https://www.stutalk.in/images/large/10.jpg",
    "https://www.stutalk.in/images/large/11.jpg", 
    "https://www.stutalk.in/images/large/1.jpg",
