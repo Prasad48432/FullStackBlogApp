@@ -19,6 +19,10 @@ const PostDetail = ({ post }) => {
       if (obj.underline) {
         modifiedText = (<u key={index} className="underline decoration-2 decoration-black dark:decoration-variant-color-dk" >{text}</u>);
       }
+
+      // if(obj.blockquote){
+      //   modifiedText = (<blockquote key={index} >{text}</blockquote>)
+      // }
     }
 
     switch (type) {
@@ -28,14 +32,15 @@ const PostDetail = ({ post }) => {
         return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
       case 'heading-four':
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+      case 'block-quote':
+        return <div className="mt-[3rem] mb-[3rem] mx-auto prose prosec-slatec lg:prosec-lgc"><blockquote key={index}>{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</blockquote></div>
       case 'image':
         return (
           <img
             key={index}
             alt={obj.title}
-            height={obj.height}
-            width={obj.width}
             src={obj.src}
+            className='rounded-[1rem] w-full h-[500px] object-cover'
           />
         );
       default:
