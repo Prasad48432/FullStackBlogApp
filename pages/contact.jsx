@@ -1,11 +1,128 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import {HiOutlineUserAdd} from 'react-icons/hi';
+import { submitContact } from '../services';
+import {ToastContainer ,toast} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"
 
-const contact = () => {
+
+const Contact = () => {
+
+  const [error, setError] = useState(false);
+  const [localStorage, setLocalStorage] = useState(null);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [formData, setFormData] = useState({ name: null, email: null, comment: null, storeData: false });
+
+  const notify = () =>{
+    toast.success('Success', {
+      position: "bottom-left",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+  }
+  useEffect(() => {
+    setLocalStorage(window.localStorage);
+    const initalFormData = {
+      name: window.localStorage.getItem('name'),
+      email: window.localStorage.getItem('email'),
+      storeData: window.localStorage.getItem('name') || window.localStorage.getItem('email'),
+    };
+    setFormData(initalFormData);
+  }, []);
+
+  const onInputChange = (e) => {
+    const { target } = e;
+    if (target.type === 'checkbox') {
+      setFormData((prevState) => ({
+        ...prevState,
+        [target.name]: target.checked,
+      }));
+    } else {
+      setFormData((prevState) => ({
+        ...prevState,
+        [target.name]: target.value,
+      }));
+    }
+  };
+
+  const handlePostSubmission = () => {
+    setError(false);
+    const { name, email, message, storeData } = formData;
+    if (!name || !email || !message) {
+      setError(true);
+      return;
+    }
+    const messageObj = {
+      name,
+      email,
+      message,
+    };
+
+    if (storeData) {
+      localStorage.setItem('name', name);
+      localStorage.setItem('email', email);
+    } else {
+      localStorage.removeItem('name');
+      localStorage.removeItem('email');
+    }
+
+    submitContact(messageObj)
+      .then((res) => {
+        if (res.createContact) {
+          if (!storeData) {
+            formData.name = '';
+            formData.email = '';
+          }
+          formData.message = '';
+          setFormData((prevState) => ({
+            ...prevState,
+            ...formData,
+          }));
+          notify()
+          setShowSuccessMessage(true);
+          setTimeout(() => {
+            setShowSuccessMessage(false);
+          }, 500);
+        }
+      });
+  };
+
+
+  let messageValue;
+  if(formData.message === null){
+    messageValue = " "
+  }
+  else{
+    messageValue = formData.message
+  }
+  let nameValue;
+  if(formData.name === null){
+    nameValue = " "
+  }
+  else{
+    nameValue = formData.name
+  }
+  let emailValue;
+  if(formData.email === null){
+    emailValue = " "
+  }
+  else{
+    emailValue = formData.email
+  }
   return (
     <>
-        <div className="h-[100px]"></div>
-    <h2 className="text-4xl font-bold text-center p-5">{""}<span className="text-indigo-700 underline decoration-indigo-700 dark:text-variant-color-dk dark:decoration-variant-color-dk" >Contact us</span></h2>
+      <div className="h-[100px]"></div>
+      <h2 className="text-4xl font-bold text-center p-5">
+        {""}
+        <span className="text-indigo-700 underline decoration-indigo-700 dark:text-variant-color-dk dark:decoration-variant-color-dk">
+          Contact us
+        </span>
+      </h2>
       <section className="mb-32 text-gray-800">
         <div className="container text-gray-800 px-4 md:px-12">
           <div className=" rounded-lg shadow-lg py-10 md:py-12 px-2 md:px-6 mt-[50px] bg-[hsla(0, 0%, 100%, 0.8)]">
@@ -15,97 +132,72 @@ const contact = () => {
                   <div className="form-group mb-6">
                     <input
                       type="text"
+                      value={nameValue}
+                      onChange={onInputChange}
                       className="form-control 
-                      dark:placeholder:text-blue-300
-            w-full
-            px-3
-            py-1.5
-            text-base
-            font-normal
-            text-gray-700
-            bg-white
-            dark:bg-onbg-color-dk bg-clip-padding
-            border border-solid border-gray-300
-            dark:border-[#40649D]
-            rounded
-            m-0
-            focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-variant-color-dk  focus:outline-none"
-                      id="exampleInput7"
+                      dark:placeholder:text-blue-300 w-full px-3 py-1.5 text-base font-normal  text-gray-700 bg-white dark:bg-onbg-color-dk bg-clip-padding border border-solid border-gray-300 dark:border-[#40649D] rounded m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-variant-color-dk  focus:outline-none"
                       placeholder="Name"
+                      name="name"
                     />
                   </div>
                   <div className="form-group mb-6">
                     <input
                       type="email"
+                      value={emailValue}
+                      onChange={onInputChange}
+                      placeholder="Email"
+                      name="email"
                       className="form-control block
-                      dark:placeholder:text-blue-300
-            w-full
-            px-3
-            py-1.5
-            text-base
-            font-normal
-            text-gray-700
-            bg-white
-            dark:bg-onbg-color-dk  bg-clip-padding
-            border border-solid border-gray-300
-            dark:border-[#40649D]
-            rounded
-            m-0
-            focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-variant-color-dk  focus:outline-none"
-                      id="exampleInput8"
-                      placeholder="Email address"
+                      dark:placeholder:text-blue-300  w-full  px-3  py-1.5  text-base  font-normal  text-gray-700  bg-white  dark:bg-onbg-color-dk  bg-clip-padding  border border-solid border-gray-300  dark:border-[#40649D]  rounded  m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-variant-color-dk  focus:outline-none"
                     />
                   </div>
                   <div className="form-group mb-6">
                     <textarea
-                      className="
-                      dark:placeholder:text-blue-300
-            form-control
-            block
-            w-full
-            px-3
-            py-1.5
-            text-base
-            font-normal
-            text-gray-700
-            bg-white
-            dark:bg-onbg-color-dk  bg-clip-padding
-            border border-solid border-gray-300
-            dark:border-[#40649D]
-            rounded
-            m-0
-            focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-variant-color-dk focus:outline-none
-          "
-                      id="exampleFormControlTextarea13"
-                      rows="3"
+                      value={messageValue}
+                      onChange={onInputChange}
+                      name="message"
                       placeholder="Message"
+                      className="
+                      dark:placeholder:text-blue-300  form-control  block  w-full  px-3  py-1.5  text-base  font-normal  text-gray-700  bg-white  dark:bg-onbg-color-dk  bg-clip-padding  border border-solid border-gray-300  dark:border-[#40649D]  rounded  m-0  focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-variant-color-dk focus:outline-none  "
+                      rows="3"
                     ></textarea>
                   </div>
+                  <div className="p-3">
+                    <input
+                      checked={formData.storeData}
+                      onChange={onInputChange}
+                      type="checkbox"
+                      id="storeData"
+                      name="storeData"
+                      value="true"
+                    />
+                    <label
+                      className="text-gray-500 cursor-pointer text-base ml-2"
+                      htmlFor="storeData"
+                    >
+                      Remember me
+                    </label>
+                  </div>
+                  {error && (
+                    <p className="text-xs text-red-500">
+                      All fields are mandatory
+                    </p>
+                  )}
                   <button
-                    type="submit"
-                    className="
-          w-full
-          px-6
-          py-2.5
-          bg-indigo-600
-          dark:bg-variant-color-dk
-          text-white
-          font-medium
-          text-xs
-          leading-tight
-          uppercase
-          rounded
-          shadow-md
-          hover:bg-indigo-400 hover:shadow-lg
-          focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-          active:bg-blue-800 active:shadow-lg
-          transition
-          duration-150
-          ease-in-out"
+                    type="button"
+                    onClick={handlePostSubmission}
+                    className="w-full  px-6  py-2.5  bg-indigo-600  dark:bg-variant-color-dk  text-white  font-medium  text-xs  leading-tight  uppercase  rounded  shadow-md  hover:bg-indigo-400 hover:shadow-lg  focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0  active:bg-blue-800 active:shadow-lg  transition  duration-150  ease-in-out"
                   >
                     Send
                   </button>
+                  {showSuccessMessage && (
+                    <span className="text-sm float-right font-semibold mt-3 text-green-500">
+                      You will get a reply on email soon
+                    </span>
+                  )}
+                  
                 </form>
+                <ToastContainer />
               </div>
               <div className="grow-0 shrink-0 basis-auto w-full xl:w-7/12 mt-0 sm:mt-10 ">
                 <div className="flex flex-wrap">
@@ -177,7 +269,7 @@ const contact = () => {
                     <div className="flex align-start">
                       <div className="shrink-0">
                         <div className="p-4 bg-indigo-700 dark:bg-variant-color-dk rounded-md shadow-md w-14 h-14 flex items-center justify-center text-white">
-                          <HiOutlineUserAdd  size={30}/>
+                          <HiOutlineUserAdd size={30} />
                         </div>
                       </div>
                       <div className="grow ml-6">
@@ -213,7 +305,9 @@ const contact = () => {
                         <p className="font-bold mb-1 text-black dark:text-white">
                           Bug report
                         </p>
-                        <p className="text-gray-500">bugsreportstutalk@gmail.com</p>
+                        <p className="text-gray-500">
+                          bugsreportstutalk@gmail.com
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -223,8 +317,9 @@ const contact = () => {
           </div>
         </div>
       </section>
+      
     </>
-  )
+  );
 }
 
-export default contact
+export default Contact

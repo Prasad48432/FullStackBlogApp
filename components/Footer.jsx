@@ -55,10 +55,10 @@ const Footer = () => {
           </span>
 
           <a
-            href="mailto:vbit.stutalk@mail.com"
+            href="mailto:vbit.stutalk@gmail.com"
             className="block text-2xl font-medium text-gray-900 dark:text-variant-color-dk  hover:opacity-75 sm:text-3xl"
           >
-            vbit.stutalk@mail.com
+            vbit.stutalk@gmail.com
           </a>
         </p>
 
