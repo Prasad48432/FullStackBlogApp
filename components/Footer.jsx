@@ -9,7 +9,21 @@ const Footer = () => {
   <div className="relative block lg:h-32 lg:col-span-2 rounded-lg">
     <h1 className='text-2xl text-center p-3 mt-3 font-semibold' >Our <span className='underline underline-offset-2 dark:text-variant-color-dk text-indigo-700 decoration-2 dark:decoration-variant-color-dk' >Magazines</span></h1>
     <div className='grid grid-cols-3 gap-3 p-5'>
+    
     <div className='transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' >
+    <Link href="/magazines/magazine1">
+    <Image
+      src="https://www.stutalk.in/images/magazines/volume-16-issue-02.jpg"
+      alt="Magazine"
+      width={500}
+      height={700}
+      layout='responsive'
+      loading='lazy'
+    />
+    </Link>
+    </div>
+    <div className='transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' >
+    <Link href="/magazines/magazine2">
     <Image
       src="https://www.stutalk.in/images/magazines/volume-16-issue-01.jpg"
       alt="Magazine"
@@ -18,8 +32,10 @@ const Footer = () => {
       layout="fill"
       loading='lazy'
     />
+    </Link>
     </div>
     <div className='transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' >
+    <Link href="/magazines/magazine3">
     <Image
       src="https://www.stutalk.in/images/magazines/volume-15-issue-02.jpg"
       alt="Magazine"
@@ -28,16 +44,7 @@ const Footer = () => {
       layout="fill"
       loading='lazy'
     />
-    </div>
-    <div className='transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' >
-    <Image
-      src="https://www.stutalk.in/images/magazines/volume-15-issue-01.jpg"
-      alt="Magazine"
-      width={500}
-      height={700}
-      layout='responsive'
-      loading='lazy'
-    />
+    </Link>
     </div>
       {/* <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-16-issue-01.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk'  />
       <img alt="Magazine" src='https://www.stutalk.in/images/magazines/volume-15-issue-02.jpg' className='transition duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' />

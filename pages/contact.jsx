@@ -4,7 +4,7 @@ import {HiOutlineUserAdd} from 'react-icons/hi';
 import { submitContact } from '../services';
 import {ToastContainer ,toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
-
+import Script from 'next/script';
 
 const Contact = () => {
 
@@ -12,6 +12,7 @@ const Contact = () => {
   const [localStorage, setLocalStorage] = useState(null);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [formData, setFormData] = useState({ name: null, email: null, comment: null, storeData: false });
+
 
   const notify = () =>{
     toast.success('Success', {
@@ -135,7 +136,7 @@ const Contact = () => {
                       value={nameValue}
                       onChange={onInputChange}
                       className="form-control 
-                      dark:placeholder:text-blue-300 w-full px-3 py-1.5 text-base font-normal  text-gray-700 bg-white dark:bg-onbg-color-dk bg-clip-padding border border-solid border-gray-300 dark:border-[#40649D] rounded m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-variant-color-dk  focus:outline-none"
+                      dark:placeholder:text-blue-300 w-full px-3 py-1.5 text-base font-normal dark:text-gray-200  text-gray-700 bg-white dark:bg-onbg-color-dk bg-clip-padding border border-solid border-gray-300 dark:border-[#40649D] rounded m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-variant-color-dk  focus:outline-none"
                       placeholder="Name"
                       name="name"
                     />
@@ -148,7 +149,7 @@ const Contact = () => {
                       placeholder="Email"
                       name="email"
                       className="form-control block
-                      dark:placeholder:text-blue-300  w-full  px-3  py-1.5  text-base  font-normal  text-gray-700  bg-white  dark:bg-onbg-color-dk  bg-clip-padding  border border-solid border-gray-300  dark:border-[#40649D]  rounded  m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-variant-color-dk  focus:outline-none"
+                      dark:placeholder:text-blue-300  w-full  px-3  py-1.5  text-base  font-normal dark:text-gray-200  text-gray-700  bg-white  dark:bg-onbg-color-dk  bg-clip-padding  border border-solid border-gray-300  dark:border-[#40649D]  rounded  m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-variant-color-dk  focus:outline-none"
                     />
                   </div>
                   <div className="form-group mb-6">
@@ -158,7 +159,7 @@ const Contact = () => {
                       name="message"
                       placeholder="Message"
                       className="
-                      dark:placeholder:text-blue-300  form-control  block  w-full  px-3  py-1.5  text-base  font-normal  text-gray-700  bg-white  dark:bg-onbg-color-dk  bg-clip-padding  border border-solid border-gray-300  dark:border-[#40649D]  rounded  m-0  focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-variant-color-dk focus:outline-none  "
+                      dark:placeholder:text-blue-300  form-control  block  w-full  px-3  py-1.5 dark:text-gray-200  text-base  font-normal  text-gray-700  bg-white  dark:bg-onbg-color-dk  bg-clip-padding  border border-solid border-gray-300  dark:border-[#40649D]  rounded  m-0  focus:text-gray-700 focus:bg-white focus:border-blue-600 dark:focus:border-variant-color-dk focus:outline-none  "
                       rows="3"
                     ></textarea>
                   </div>
