@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { getCategories } from '../services/index';
 import {motion} from 'framer-motion';
+import parse from 'html-react-parser';
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
