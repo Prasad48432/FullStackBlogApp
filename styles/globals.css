@@ -5,6 +5,7 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 :root {
@@ -1125,4 +1126,133 @@ box-shadow: -1px 3px 26px -7px rgba(219,118,35,1);
       margin-bottom: 0;
   }
 }
+
+.wand-container{
+  background: rgb(2, 6, 23);
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+#wand {
+  width: 10vmin;
+  aspect-ratio: 1 / 10;
+  background: linear-gradient(
+    to right, 
+    rgb(26 24 28) 10%, 
+    rgb(42 40 44) 45% 55%, 
+    rgb(26 24 28) 90%
+  );
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  translate: -50%;
+  rotate: -3deg;
+  z-index: 100;
+  border-radius: 3vmin;
+  box-shadow: 0vmin 1vmin 4vmin rgb(0 0 0 / 80%);
+  overflow: hidden;
+}
+
+#wand > .cap {
+  height: 20%;
+  width: 100%;
+  background: linear-gradient(
+    to right, 
+    rgb(212 221 236) 10%, 
+    rgb(255 255 255) 45% 55%, 
+    rgb(212 221 236) 90%
+  );
+}
+
+#magictiles {
+  display: flex;
+}
+
+.magictile {
+  display: grid;
+  place-items: center;
+  width: 38vmin;
+  aspect-ratio: 1;
+  background-color: rgb(31, 41, 55);
+  border-radius: 6vmin;
+  box-shadow: 0vmin 3vmin 6vmin rgb(0 0 0 / 25%),
+    inset 0vmin 0.5vmin 1vmin rgb(255 255 255 / 15%);
+  position: relative;
+  overflow: hidden;
+}
+
+.magictile:nth-child(1) {
+  rotate: 3deg;
+  z-index: 3;
+}
+
+.magictile:nth-child(2) {
+  rotate: -2deg;
+  z-index: 2;
+}
+
+.magictile:nth-child(3) {
+  rotate: 5deg;
+  z-index: 1;
+}
+
+.magictile:is(:nth-child(2), :nth-child(3)) {
+  margin-left: -10vmin;
+}
+
+.magictile > i {
+  font-size: 15vmin;
+  color: rgb(255 255 255 / 10%);
+}
+
+.magictile > img {
+  height: 100%;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+  opacity: var(--opacity);
+  filter: blur(calc(var(--blur) * 10px));
+}
+@keyframes rotatenice {
+  from {
+    rotate: 0deg;
+  }
+  
+  50% {
+    scale: 1 1.5;
+  }
+  
+  to {
+    rotate: 360deg;
+  }
+}
+
+#blob {
+  background-color: white;
+  height: 34vmax;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: linear-gradient(to right, aquamarine, mediumpurple);
+  animation: rotatenice 20s infinite;
+  opacity: 0.8;
+}
+
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  backdrop-filter: blur(12vmax);
+}
+
+
 

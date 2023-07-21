@@ -5,6 +5,9 @@ import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 
 const Testimonals = () => {
+
+
+
   const {ref,inView} = useInView();
   const animation = useAnimation();
   useEffect(()=>{
@@ -35,10 +38,10 @@ const Testimonals = () => {
             </h5>
             <div className=" lg:flex">
               <img
-              className=" w-[276px] h-[230px] object-cover mb-10 dark:opacity-80"
-              src="https://www.stutalk.in/images/events/temp-1.jpeg"
-              alt="/"
-            />
+                className=" w-[276px] h-[230px] object-cover mb-10 dark:opacity-80"
+                src="https://www.stutalk.in/images/events/temp-1.jpeg"
+                alt="/"
+              />
               <p className="text-gray-700 dark:text-excerpt-color-dk text-base mb-4 ml-7 p-2">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Reprehenderit est autem minima nobis! Assumenda totam mollitia

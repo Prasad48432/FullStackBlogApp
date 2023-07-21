@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps , router}) {
   return (
     <>
       <ThemeProvider enableSystem={true} attribute="class">
-        <Navbar/>
+        <Navbar />
         <motion.div
           className="progress-bar"
           style={{ scaleX: scrollYProgress }}
@@ -40,16 +40,16 @@ function MyApp({ Component, pageProps , router}) {
             }}
             variants={{
               initialState: {
-                clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-                transition: { duration: 0.35 },
+                clipPath: "circle(0%)",
+                transition: { duration: 0.7 },
               },
               animateState: {
-                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-                transition: { duration: 0.35, staggerChildren: 0.1 },
+                clipPath: "circle(100%)",
+                transition: { duration: 0.7, staggerChildren: 0.3 },
               },
               exitState: {
-                clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
-                transition: { duration: 0.35 },
+                clipPath: "circle(-100%)",
+                transition: { duration: 0.7 },
               },
             }}
             className="base-page-size"

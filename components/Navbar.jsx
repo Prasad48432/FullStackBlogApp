@@ -5,10 +5,44 @@ import {useRouter} from 'next/router';
 import Image from 'next/image';
 import ThemeToggler from "../pages/ThemeToggler";
 import Modal from './Modal';
-import useGeoLocation from '../hooks/useGeoLocation.';
+
 import { FiImage,FiFileText,FiHome ,FiMessageCircle} from "react-icons/fi";
 
 const Navbar = () => {
+
+  if (typeof window !== "undefined") {
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    let interval = null;
+
+    document.querySelector("h1").onmouseover = (event) => {
+      let iteration = 0;
+
+      clearInterval(interval);
+
+      interval = setInterval(() => {
+        event.target.innerText = event.target.innerText
+          .split("")
+          .map((letter, index) => {
+            if (index < iteration) {
+              return event.target.dataset.value[index];
+            }
+
+            return letters[Math.floor(Math.random() * 26)];
+          })
+          .join("");
+
+        if (iteration >= event.target.dataset.value.length) {
+          clearInterval(interval);
+        }
+
+        iteration += 1 / 3;
+      }, 30);
+    };
+  }
+  
+
+
   const [modal, setModal] = React.useState(false);
   // const location = useGeoLocation();
 
@@ -34,7 +68,7 @@ const Navbar = () => {
                 height={40}
                 layout="fixed"
               />
-              <h1 className="sm:font-bold font-semibold text-3xl ml-[10px] hide-small text-black dark:text-white cursor-pointer">
+              <h1 data-value="STU TALK®" className="sm:font-bold font-semibold text-3xl ml-[10px] hide-small text-black dark:text-white cursor-pointer">
                 STU TALK<span className="font-normal">®</span>
               </h1>
             </div>
@@ -45,38 +79,38 @@ const Navbar = () => {
               style={{ padding: "0.65rem" }}
               className={router.pathname == "/" ? "active_nav" : " "}
             >
-              <Link href="/">Home</Link>
+              <Link href="/">HOME</Link>
             </li>
             <li
               style={{ padding: "0.65rem" }}
               className={router.pathname == "/blogs" ? "active_nav" : " "}
             >
-              <Link href="/blogs">Blogs</Link>
+              <Link href="/blogs">BLOGS</Link>
             </li>
             <li
               style={{ padding: "0.65rem" }}
               className={router.pathname == "/gallery" ? "active_nav" : " "}
             >
-              <Link href="/gallery">Gallery</Link>
+              <Link href="/gallery">GALLERY</Link>
             </li>
             <li
               style={{ padding: "0.65rem" }}
               className={router.pathname == "/aboutus" ? "active_nav" : " "}
             >
-              <Link href="/aboutus">About us</Link>
+              <Link href="/aboutus">ABOUTUS</Link>
             </li>
             <li
               style={{ padding: "0.65rem" }}
               className={router.pathname == "/contact" ? "active_nav" : " "}
             >
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact">CONTACT</Link>
             </li>
             <li style={{ padding: "0.65rem" }}>
               <button
                 className="text-black dark:text-white"
                 onClick={() => setModal((modal) => !modal)}
               >
-                Magazines
+                MAGAZINES
               </button>
             </li>
             <ThemeToggler />
@@ -149,33 +183,93 @@ const Navbar = () => {
         <div className="inner hidden sm:block"></div>
       </div>
       <section className="block sm:hidden fixed inset-x-0 bottom-0 z-[20] bg-white dark:bg-bg-color-dk shadow">
-      <div className="flex justify-between bottom-bar-shadow">
-        <Link href="/">
-          <a className="w-full justify-center inline-block text-center pt-2 pb-1">
-            <FiHome size={30} className={router.pathname == "/" ? "active_nav inline-block mb-1" : "inline-block mb-1"}/>
-            <span className={router.pathname == "/" ? "active_nav block text-xs" : "block text-xs"} >Home</span>
-          </a>
-        </Link>
-        <Link href="/blogs">
-          <a className="w-full justify-center inline-block text-center pt-2 pb-1">
-            <FiFileText size={30} className={router.pathname == "/blogs" ? "active_nav inline-block mb-1" : "inline-block mb-1"} />
-            <span className={router.pathname == "/blogs" ? "active_nav block text-xs" : "block text-xs"}>Blogs</span>
-          </a>
-        </Link>
-        <Link href="/gallery">
-          <a className="w-full justify-center inline-block text-center pt-2 pb-1">
-            <FiImage size={30} className={router.pathname == "/gallery" ? "active_nav inline-block mb-1" : "inline-block mb-1"} />
-            <span className={router.pathname == "/gallery" ? "active_nav block text-xs" : "block text-xs"}>Gallery</span>
-          </a>
-        </Link>
-        <Link href="/contact">
-          <a className="w-full justify-center inline-block text-center pt-2 pb-1">
-            <FiMessageCircle size={30} className={router.pathname == "/contact" ? "active_nav inline-block mb-1" : "inline-block mb-1"} />
-            <span className={router.pathname == "/contact" ? "active_nav block text-xs" : "block text-xs"}>Contact</span>
-          </a>
-        </Link>
-      </div>
-    </section>
+        <div className="flex justify-between bottom-bar-shadow">
+          <Link href="/">
+            <a className="w-full justify-center inline-block text-center pt-2 pb-1">
+              <FiHome
+                size={30}
+                className={
+                  router.pathname == "/"
+                    ? "active_nav inline-block mb-1"
+                    : "inline-block mb-1"
+                }
+              />
+              <span
+                className={
+                  router.pathname == "/"
+                    ? "active_nav block text-xs"
+                    : "block text-xs"
+                }
+              >
+                Home
+              </span>
+            </a>
+          </Link>
+          <Link href="/blogs">
+            <a className="w-full justify-center inline-block text-center pt-2 pb-1">
+              <FiFileText
+                size={30}
+                className={
+                  router.pathname == "/blogs"
+                    ? "active_nav inline-block mb-1"
+                    : "inline-block mb-1"
+                }
+              />
+              <span
+                className={
+                  router.pathname == "/blogs"
+                    ? "active_nav block text-xs"
+                    : "block text-xs"
+                }
+              >
+                Blogs
+              </span>
+            </a>
+          </Link>
+          <Link href="/gallery">
+            <a className="w-full justify-center inline-block text-center pt-2 pb-1">
+              <FiImage
+                size={30}
+                className={
+                  router.pathname == "/gallery"
+                    ? "active_nav inline-block mb-1"
+                    : "inline-block mb-1"
+                }
+              />
+              <span
+                className={
+                  router.pathname == "/gallery"
+                    ? "active_nav block text-xs"
+                    : "block text-xs"
+                }
+              >
+                Gallery
+              </span>
+            </a>
+          </Link>
+          <Link href="/contact">
+            <a className="w-full justify-center inline-block text-center pt-2 pb-1">
+              <FiMessageCircle
+                size={30}
+                className={
+                  router.pathname == "/contact"
+                    ? "active_nav inline-block mb-1"
+                    : "inline-block mb-1"
+                }
+              />
+              <span
+                className={
+                  router.pathname == "/contact"
+                    ? "active_nav block text-xs"
+                    : "block text-xs"
+                }
+              >
+                Contact
+              </span>
+            </a>
+          </Link>
+        </div>
+      </section>
     </>
   );
 };

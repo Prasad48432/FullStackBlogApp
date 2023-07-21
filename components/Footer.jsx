@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const Footer = () => {
+
   return (
     <>
     <footer aria-label="Site Footer" className="bg-white dark:bg-bg-color-dk lg:grid lg:grid-cols-5 outline outline-2 outline-black dark:outline-variant-color-dk">

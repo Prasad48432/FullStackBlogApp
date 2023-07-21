@@ -4,7 +4,6 @@ import {HiOutlineUserAdd} from 'react-icons/hi';
 import { submitContact } from '../services';
 import {ToastContainer ,toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
-import Script from 'next/script';
 
 const Contact = () => {
 
