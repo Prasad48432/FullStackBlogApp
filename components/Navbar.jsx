@@ -68,8 +68,8 @@ const Navbar = () => {
                 height={40}
                 layout="fixed"
               />
-              <h1 data-value="STU TALK®" className="sm:font-bold font-semibold text-3xl ml-[10px] hide-small text-black dark:text-white cursor-pointer">
-                STU TALK<span className="font-normal">®</span>
+              <h1 data-value="STU TALK®" className="sm:font-bold font-semibold text-3xl ml-[10px]  text-black dark:text-white cursor-pointer">
+                STU TALK®
               </h1>
             </div>
           </Link>

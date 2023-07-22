@@ -27,46 +27,57 @@ const Modal = ({ modal, setModal }) => {
             >
               &times;
             </button>
-            <h1 className='text-2xl text-center p-3 mt-3 font-semibold text-black dark:text-white' > Our <span className='underline underline-offset-2 dark:text-variant-color-dk text-indigo-700 decoration-2 dark:decoration-variant-color-dk' >Magazines</span></h1>
+            <h1 className="text-2xl text-center p-3 mt-3 font-semibold text-black dark:text-white">
+              {" "}
+              Our{" "}
+              <span className="underline underline-offset-2 dark:text-variant-color-dk text-indigo-700 decoration-2 dark:decoration-variant-color-dk">
+                Magazines
+              </span>
+            </h1>
             <div className="grid grid-cols-3 gap-3 p-5">
+              <div className="transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk in">
+                <Link href="/magazines/magazine1">
+                  <Image
+                    className="interactable"
+                    data-type="link"
+                    src="https://www.stutalk.in/images/magazines/volume-16-issue-02.jpg"
+                    alt="Magazine3"
+                    width={500}
+                    height={700}
+                    layout="responsive"
+                    onClick={() => setModal((modal) => !modal)}
+                  />
+                </Link>
+              </div>
+              <div className="transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk">
+                <Link href="/magazines/magazine2">
+                  <Image
+                    className="interactable"
+                    data-type="link"
+                    src="https://www.stutalk.in/images/magazines/volume-16-issue-01.jpg"
+                    alt="Magazine1"
+                    width={500}
+                    height={700}
+                    layout="fill"
+                    onClick={() => setModal((modal) => !modal)}
+                  />
+                </Link>
+              </div>
 
-    <div className='transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' >
-    <Link href="/magazines/magazine1">
-    <Image
-      src="https://www.stutalk.in/images/magazines/volume-16-issue-02.jpg"
-      alt="Magazine3"
-      width={500}
-      height={700}
-      layout='responsive'
-      onClick={() => setModal((modal) => !modal)}
-    />
-    </Link>
-    </div>
-    <div className='transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' >
-    <Link href="/magazines/magazine2">
-    <Image
-      src="https://www.stutalk.in/images/magazines/volume-16-issue-01.jpg"
-      alt="Magazine1"
-      width={500}
-      height={700}
-      layout='fill'
-      onClick={() => setModal((modal) => !modal)}
-    />
-    </Link>
-    </div>
-
-    <div className='transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk' >
-    <Link href="/magazines/magazine3">
-    <Image
-      src="https://www.stutalk.in/images/magazines/volume-15-issue-02.jpg"
-      alt="Magazine2"
-      width={500}
-      height={700}
-      layout='fill'
-      onClick={() => setModal((modal) => !modal)}
-    />
-    </Link>  
-    </div>
+              <div className="transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk">
+                <Link href="/magazines/magazine3">
+                  <Image
+                    className="interactable"
+                    data-type="link"
+                    src="https://www.stutalk.in/images/magazines/volume-15-issue-02.jpg"
+                    alt="Magazine2"
+                    width={500}
+                    height={700}
+                    layout="fill"
+                    onClick={() => setModal((modal) => !modal)}
+                  />
+                </Link>
+              </div>
             </div>
           </motion.div>
           <motion.div

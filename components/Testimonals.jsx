@@ -32,7 +32,7 @@ const Testimonals = () => {
     <>
       <motion.div animate={animation} viewport={{ once: true }}>
         <div ref={ref} className="testimonals">
-          <div className="block p-6 rounded-lg w-full bg-white dark:bg-onbg-color-dk custom_bg_shadow dark:shadow-none">
+          <div className="block p-6 rounded-lg w-full bg-white dark:bg-onbg-color-dk custom_bg_shadow dark:shadow-none dark:outline-1 outline-gray-300 minimal_border">
             <h5 className="text-gray-900 text-xl leading-tight dark:text-white/90 font-medium mb-2 p-3">
               Upcoming Event
             </h5>
@@ -50,7 +50,7 @@ const Testimonals = () => {
               </p>
             </div>
           </div>
-          <div className="block p-6 rounded-lg w-full bg-white dark:bg-onbg-color-dk custom_bg_shadow dark:shadow-none">
+          <div className="block p-6 rounded-lg w-full bg-white dark:bg-onbg-color-dk custom_bg_shadow dark:shadow-none dark:outline-1 outline-gray-300 minimal_border">
             <h5 className="text-gray-900 text-lg leading-tight dark:text-white/90 font-medium mb-2 text-center">
               Writer Of the Month 🏆
             </h5>
@@ -74,7 +74,7 @@ const Testimonals = () => {
               </Link>
             </div>
           </div>
-          <div className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white dark:bg-onbg-color-dk dark:shadow-none">
+          <div className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white dark:bg-onbg-color-dk dark:shadow-none dark:outline-1 outline-gray-300 minimal_border">
             <h5 className="text-gray-900 text-xl leading-tight dark:text-white/90 font-medium mb-2">
               Upcoming Event
             </h5>
@@ -84,7 +84,7 @@ const Testimonals = () => {
               adipisicing elit.
             </p>
           </div>
-          <div className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white dark:bg-onbg-color-dk dark:shadow-none">
+          <div className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white dark:bg-onbg-color-dk dark:shadow-none dark:outline-1 outline-gray-300 minimal_border">
             <h5 className="text-gray-900 text-xl leading-tight dark:text-white/90 font-medium mb-2 p-3">
               Upcoming Event
             </h5>
@@ -101,7 +101,7 @@ const Testimonals = () => {
               </p>
             </div>
           </div>
-          <div className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white dark:bg-onbg-color-dk dark:shadow-none">
+          <div className="block p-6 rounded-lg custom_bg_shadow  w-full bg-white dark:bg-onbg-color-dk dark:shadow-none dark:outline-1 outline-gray-300 minimal_border">
             <h5 className="text-gray-900 text-xl leading-tight dark:text-white/90 font-medium mb-2 p-3">
               Upcoming Event
             </h5>

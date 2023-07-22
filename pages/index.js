@@ -3,7 +3,6 @@ import Hero from "../components/Hero";
 import Instagram from "../components/Instagram";
 import Testimonals from "../components/Testimonals";
 import  FeaturedPosts  from '../sections/FeaturedPosts';
-import MagicWand from "../components/MagicWand";
 
 
 export default function Home() {

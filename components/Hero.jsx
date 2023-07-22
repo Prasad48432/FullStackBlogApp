@@ -11,11 +11,11 @@ const Hero = () => {
           <div className="w-full relative pb-10 px-6 xl:px-0 ">
             <div className="pt-32 lg:flex items-center relative z-1 container mx-auto">
               <div className="w-full lg:w-1/2 h-full lg:pr-10 xl:pr-0">
-              <img
+                <img
                   tabIndex="0"
                   role="img"
                   aria-label="people smiling"
-                  className="mx-auto lg:w-[500px] lg:h-[500px] object-cover dark:rounded-full"
+                  className="mx-auto lg:w-[500px] lg:h-[500px] object-cover"
                   src="https://i.ibb.co/7Q3nfWD/mainhomephoto.png"
                   alt="main home image"
                 />
@@ -93,7 +93,7 @@ const Hero = () => {
                 </h1>
                 <p
                   tabIndex="0"
-                  className="text-gray-800 dark:text-excerpt-color-dk font-regular text-lg mb-8"
+                  className="text-gray-800 dark:text-excerpt-color-dk font-regular text-lg mb-8 mr-5"
                 >
                   StuTalk is a{" "}
                   <span className="underline underline-offset-2 decoration-2 font-semibold decoration-indigo-700 dark:decoration-variant-color-dk">
@@ -114,7 +114,7 @@ const Hero = () => {
                     The Republic Edition.
                   </span>
                 </p>
-                <div className="bg-gray-200 dark:bg-onbg-color-dk lg:mt-16 mt-10 py-4 px-4 flex flex-col sm:flex-row justify-center sm:justify-center items-center sm:items-center custom_bg_shadow dark:shadow-none rounded-lg sm:w-[40vw]">
+                <div className="bg-gray-200 dark:bg-onbg-color-dk lg:mt-16 mt-10 py-4 px-4 flex flex-col sm:flex-row justify-center sm:justify-center items-center sm:items-center custom_bg_shadow dark:shadow-none rounded-lg sm:w-[40vw] dark:outline-1 outline-gray-300 minimal_border">
                   <div className="sm:flex items-center py-2 justify-center ">
                     <div className="flex items-center ">
                       <h2 className="text-2xl underline">Imagine !</h2>

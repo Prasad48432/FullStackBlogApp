@@ -27,8 +27,8 @@ const Categories = () => {
             }
           }
         }}>
-    <div className="bg-white dark:bg-onbg-color-dk shadow-lg rounded-lg p-5 pb-8 mb-4 outline outline-2 outline-gray-300 dark:outline-border-color-dk">
-      <h3 className="text-xl mb-8 font-semibold border-b pb-4 border-black dark:border-variant-color-dk">Categories</h3>
+    <div className="bg-white dark:bg-onbg-color-dk shadow-lg rounded-lg p-5 pb-8 mb-4 outline dark:outline-1 outline-gray-300 minimal_border">
+      <h3 className="text-xl mb-8 font-semibold border-b pb-4 border-black dark:border-white">Categories</h3>
       {categories.map((category, index) => (
         <Link key={index} href={`/category/${category.slug}`}>
           <span className={`cursor-pointer block ${(index === categories.length - 1) ? 'border-b-0' : 'border-b'} pb-3 mb-3`}>{category.name}</span>

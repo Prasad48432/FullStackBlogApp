@@ -61,10 +61,10 @@ const FeaturedPosts = () => {
           responsive={responsive}
           itemClass="px-4"
         >
-          {dataLoaded && featuredPosts.map((post, index) => (
-                <FeaturedPostCard key={index} post={post} />
-              ))
-            }
+          {dataLoaded &&
+            featuredPosts.map((post, index) => (
+              <FeaturedPostCard key={index} post={post} />
+            ))}
         </Carousel>
       </div>
     </>

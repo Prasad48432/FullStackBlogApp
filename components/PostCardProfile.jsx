@@ -5,7 +5,7 @@ import Link from 'next/link';
 const PostCardProfile = ({ post }) => (
   <>
     <Link href={`/post/${post.slug}`}>
-      <div className="bg-white dark:bg-onbg-color-dk custom_bg_shadow rounded-lg dark:shadow-none p-3 lg:p-5 pb-8 lg:pb-12 mb-2 outline outline-2 outline-gray-300 dark:outline-border-color-dk cursor-pointer">
+      <div className="bg-white interactable dark:bg-onbg-color-dk custom_bg_shadow rounded-lg dark:shadow-none p-3 lg:p-5 pb-8 lg:pb-12 mb-2 outline outline-2 outline-gray-300 dark:outline-border-color-dk cursor-pointer">
         <div className="relative overflow-hidden pb-[12rem] lg:pb-[10rem] mb-6">
           <img
             src={post.featuredImage.url}
