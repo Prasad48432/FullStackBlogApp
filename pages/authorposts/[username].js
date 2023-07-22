@@ -102,14 +102,14 @@ const AuthorPosts = ({ posts, author, authors }) => {
                 }}
               >
                 <div className="bg-white dark:bg-onbg-color-dk shadow-lg rounded-lg p-5 pb-8 mb-6 outline outline-2 outline-gray-300 dark:outline-border-color-dk">
-                  <h3 className="text-lg mb-8 font-semibold border-b pb-4 border-black dark:border-variant-color-dk">
+                  <h3 className="text-lg mb-8 font-semibold border-b pb-4 border-black dark:border-white">
                     Browse More Authors
                   </h3>
                   {authors.map((author, index) => (
                     <div key={index} className="flex items-center w-full mb-4">
                       <Link href={`/authorposts/${author.username}`}>
                         <img
-                          className="w-12 h-12 p-1 rounded-full ring-2 ring-gray-300 dark:ring-[#0f1c32] object-cover  cursor-pointer"
+                          className="w-12 h-12 p-1 rounded-full ring-2 ring-gray-300 dark:ring-[#a4a3a3] object-cover  cursor-pointer"
                           src={author.photo.url}
                           alt="/"
                         />

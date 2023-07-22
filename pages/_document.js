@@ -14,7 +14,7 @@ export default function Document() {
       </Head>
       <body className="dark:bg-bg-color-dk bg-color-lt">
         <div id="trailer" className="hidden sm:grid">
-          <FiArrowUpRight id="trailer-icon" size={5} className='text-white dark:text-black' />
+        <i id="trailer-icon" className="fa-solid fa-arrow-up-right-from-square"></i>
         </div>
         <Main />
         <NextScript />

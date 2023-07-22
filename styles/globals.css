@@ -817,7 +817,7 @@ box-shadow: -1px 3px 26px -7px rgba(219,118,35,1);
   --tw-prose-bullets: #cbd5e1;
   --tw-prose-hr: #e2e8f0;
   --tw-prose-quotes: white;
-  --tw-prose-quote-borders: #77bd3e;
+  --tw-prose-quote-borders: var(--variant-color-dk);
   --tw-prose-captions: #64748b;
   --tw-prose-code: #0f172a;
   --tw-prose-pre-code: #e2e8f0;
@@ -1452,19 +1452,20 @@ body:hover > #trailer {
 #trailer {
   height: 20px;
   width: 20px;
-  background-color: rgb(0, 0, 0);
+  background-color: #141414;
   border-radius: 20px;
   position: fixed;
   left: 0px;
   top: 0px;
-  z-index: 10000;
+  z-index: 10000;  
   pointer-events: none;
   opacity: 0;
   transition: opacity 500ms ease;
+  display: grid;
   place-items: center;
 }
 
-.dark #trailer {
+.dark #trailer{
   height: 20px;
   width: 20px;
   background-color: white;
@@ -1472,12 +1473,12 @@ body:hover > #trailer {
   position: fixed;
   left: 0px;
   top: 0px;
-  z-index: 10000;
+  z-index: 10000;  
   pointer-events: none;
   opacity: 0;
   transition: opacity 500ms ease;
+  display: grid;
   place-items: center;
-  mix-blend-mode: difference;
 }
 
 #trailer:not([data-type=""]) > #trailer-icon {
@@ -1491,11 +1492,19 @@ body:hover > #trailer {
   transition: opacity 400ms ease;
 }
 
-.interactable {
+.interactable { 
+  opacity: 0.85;
+  scale: 1;
+  transition: background-size 400ms ease, opacity 400ms ease;
 }
 
 .interactable:hover {
+  background-size: 105%;
+  opacity: 1;
+  scale: 1.01;
+  transition: 0.3s ease-in-out;
 }
+
 
 .footer_magazine{
   scale: 1;
