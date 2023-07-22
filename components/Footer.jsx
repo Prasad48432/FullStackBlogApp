@@ -259,7 +259,7 @@ const Footer = () => {
 
                     <li>
                       <p className="text-gray-700 dark:text-white transition hover:opacity-75">
-                        <Link href="/#gallery">Gallery</Link>
+                        <Link href="/gallery">Gallery</Link>
                       </p>
                     </li>
 

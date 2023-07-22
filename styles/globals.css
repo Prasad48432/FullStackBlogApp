@@ -1449,6 +1449,17 @@ body:hover > #trailer {
   opacity: 1;
 }
 
+
+@media (min-width:0px) and (max-width:639px)
+{
+  #trailer{
+    display: hidden;
+  }
+}
+
+
+
+@media (min-width:640px){
 #trailer {
   height: 20px;
   width: 20px;
@@ -1480,7 +1491,6 @@ body:hover > #trailer {
   display: grid;
   place-items: center;
 }
-
 #trailer:not([data-type=""]) > #trailer-icon {
   opacity: 1;
 }
@@ -1491,7 +1501,7 @@ body:hover > #trailer {
   opacity: 0;
   transition: opacity 400ms ease;
 }
-
+}
 .interactable { 
   opacity: 0.85;
   scale: 1;
