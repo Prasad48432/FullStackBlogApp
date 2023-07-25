@@ -772,6 +772,24 @@ box-shadow: -1px 3px 26px -7px rgba(219,118,35,1);
   margin-top: 1.2em;
 }
 
+@media (min-width:0px) and (max-width:639px) {
+  .prose {
+    color: var(--tw-prose-body);
+    width:75vw;
+    background: #e0e0e0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  .dark .prose {
+    color: var(--tw-prose-body);
+    max-width:75vw;
+    background: var(--onbg-color-dk);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+
+
 .prosec-slatec {
   --tw-prose-body: #334155;
   --tw-prose-headings: #0f172a;
@@ -1516,13 +1534,7 @@ body:hover > #trailer {
 }
 
 
-.footer_magazine{
-  scale: 1;
-  transition: 300ms ease-in-out;
-}
-.footer_magazine:hover{
-  scale: 1.1;
-}
+
 
 
 

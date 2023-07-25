@@ -14,7 +14,7 @@ const Contact = () => {
 
 
   const notify = () =>{
-    toast.success('Success', {
+    toast.success('Sent!', {
       position: "bottom-left",
       autoClose: 5000,
       hideProgressBar: false,
@@ -87,7 +87,7 @@ const Contact = () => {
           setShowSuccessMessage(true);
           setTimeout(() => {
             setShowSuccessMessage(false);
-          }, 500);
+          }, 2500);
         }
       });
   };
@@ -179,14 +179,15 @@ const Contact = () => {
                     </label>
                   </div>
                   {error && (
-                    <p className="text-xs text-red-500">
+                    <p className="text-sm text-red-500 mb-2">
                       All fields are mandatory
                     </p>
                   )}
                   <button
                     type="button"
+                    data-type="post"
                     onClick={handlePostSubmission}
-                    className="w-full  px-6  py-2.5  bg-indigo-600  dark:bg-variant-color-dk  text-white  font-medium  text-xs  leading-tight  uppercase  rounded  shadow-md  hover:bg-indigo-400 hover:shadow-lg  focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0  active:bg-blue-800 active:shadow-lg  transition  duration-150  ease-in-out"
+                    className="interactable w-full  px-6  py-2.5  bg-indigo-600  dark:bg-variant-color-dk  text-white  font-medium  text-xs  leading-tight  uppercase  rounded  shadow-md  hover:bg-indigo-400 hover:shadow-lg  focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0  active:bg-blue-800 active:shadow-lg  transition  duration-150  ease-in-out"
                   >
                     Send
                   </button>

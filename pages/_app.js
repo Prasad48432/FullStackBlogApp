@@ -764,17 +764,17 @@ if (typeof window !== "undefined") {
   const getTrailerClass = type => {
     switch (type) {
       case "video":
-        return "fa-solid fa-play text-white dark:text-black";
+        return "fa-solid fa-play fa-shake  text-white dark:text-black";
       case "insta":
-        return "fa-solid fa-link text-white dark:text-black";
+        return "fa-solid fa-link fa-shake text-white dark:text-black";
       case "right":
-        return "fa-solid fa-arrow-right-long text-white dark:text-black";
+        return "fa-solid fa-arrow-right-long fa-shake text-white dark:text-black";
       case "left":
-        return "fa-solid fa-arrow-left-long text-white dark:text-black";
+        return "fa-solid fa-arrow-left-long fa-shake text-white dark:text-black";
       case "post":
-        return "fa-solid fa-location-arrow text-white dark:text-black";      
+        return "fa-solid fa-location-arrow fa-shake text-white dark:text-black";      
       default:
-        return "fa-solid fa-square-arrow-up-right text-white dark:text-black";
+        return "fa-solid fa-square-up-right fa-shake text-white dark:text-black";
     }
   }
   

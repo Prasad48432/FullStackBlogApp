@@ -286,21 +286,23 @@ const Footer = () => {
                 <nav aria-label="Footer Navigation - Company" className="mt-6">
                   <ul className="space-y-4 text-sm">
                     <li>
+                    <Link href="/aboutus">
                       <a
-                        href="#"
                         className="text-gray-700 dark:text-white transition hover:opacity-75"
                       >
                         Our Story
                       </a>
+                    </Link>
                     </li>
 
                     <li>
+                    <Link href="/team">
                       <a
-                        href="#"
                         className="text-gray-700 dark:text-white transition hover:opacity-75"
                       >
                         Meet our Team
                       </a>
+                      </Link>
                     </li>
 
                     <li>

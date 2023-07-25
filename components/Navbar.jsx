@@ -56,7 +56,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed left-0 sm:top-0 w-full z-10 shadow-xl dark:shadow-none bg-white dark:bg-bg-color-dk">
+      <div className="fixed left-0 sm:top-0 w-full z-10 shadow-xl dark:shadow-none bg-white dark:bg-[#0e0e0e]">
         <div className="max-w-[1240px] m-auto flex justify-between items-center p-3 text-black">
           <Link href="/">
             <div className="flex">
@@ -180,7 +180,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <div className="inner hidden sm:block"></div>
+
       </div>
       <section className="block sm:hidden fixed inset-x-0 bottom-0 z-[20] bg-white dark:bg-bg-color-dk shadow">
         <div className="flex justify-between bottom-bar-shadow">

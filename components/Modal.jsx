@@ -35,7 +35,7 @@ const Modal = ({ modal, setModal }) => {
               </span>
             </h1>
             <div className="grid grid-cols-3 gap-3 p-5">
-              <div className="transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk in">
+              <div className="transition relative duration-300 ease-in-out outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk in">
                 <Link href="/magazines/magazine1">
                   <Image
                     className="interactable"
@@ -49,7 +49,7 @@ const Modal = ({ modal, setModal }) => {
                   />
                 </Link>
               </div>
-              <div className="transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk">
+              <div className="transition relative duration-300 ease-in-out outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk">
                 <Link href="/magazines/magazine2">
                   <Image
                     className="interactable"
@@ -64,7 +64,7 @@ const Modal = ({ modal, setModal }) => {
                 </Link>
               </div>
 
-              <div className="transition relative duration-300 ease-in-out hover:scale-105 outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk">
+              <div className="transition relative duration-300 ease-in-out outline dark:outline-3 outline-1 outline-black dark:outline-variant-color-dk">
                 <Link href="/magazines/magazine3">
                   <Image
                     className="interactable"
