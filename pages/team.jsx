@@ -3,7 +3,7 @@ import React from "react";
 const team = () => {
   return (
     <>
-    <div className="container my-24 mx-auto md:px-6">
+    <div className="container my-24 mx-auto md:px-6 ">
       <section className="mb-32 text-center">
         <h2 className="mb-12 text-3xl font-bold">
           Meet the <u className="text-variant-color-lt underline decoration-variant-color-lt dark:text-variant-color-dk dark:decoration-variant-color-dk">Team</u>
